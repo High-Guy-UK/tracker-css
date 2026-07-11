@@ -8030,3 +8030,99 @@ textarea {
     object-fit: contain !important;
   }
 }
+
+/* ==========================================================================
+   Wide Cinema hard layout reset: restore Dark Night column mechanics.
+   ========================================================================== */
+
+@media (min-width: 1280px) {
+  #torrents-movie-view,
+  #content,
+  .page__main-content {
+    display: block !important;
+    overflow: visible !important;
+  }
+
+  #torrents-movie-view::after,
+  #content::after,
+  .page__main-content::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  #torrents-movie-view .sidebar,
+  #content .sidebar,
+  .page__main-content .sidebar {
+    display: block !important;
+    float: right !important;
+    clear: right !important;
+    position: relative !important;
+    width: 340px !important;
+    max-width: 340px !important;
+    min-width: 0 !important;
+    height: auto !important;
+    max-height: none !important;
+    margin: 0 0 22px 24px !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  #torrents-movie-view .main-column,
+  #content .main-column,
+  .page__main-content .main-column {
+    display: block !important;
+    float: none !important;
+    clear: none !important;
+    position: relative !important;
+    width: auto !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    height: auto !important;
+    max-height: none !important;
+    margin: 0 386px 0 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  #torrents-movie-view .main-column > *,
+  #content .main-column > *,
+  .page__main-content .main-column > * {
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+
+  #torrents-movie-view .torrent_table,
+  #torrents-movie-view table.torrent_table,
+  #content .torrent_table,
+  .page__main-content .torrent_table {
+    display: table !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    clear: none !important;
+  }
+
+  #torrents-movie-view .sidebar .panel,
+  #content .sidebar .panel,
+  .page__main-content .sidebar .panel {
+    width: 100% !important;
+    max-width: 340px !important;
+    margin-bottom: 16px !important;
+  }
+
+  #torrents-movie-view .sidebar-cover-image,
+  #content .sidebar-cover-image,
+  .page__main-content .sidebar-cover-image,
+  #torrents-movie-view .sidebar img,
+  #content .sidebar img,
+  .page__main-content .sidebar img {
+    display: block !important;
+    width: auto !important;
+    max-width: 100% !important;
+    max-height: 470px !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    object-fit: contain !important;
+  }
+}
