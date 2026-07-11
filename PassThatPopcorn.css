@@ -7106,3 +7106,160 @@ input[value="Defriend"] {
     font-weight: 400 !important;
   }
 }
+
+/* ==========================================================================
+   Wide Cinema refinements: toast notifications + compact sidebar search.
+   ========================================================================== */
+
+@media (min-width: 1280px) {
+  .header .alert,
+  .header .alert-bar,
+  .header .alert--warning,
+  .header .alert--error {
+    position: fixed !important;
+    right: 22px;
+    bottom: 22px;
+    z-index: 120;
+    width: 340px !important;
+    max-width: calc(100vw - var(--ptp-sidebar) - 70px) !important;
+    min-height: 58px;
+    margin: 0 !important;
+    padding: 13px 16px !important;
+    border: 1px solid rgba(230, 184, 92, 0.28) !important;
+    border-radius: 8px !important;
+    background:
+      linear-gradient(135deg, rgba(230, 184, 92, 0.18), rgba(61, 214, 189, 0.08)),
+      rgba(14, 15, 15, 0.94) !important;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.46) !important;
+    color: var(--ptp-text) !important;
+    text-align: left !important;
+    font-family: "Open Sans", Inter, system-ui, sans-serif !important;
+    font-size: 0.84rem !important;
+    line-height: 1.35;
+    backdrop-filter: blur(18px) saturate(125%);
+    -webkit-backdrop-filter: blur(18px) saturate(125%);
+    animation: ptp-toast-in 240ms ease-out both;
+  }
+
+  .header .alert::before,
+  .header .alert-bar::before,
+  .header .alert--warning::before,
+  .header .alert--error::before {
+    content: "";
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    margin-right: 8px;
+    border-radius: 999px;
+    background: var(--ptp-gold);
+    box-shadow: 0 0 18px rgba(230, 184, 92, 0.75);
+    vertical-align: middle;
+  }
+
+  .header .alert + .alert,
+  .header .alert + .alert-bar,
+  .header .alert-bar + .alert,
+  .header .alert-bar + .alert-bar,
+  .header .alert--warning + .alert,
+  .header .alert--warning + .alert-bar,
+  .header .alert--error + .alert,
+  .header .alert--error + .alert-bar {
+    bottom: 96px;
+  }
+
+  .header .alert + .alert + .alert,
+  .header .alert-bar + .alert-bar + .alert-bar {
+    bottom: 170px;
+  }
+
+  .search-bar,
+  .header:not(:hover):not(:focus-within) .search-bar,
+  .header:hover .search-bar,
+  .header:focus-within .search-bar {
+    padding: 8px !important;
+    border-radius: 8px !important;
+    background: rgba(255, 255, 255, 0.035) !important;
+  }
+
+  .search-bar__list {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 6px !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .search-bar__list > *,
+  .search-bar__search-field,
+  .search-bar__search-field__form {
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+  }
+
+  .search-bar input,
+  .search-bar select,
+  .search-bar button,
+  .search-bar__search-field__input {
+    width: 100% !important;
+    min-height: 34px !important;
+    margin: 0 !important;
+    padding: 7px 10px !important;
+    box-sizing: border-box !important;
+    font-family: "Open Sans", Inter, system-ui, sans-serif !important;
+    font-size: 0.78rem !important;
+    font-weight: 400 !important;
+    letter-spacing: 0 !important;
+    line-height: 1.2 !important;
+  }
+
+  .search-bar button,
+  .search-bar input[type="button"],
+  .search-bar input[type="submit"] {
+    font-weight: 600 !important;
+  }
+
+  .header {
+    padding-top: calc(var(--ptp-topbar) + 14px) !important;
+  }
+
+  .site-logo {
+    margin-bottom: 14px !important;
+  }
+
+  .site-logo__link::after,
+  .header:hover .site-logo__link::after,
+  .header:focus-within .site-logo__link::after {
+    height: 74px;
+    font-size: 4.1rem !important;
+  }
+
+  .main-menu {
+    margin-bottom: 12px !important;
+  }
+
+  .main-menu__list,
+  .header:not(:hover):not(:focus-within) .main-menu__list {
+    gap: 6px !important;
+  }
+
+  .main-menu__link,
+  .header:not(:hover):not(:focus-within) .main-menu__link {
+    min-height: 38px !important;
+    padding: 8px 12px !important;
+    font-size: 1rem !important;
+  }
+}
+
+@keyframes ptp-toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
