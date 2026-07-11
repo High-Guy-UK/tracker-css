@@ -6202,3 +6202,45 @@ input[type="submit"]:hover {
     animation-duration: 1ms !important;
   }
 }
+
+/* Rail placement polish: navigation stays at the top, search lives at the
+   bottom, and the shared account bar gets a calmer vertical rhythm. */
+@media (min-width: 1280px) {
+  :root {
+    --ptp-topbar: 60px;
+  }
+
+  .user-info-bar,
+  body:has(.header:hover) .user-info-bar,
+  body:has(.header:focus-within) .user-info-bar {
+    box-sizing: border-box !important;
+    height: var(--ptp-topbar) !important;
+    min-height: var(--ptp-topbar) !important;
+    padding: 9px 18px !important;
+  }
+
+  .header,
+  .header:hover,
+  .header:focus-within {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    box-sizing: border-box !important;
+  }
+
+  .main-menu {
+    flex: 0 0 auto !important;
+    order: 1 !important;
+    width: 100% !important;
+  }
+
+  .search-bar,
+  .header:not(:hover):not(:focus-within) .search-bar,
+  .header:hover .search-bar,
+  .header:focus-within .search-bar {
+    flex: 0 0 auto !important;
+    order: 2 !important;
+    width: 100% !important;
+    margin-top: auto !important;
+  }
+}
