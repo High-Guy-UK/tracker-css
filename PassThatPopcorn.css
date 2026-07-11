@@ -6935,3 +6935,174 @@ input[value="Defriend"] {
     transition-duration: 1ms !important;
   }
 }
+
+/* ==========================================================================
+   Wide Cinema refinements: permanent sidebar + single-line account bar.
+   ========================================================================== */
+
+@media (min-width: 1280px) {
+  :root {
+    --ptp-sidebar: 300px;
+    --ptp-sidebar-open: 300px;
+    --ptp-topbar: 44px;
+  }
+
+  body {
+    padding-top: calc(var(--ptp-topbar) + 22px) !important;
+    padding-left: calc(var(--ptp-sidebar) + 28px) !important;
+  }
+
+  .header,
+  .header:hover,
+  .header:focus-within {
+    width: var(--ptp-sidebar) !important;
+    padding: calc(var(--ptp-topbar) + 18px) 18px 20px !important;
+    background: rgba(9, 10, 10, 0.94) !important;
+    overflow-x: hidden;
+    transition: none !important;
+  }
+
+  body:has(.header:hover),
+  body:has(.header:focus-within) {
+    padding-left: calc(var(--ptp-sidebar) + 28px) !important;
+  }
+
+  body:has(.header:hover) .user-info-bar,
+  body:has(.header:focus-within) .user-info-bar {
+    padding-left: calc(var(--ptp-sidebar) + 18px) !important;
+  }
+
+  .user-info-bar {
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    gap: 10px;
+    min-height: var(--ptp-topbar);
+    padding: 7px 22px 7px calc(var(--ptp-sidebar) + 18px) !important;
+    text-align: right !important;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+
+  .user-info-bar__list {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    gap: 10px !important;
+    flex: 0 0 auto;
+    width: auto !important;
+    margin: 0 !important;
+    overflow-x: visible;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scrollbar-width: none;
+  }
+
+  .user-info-bar__list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .user-info-bar__item {
+    flex: 0 0 auto;
+    min-height: 28px;
+  }
+
+  .user-info-bar__link {
+    min-height: 28px;
+    padding: 5px 8px !important;
+    white-space: nowrap;
+  }
+
+  .site-logo {
+    margin-bottom: 22px !important;
+  }
+
+  .site-logo__link::after,
+  .header:hover .site-logo__link::after,
+  .header:focus-within .site-logo__link::after {
+    content: "PTP";
+    height: 92px;
+    font-family: Impact, "Bebas Neue", "Arial Black", sans-serif;
+    font-size: 4.9rem !important;
+    letter-spacing: 0 !important;
+  }
+
+  .main-menu {
+    margin-bottom: 18px !important;
+  }
+
+  .main-menu__list,
+  .header:not(:hover):not(:focus-within) .main-menu__list {
+    display: grid !important;
+    gap: 9px !important;
+  }
+
+  .main-menu__item {
+    width: 100%;
+  }
+
+  .main-menu__link,
+  .header:not(:hover):not(:focus-within) .main-menu__link {
+    justify-content: flex-start !important;
+    min-height: 44px !important;
+    width: 100%;
+    padding: 10px 14px !important;
+    font-family: Impact, "Arial Black", "Bebas Neue", sans-serif;
+    font-size: 1.08rem !important;
+    font-weight: 400 !important;
+    letter-spacing: 0 !important;
+    text-transform: none;
+  }
+
+  .header:not(:hover):not(:focus-within) .main-menu__link::after {
+    content: none !important;
+  }
+
+  .main-menu__link:hover {
+    transform: none !important;
+  }
+
+  .search-bar,
+  .header:not(:hover):not(:focus-within) .search-bar,
+  .header:hover .search-bar,
+  .header:focus-within .search-bar {
+    max-height: none !important;
+    margin: 0 !important;
+    padding: 12px !important;
+    opacity: 1 !important;
+    transform: none !important;
+    pointer-events: auto !important;
+    border-color: var(--ptp-line) !important;
+    overflow: visible !important;
+  }
+
+  .search-bar__list {
+    gap: 10px !important;
+  }
+
+  .search-bar__search-field__input {
+    min-height: 38px;
+    padding: 8px 12px !important;
+  }
+
+  .sidebar .panel__heading__title,
+  .sidebar .panel__heading__title a,
+  .search-bar input,
+  .search-bar select,
+  .search-bar button {
+    font-family: Impact, "Arial Black", "Bebas Neue", sans-serif !important;
+    letter-spacing: 0 !important;
+  }
+
+  .sidebar .panel__heading {
+    padding: 12px 14px !important;
+  }
+
+  .sidebar .panel__heading__title,
+  .sidebar .panel__heading__title a {
+    font-size: 1.05rem !important;
+    font-weight: 400 !important;
+  }
+}
