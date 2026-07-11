@@ -6566,3 +6566,20 @@ table.torrent_table > tbody > tr:last-child > :last-child {
 .forum-post__body {
   border-color: transparent !important;
 }
+
+/* The latest-torrents strip has its own table surface in the base theme. */
+#last5t,
+#last5t .last5-movies,
+#last5t .last5-movies__table,
+#last5t .last5-movies__table > tbody,
+#last5t .last5-movies__table > tbody > tr,
+#last5t .last5-movies__table > tbody > tr > td,
+#last5t .last5-movies__show-all-row,
+.last5-movies,
+.last5-movies__table,
+.last5-movies__table > tbody,
+.last5-movies__table > tbody > tr,
+.last5-movies__table > tbody > tr > td,
+.last5-movies__show-all-row {
+  background: #000 !important;
+}
