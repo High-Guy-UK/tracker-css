@@ -7766,3 +7766,109 @@ textarea {
     padding: 12px !important;
   }
 }
+
+/* ==========================================================================
+   Wide Cinema layout fix: use stable floated content rails.
+   ========================================================================== */
+
+@media (min-width: 1280px) {
+  #content,
+  #torrents-movie-view,
+  #index,
+  .page__main-content {
+    display: block !important;
+    overflow: visible !important;
+  }
+
+  #content::after,
+  #torrents-movie-view::after,
+  #index::after,
+  .page__main-content::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  #content .sidebar,
+  #torrents-movie-view .sidebar,
+  #index .sidebar,
+  .page__main-content .sidebar {
+    float: right !important;
+    clear: right !important;
+    position: relative !important;
+    width: 320px !important;
+    max-width: 320px !important;
+    min-width: 0 !important;
+    height: auto !important;
+    max-height: none !important;
+    margin: 0 0 22px 24px !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  #content .main-column,
+  #torrents-movie-view .main-column,
+  #index .main-column,
+  .page__main-content .main-column {
+    display: block !important;
+    float: none !important;
+    position: relative !important;
+    width: auto !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    margin: 0 364px 0 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  #content .sidebar + .main-column,
+  #torrents-movie-view .sidebar + .main-column,
+  #index .sidebar + .main-column,
+  .page__main-content .sidebar + .main-column {
+    margin-right: 364px !important;
+  }
+
+  #content .main-column + .sidebar,
+  #torrents-movie-view .main-column + .sidebar,
+  #index .main-column + .sidebar,
+  .page__main-content .main-column + .sidebar {
+    margin-left: 24px !important;
+  }
+
+  #content .sidebar .panel,
+  #torrents-movie-view .sidebar .panel,
+  #index .sidebar .panel,
+  .page__main-content .sidebar .panel {
+    width: 100% !important;
+    max-width: 320px !important;
+    margin-bottom: 16px !important;
+  }
+
+  #content .sidebar-cover-image,
+  #torrents-movie-view .sidebar-cover-image,
+  #index .sidebar-cover-image,
+  .page__main-content .sidebar-cover-image,
+  #content .sidebar .panel img,
+  #torrents-movie-view .sidebar .panel img,
+  #index .sidebar .panel img,
+  .page__main-content .sidebar .panel img {
+    display: block !important;
+    width: auto !important;
+    max-width: 100% !important;
+    max-height: 470px !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    object-fit: contain !important;
+  }
+
+  #content .main-column .panel,
+  #torrents-movie-view .main-column .panel,
+  #index .main-column .panel,
+  .page__main-content .main-column .panel,
+  #content .main-column .table,
+  #torrents-movie-view .main-column .table,
+  #index .main-column .table,
+  .page__main-content .main-column .table {
+    max-width: 100% !important;
+  }
+}
