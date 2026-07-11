@@ -7956,3 +7956,77 @@ textarea {
     max-width: none !important;
   }
 }
+
+/* ==========================================================================
+   Wide Cinema movie page: split panels and torrent table inside main-column.
+   ========================================================================== */
+
+@media (min-width: 1280px) {
+  #torrents-movie-view .main-column {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) 340px !important;
+    gap: 22px !important;
+    align-items: start !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  #torrents-movie-view .main-column > .panel,
+  #torrents-movie-view .main-column > div:has(.sidebar-cover-image),
+  #torrents-movie-view .main-column > div:has(input[name="amount"]),
+  #torrents-movie-view .main-column > div:has(input[placeholder="Points"]) {
+    grid-column: 2 !important;
+    grid-row: auto !important;
+    width: 100% !important;
+    max-width: 340px !important;
+    margin: 0 0 16px !important;
+    float: none !important;
+    clear: none !important;
+    position: relative !important;
+  }
+
+  #torrents-movie-view .main-column > .torrent_table,
+  #torrents-movie-view .main-column > table.torrent_table,
+  #torrents-movie-view .main-column > .table,
+  #torrents-movie-view .main-column > table,
+  #torrents-movie-view .main-column > div:has(.torrent_table),
+  #torrents-movie-view .main-column > div:has(table.torrent_table),
+  #torrents-movie-view .main-column > div:has(.movie-page__torrent__panel),
+  #torrents-movie-view .main-column > .panel:has(.torrent_table),
+  #torrents-movie-view .main-column > .panel:has(table.torrent_table),
+  #torrents-movie-view .main-column > .panel:has(.movie-page__torrent__panel) {
+    grid-column: 1 !important;
+    grid-row: 1 / span 80 !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    float: none !important;
+    clear: none !important;
+    position: relative !important;
+    overflow: visible !important;
+  }
+
+  #torrents-movie-view .main-column > .page__title,
+  #torrents-movie-view .main-column > .linkbox,
+  #torrents-movie-view .main-column > .tabs,
+  #torrents-movie-view .main-column > .tabs__bar {
+    grid-column: 1 / -1 !important;
+    grid-row: auto !important;
+  }
+
+  #torrents-movie-view .main-column > .panel img,
+  #torrents-movie-view .main-column .sidebar-cover-image {
+    width: auto !important;
+    max-width: 100% !important;
+    max-height: 480px !important;
+    height: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    object-fit: contain !important;
+  }
+}
