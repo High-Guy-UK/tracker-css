@@ -6477,3 +6477,53 @@ table.table > tbody > tr:last-child > :last-child,
 table.torrent_table > tbody > tr:last-child > :last-child {
   border-bottom-right-radius: 7px;
 }
+
+/* Panels are single surfaces: no second rectangular frame inside the rounded
+   outer shell. */
+.panel,
+.forum-post,
+.movie-page__torrent__panel,
+.release-description-preview,
+.mediainfo,
+.screenshot-comparison__container {
+  border: 0 !important;
+  border-radius: 9px !important;
+  overflow: hidden !important;
+}
+
+.panel__heading,
+.forum-post__heading {
+  border: 0 !important;
+  border-radius: 9px 9px 0 0 !important;
+}
+
+.panel .panel__body,
+.panel__body,
+.panel tbody,
+.forum-post__avatar-and-body {
+  border: 0 !important;
+  border-radius: 0 0 9px 9px !important;
+}
+
+/* The latest activity modules read better as one rounded list rather than a
+   series of individually boxed rows. */
+#last5t table,
+#last5t .table,
+#last5t table > tbody > tr,
+#last5t table > tbody > tr > td,
+#last5t table > tbody > tr > th,
+#last5t .table > tbody > tr,
+#last5t .table > tbody > tr > td,
+#last5t .table > tbody > tr > th {
+  border-color: transparent !important;
+}
+
+#last5t table > tbody > tr,
+#last5t .table > tbody > tr {
+  background: transparent !important;
+}
+
+#last5t table > tbody > tr:hover,
+#last5t .table > tbody > tr:hover {
+  background: rgba(255, 255, 255, 0.045) !important;
+}
