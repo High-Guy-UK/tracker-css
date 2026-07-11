@@ -7688,3 +7688,81 @@ textarea {
     letter-spacing: 0 !important;
   }
 }
+
+/* ==========================================================================
+   Wide Cinema layout fix: movie/home content columns and poster sizing.
+   ========================================================================== */
+
+@media (min-width: 1280px) {
+  #torrents-movie-view:has(.main-column):has(.sidebar),
+  #content:has(> .main-column):has(> .sidebar),
+  #content:has(.main-column):has(.sidebar) > .page__main-content {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) clamp(260px, 21vw, 340px) !important;
+    gap: 20px !important;
+    align-items: start !important;
+    overflow: visible !important;
+  }
+
+  #torrents-movie-view:has(.main-column):has(.sidebar) .main-column,
+  #content:has(> .main-column):has(> .sidebar) > .main-column,
+  #content:has(.main-column):has(.sidebar) > .page__main-content > .main-column {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+    min-width: 0 !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    float: none !important;
+    position: static !important;
+    overflow: visible !important;
+  }
+
+  #torrents-movie-view:has(.main-column):has(.sidebar) .sidebar,
+  #content:has(> .main-column):has(> .sidebar) > .sidebar,
+  #content:has(.main-column):has(.sidebar) > .page__main-content > .sidebar {
+    grid-column: 2 !important;
+    grid-row: auto !important;
+    min-width: 0 !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    float: none !important;
+    position: static !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  #torrents-movie-view:has(.main-column):has(.sidebar) > :not(.main-column):not(.sidebar),
+  #content:has(> .main-column):has(> .sidebar) > :not(.main-column):not(.sidebar),
+  #content:has(.main-column):has(.sidebar) > .page__main-content > :not(.main-column):not(.sidebar) {
+    grid-column: 1 / -1 !important;
+  }
+
+  #torrents-movie-view .sidebar .panel,
+  #content .sidebar .panel {
+    width: 100% !important;
+  }
+
+  #torrents-movie-view .sidebar-cover-image,
+  #content .sidebar .sidebar-cover-image,
+  #content .sidebar .panel img,
+  #torrents-movie-view .sidebar .panel img {
+    display: block !important;
+    width: 100% !important;
+    max-width: 320px !important;
+    max-height: 500px !important;
+    height: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    object-fit: contain !important;
+  }
+
+  #torrents-movie-view .sidebar .panel__body,
+  #content .sidebar .panel__body {
+    padding: 12px !important;
+  }
+}
