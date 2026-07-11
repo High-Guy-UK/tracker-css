@@ -6244,3 +6244,107 @@ input[type="submit"]:hover {
     margin-top: auto !important;
   }
 }
+
+/* Quiet rail edges and search fields. */
+@media (min-width: 1280px) {
+  .header,
+  .header:hover,
+  .header:focus-within {
+    border: 0 !important;
+  }
+
+  .user-info-bar,
+  body:has(.header:hover) .user-info-bar,
+  body:has(.header:focus-within) .user-info-bar {
+    border: 0 !important;
+  }
+
+  .search-bar,
+  .header:not(:hover):not(:focus-within) .search-bar,
+  .header:hover .search-bar,
+  .header:focus-within .search-bar {
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+  }
+
+  .search-bar__list {
+    gap: 3px !important;
+  }
+
+  .search-bar__search-field {
+    position: relative !important;
+    min-height: 34px !important;
+  }
+
+  .search-bar input,
+  .search-bar select,
+  .search-bar button,
+  .search-bar__search-field__input {
+    min-height: 34px !important;
+    padding: 7px 10px !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    color: var(--ptp-text) !important;
+    text-align: left !important;
+  }
+
+  .search-bar__search-field__input::placeholder {
+    color: transparent !important;
+  }
+
+  .search-bar__search-field::before {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    z-index: 1;
+    color: #777f77;
+    content: "Search..";
+    font-family: Inter, "Open Sans", Arial, sans-serif;
+    font-size: 0.78rem;
+    font-weight: 400;
+    line-height: 1;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: color 140ms ease, opacity 100ms ease;
+  }
+
+  .search-bar__search-field:has(input[placeholder="Movies"])::before {
+    content: "Search Movies..";
+  }
+
+  .search-bar__search-field:has(input[placeholder="People"])::before {
+    content: "Search People..";
+  }
+
+  .search-bar__search-field:has(input[placeholder="Collections"])::before {
+    content: "Search Collections..";
+  }
+
+  .search-bar__search-field:has(input[placeholder="Requests"])::before {
+    content: "Search Requests..";
+  }
+
+  .search-bar__search-field:has(input[placeholder="Forums"])::before {
+    content: "Search Forums..";
+  }
+
+  .search-bar__search-field:has(input[placeholder="Log"])::before {
+    content: "Search Log..";
+  }
+
+  .search-bar__search-field:has(input[placeholder="Users"])::before {
+    content: "Search Users..";
+  }
+
+  .search-bar__search-field:focus-within::before {
+    color: #edf0eb;
+  }
+
+  .search-bar__search-field:has(input:not(:placeholder-shown))::before {
+    opacity: 0;
+  }
+}
