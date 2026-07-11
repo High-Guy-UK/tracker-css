@@ -6348,3 +6348,132 @@ input[type="submit"]:hover {
     opacity: 0;
   }
 }
+
+/* Search labels fall back to their fixed rail order when a page supplies a
+   different native placeholder value. */
+@media (min-width: 1280px) {
+  .search-bar__search-field:has(input[placeholder*="Movie" i])::before,
+  .search-bar__list > :nth-child(1) .search-bar__search-field::before,
+  .search-bar__list > .search-bar__search-field:nth-child(1)::before {
+    content: "Search Movies..";
+  }
+
+  .search-bar__search-field:has(input[placeholder*="People" i])::before,
+  .search-bar__list > :nth-child(2) .search-bar__search-field::before,
+  .search-bar__list > .search-bar__search-field:nth-child(2)::before {
+    content: "Search People..";
+  }
+
+  .search-bar__search-field:has(input[placeholder*="Collection" i])::before,
+  .search-bar__list > :nth-child(3) .search-bar__search-field::before,
+  .search-bar__list > .search-bar__search-field:nth-child(3)::before {
+    content: "Search Collections..";
+  }
+
+  .search-bar__search-field:has(input[placeholder*="Request" i])::before,
+  .search-bar__list > :nth-child(4) .search-bar__search-field::before,
+  .search-bar__list > .search-bar__search-field:nth-child(4)::before {
+    content: "Search Requests..";
+  }
+
+  .search-bar__search-field:has(input[placeholder*="Forum" i])::before,
+  .search-bar__list > :nth-child(5) .search-bar__search-field::before,
+  .search-bar__list > .search-bar__search-field:nth-child(5)::before {
+    content: "Search Forums..";
+  }
+
+  .search-bar__search-field:has(input[placeholder*="Log" i])::before,
+  .search-bar__list > :nth-child(6) .search-bar__search-field::before,
+  .search-bar__list > .search-bar__search-field:nth-child(6)::before {
+    content: "Search Log..";
+  }
+
+  .search-bar__search-field:has(input[placeholder*="User" i])::before,
+  .search-bar__list > :nth-child(7) .search-bar__search-field::before,
+  .search-bar__list > .search-bar__search-field:nth-child(7)::before {
+    content: "Search Users..";
+  }
+}
+
+/* Modern data tables: a single soft frame, compact header and quieter rows. */
+:is(#forums, #torrents, #index) table,
+table.table,
+table.torrent_table {
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  border-radius: 8px !important;
+  background: #0b0e0e !important;
+  overflow: hidden !important;
+}
+
+:is(#forums, #torrents, #index) table > thead > tr,
+table.table > thead > tr,
+table.torrent_table > thead > tr {
+  background: #151a1b !important;
+}
+
+:is(#forums, #torrents, #index) table > thead > tr > th,
+table.table > thead > tr > th,
+table.torrent_table > thead > tr > th {
+  padding: 10px 12px !important;
+  border-color: rgba(255, 255, 255, 0.13) !important;
+  color: #eef1ed !important;
+  font-size: 0.72rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0 !important;
+  text-transform: uppercase;
+}
+
+:is(#forums, #torrents, #index) table > tbody > tr,
+table.table > tbody > tr,
+table.torrent_table > tbody > tr {
+  background: #0d1111 !important;
+  transition: background 140ms ease;
+}
+
+:is(#forums, #torrents, #index) table > tbody > tr:nth-child(even),
+table.table > tbody > tr:nth-child(even),
+table.torrent_table > tbody > tr:nth-child(even) {
+  background: #111616 !important;
+}
+
+:is(#forums, #torrents, #index) table > tbody > tr:hover,
+table.table > tbody > tr:hover,
+table.torrent_table > tbody > tr:hover {
+  background: #192020 !important;
+}
+
+:is(#forums, #torrents, #index) table > tbody > tr > td,
+:is(#forums, #torrents, #index) table > tbody > tr > th,
+table.table > tbody > tr > td,
+table.table > tbody > tr > th,
+table.torrent_table > tbody > tr > td,
+table.torrent_table > tbody > tr > th {
+  padding: 9px 12px !important;
+  border-color: rgba(255, 255, 255, 0.11) !important;
+}
+
+:is(#forums, #torrents, #index) table > thead > tr > :first-child,
+table.table > thead > tr > :first-child,
+table.torrent_table > thead > tr > :first-child {
+  border-top-left-radius: 7px;
+}
+
+:is(#forums, #torrents, #index) table > thead > tr > :last-child,
+table.table > thead > tr > :last-child,
+table.torrent_table > thead > tr > :last-child {
+  border-top-right-radius: 7px;
+}
+
+:is(#forums, #torrents, #index) table > tbody > tr:last-child > :first-child,
+table.table > tbody > tr:last-child > :first-child,
+table.torrent_table > tbody > tr:last-child > :first-child {
+  border-bottom-left-radius: 7px;
+}
+
+:is(#forums, #torrents, #index) table > tbody > tr:last-child > :last-child,
+table.table > tbody > tr:last-child > :last-child,
+table.torrent_table > tbody > tr:last-child > :last-child {
+  border-bottom-right-radius: 7px;
+}
