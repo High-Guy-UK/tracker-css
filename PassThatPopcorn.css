@@ -6527,3 +6527,42 @@ table.torrent_table > tbody > tr:last-child > :last-child {
 #last5t .table > tbody > tr:hover {
   background: rgba(255, 255, 255, 0.045) !important;
 }
+
+/* Strict OLED surface layer: only data tables keep tonal separation. */
+#wrapper,
+#content,
+#index,
+.page__main-content,
+.panel,
+.panel__heading,
+.panel .panel__body,
+.panel__body,
+.forum-post,
+.forum-post__heading,
+.forum-post__avatar-and-body,
+.forum-post__body,
+.huge-movie-list__movie,
+.huge-movie-list__movie__details,
+.cover-movie-list__movie__undercover,
+.movie-page__torrent__panel,
+.release-description-preview,
+.mediainfo,
+.screenshot-comparison__container,
+.sidebar .panel,
+.last5-movies {
+  background-color: #000 !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+.panel__heading,
+.forum-post__heading {
+  border-bottom-color: transparent !important;
+}
+
+.panel .panel__body,
+.panel__body,
+.forum-post__avatar-and-body,
+.forum-post__body {
+  border-color: transparent !important;
+}
