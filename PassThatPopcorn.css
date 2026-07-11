@@ -7263,3 +7263,179 @@ input[value="Defriend"] {
     transform: translateY(0);
   }
 }
+
+/* ==========================================================================
+   Wide Cinema OLED pass: blacker surfaces, brighter text, full-width top bar.
+   ========================================================================== */
+
+:root {
+  --ptp-bg: #000;
+  --ptp-bg-2: #030303;
+  --ptp-surface: rgba(2, 3, 3, 0.96);
+  --ptp-surface-2: rgba(8, 9, 9, 0.98);
+  --ptp-surface-3: rgba(14, 15, 15, 0.99);
+  --ptp-line: rgba(255, 255, 255, 0.14);
+  --ptp-line-strong: rgba(255, 255, 255, 0.24);
+  --ptp-text: #fff;
+  --ptp-muted: #d4d7d2;
+  --ptp-faint: #9ca29a;
+}
+
+body {
+  color: var(--ptp-text) !important;
+  background:
+    linear-gradient(90deg, rgba(255, 91, 79, 0.07), transparent 18%),
+    linear-gradient(270deg, rgba(61, 214, 189, 0.055), transparent 22%),
+    #000 !important;
+}
+
+body::before {
+  opacity: 0.35;
+}
+
+body::after {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.96) 0,
+    rgba(0, 0, 0, 0.5) 16%,
+    rgba(0, 0, 0, 0.08) 52%,
+    rgba(0, 0, 0, 0.52) 100%
+  ) !important;
+}
+
+.page__main-content,
+.panel,
+.forum-post,
+.table,
+.huge-movie-list__movie,
+.sidebar .panel,
+.search-bar,
+.movie-page__torrent__panel,
+.release-description-preview,
+.mediainfo,
+.movie-tooltip__torrents,
+.screenshot-comparison__container {
+  background-color: rgba(2, 3, 3, 0.94) !important;
+  border-color: var(--ptp-line) !important;
+}
+
+.table > tbody > tr,
+.table > thead > tr,
+.table > tbody > tr.basic-movie-list__details-row,
+.table > tbody > tr.compact-movie-list__details-row--odd,
+.table > tbody > tr.release-name-movie-list__details-row {
+  background: rgba(5, 6, 6, 0.94) !important;
+}
+
+.table > tbody > tr:hover {
+  background: rgba(255, 255, 255, 0.075) !important;
+}
+
+a,
+.user-info-bar__link,
+.main-menu__link,
+.tabs__bar__link,
+.linkbox a,
+.pagination__link,
+input,
+select,
+textarea {
+  color: var(--ptp-muted) !important;
+}
+
+.table,
+.panel,
+.forum-post__body,
+.huge-movie-list__movie__synopsis,
+.basic-movie-list__movie__title,
+.cover-movie-list__movie__title,
+.release-name-movie-list__movie__release-name {
+  color: var(--ptp-text) !important;
+}
+
+@media (min-width: 1280px) {
+  body {
+    padding-top: calc(var(--ptp-topbar) + 22px) !important;
+    padding-left: calc(var(--ptp-sidebar) + 28px) !important;
+  }
+
+  .user-info-bar,
+  body:has(.header:hover) .user-info-bar,
+  body:has(.header:focus-within) .user-info-bar {
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    padding: 7px 22px !important;
+    border-bottom-color: var(--ptp-line-strong) !important;
+    background: rgba(0, 0, 0, 0.92) !important;
+  }
+
+  .header,
+  .header:hover,
+  .header:focus-within {
+    top: var(--ptp-topbar) !important;
+    height: calc(100vh - var(--ptp-topbar)) !important;
+    padding-top: 14px !important;
+    background: rgba(0, 0, 0, 0.96) !important;
+    border-right-color: var(--ptp-line-strong) !important;
+  }
+
+  .site-logo {
+    margin-bottom: 14px !important;
+  }
+
+  .site-logo__link::after,
+  .header:hover .site-logo__link::after,
+  .header:focus-within .site-logo__link::after {
+    content: "PassThePopcorn";
+    height: auto;
+    min-height: 72px;
+    padding: 8px 4px;
+    border: 0 !important;
+    background-color: #4281da;
+    background-image: linear-gradient(
+      90deg,
+      #e66534 4%,
+      #e69734 19%,
+      #e2d956 39%,
+      #62e080 60%,
+      #d195cb 80%,
+      #e646dd 100%
+    ) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    color: transparent !important;
+    font-family: "Bebas Neue", Impact, "Arial Black", sans-serif !important;
+    font-size: 3.1rem !important;
+    line-height: 0.86;
+    text-align: center !important;
+    text-shadow: 0 0 24px rgba(230, 101, 52, 0.45) !important;
+    box-shadow: none !important;
+    filter: brightness(1.18) saturate(1.1);
+  }
+
+  .site-logo__link:hover::after {
+    transform: none;
+    filter: brightness(1.28) saturate(1.18);
+  }
+
+  .main-menu__link,
+  .header:not(:hover):not(:focus-within) .main-menu__link {
+    color: #f4f4f1 !important;
+    background: rgba(255, 255, 255, 0.035);
+  }
+
+  .main-menu__link:hover {
+    background: rgba(255, 255, 255, 0.085);
+  }
+
+  .search-bar input,
+  .search-bar select,
+  .search-bar button,
+  .search-bar__search-field__input {
+    background: rgba(0, 0, 0, 0.82) !important;
+    border-color: var(--ptp-line) !important;
+    color: #ecefeb !important;
+  }
+}
