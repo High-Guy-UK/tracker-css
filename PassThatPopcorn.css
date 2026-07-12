@@ -6599,3 +6599,45 @@ table.torrent_table > tbody > tr:last-child > :last-child {
     opacity: 0;
   }
 }
+
+/* PTP does not give every search field the same input markup. Render the
+   rail labels once at list level so all seven rows are always covered. */
+@media (min-width: 1280px) {
+  .search-bar__list {
+    position: relative !important;
+    grid-auto-rows: 34px !important;
+    gap: 3px !important;
+  }
+
+  .search-bar__search-field::before {
+    display: none !important;
+  }
+
+  .search-bar__list::before {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    z-index: 1;
+    color: #777f77;
+    content: "Search Movies..\A Search People..\A Search Collections..\A Search Requests..\A Search Forums..\A Search Log..\A Search Users..";
+    font-family: Inter, "Open Sans", Arial, sans-serif;
+    font-size: 0.78rem;
+    font-weight: 400;
+    line-height: 37px;
+    white-space: pre;
+    pointer-events: none;
+    transition: opacity 100ms ease;
+  }
+
+  .search-bar__list:focus-within::before {
+    opacity: 0;
+  }
+
+  .search-bar input,
+  .search-bar select,
+  .search-bar button,
+  .search-bar__search-field__input {
+    position: relative !important;
+    z-index: 2;
+  }
+}
