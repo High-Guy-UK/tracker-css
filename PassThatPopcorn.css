@@ -6902,13 +6902,12 @@ table.torrent_table > tbody > tr:last-child > :last-child {
   }
 }
 
-/* The browse page reserves a dormant right rail. Reclaim most of it for the
-   results surface while retaining a comfortable edge gutter. */
+/* Keep the browse results aligned with the shared list-page right gutter. */
 @media (min-width: 1280px) {
   #torrents:not(:has(.sidebar)) .main-column {
     width: auto !important;
     max-width: none !important;
-    margin-right: 120px !important;
+    margin-right: 80px !important;
     overflow: visible !important;
   }
 
