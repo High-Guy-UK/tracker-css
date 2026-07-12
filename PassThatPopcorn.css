@@ -7112,3 +7112,33 @@ table.torrent_table > tbody > tr:last-child > :last-child {
 .forum-post__avatar {
   border-right: 0 !important;
 }
+
+/* Subscription and catch-up tabs stay OLED black instead of grey panels. */
+.tabs__bar__list {
+  border-bottom-color: transparent !important;
+}
+
+.tabs__bar__link,
+.tabs__bar__link:active,
+.tabs__bar__link:focus,
+.tabs__bar__link:hover {
+  border: 0 !important;
+  background: #000 !important;
+  box-shadow: inset 0 -2px transparent !important;
+  color: var(--ptp-muted) !important;
+  transition: color 160ms ease, box-shadow 160ms ease !important;
+}
+
+.tabs__bar__link:hover {
+  box-shadow: inset 0 -2px rgba(255, 255, 255, 0.45) !important;
+  color: #fff !important;
+}
+
+.tabs__bar__item--active > .tabs__bar__link,
+.tabs__bar__item--active > .tabs__bar__link:active,
+.tabs__bar__item--active > .tabs__bar__link:focus,
+.tabs__bar__item--active > .tabs__bar__link:hover {
+  background: #000 !important;
+  box-shadow: inset 0 -2px #fff !important;
+  color: #fff !important;
+}
