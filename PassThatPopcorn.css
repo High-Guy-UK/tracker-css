@@ -6696,3 +6696,106 @@ table.torrent_table > tbody > tr:last-child > :last-child {
     z-index: 6;
   }
 }
+
+/* Advanced torrent search: a calmer, modern filter workspace. */
+@media (min-width: 1280px) {
+  #torrents .search-form,
+  #torrents .toggleable-search-form__search-form {
+    width: min(100%, 1060px) !important;
+    max-width: 1060px !important;
+    margin: 0 auto 22px !important;
+    padding: 18px 20px !important;
+    border: 0 !important;
+    border-radius: 10px !important;
+    background: #000 !important;
+    box-shadow: none !important;
+  }
+
+  #torrents .search-form__advanced-basic-toggler,
+  #torrents .toggleable-search-form__toggler-container {
+    margin-bottom: 14px;
+    padding: 0 !important;
+    color: var(--ptp-faint) !important;
+    font-size: 0.8rem;
+  }
+
+  #torrents .search-form input:not([type="checkbox"]):not([type="radio"]),
+  #torrents .search-form select,
+  #torrents .search-form textarea {
+    min-height: 38px !important;
+    padding: 8px 11px !important;
+    border: 1px solid rgba(72, 211, 189, 0.18) !important;
+    border-radius: 7px !important;
+    background: #030404 !important;
+    box-shadow: none !important;
+    color: #f1f4ef !important;
+    font-family: Inter, "Open Sans", Arial, sans-serif !important;
+    font-size: 0.86rem !important;
+    font-weight: 400 !important;
+    transition: border-color 140ms ease, box-shadow 140ms ease,
+      background-color 140ms ease;
+  }
+
+  #torrents .search-form input::placeholder,
+  #torrents .search-form textarea::placeholder {
+    color: #8f9890 !important;
+    opacity: 1;
+  }
+
+  #torrents .search-form input:not([type="checkbox"]):not([type="radio"]):hover,
+  #torrents .search-form select:hover,
+  #torrents .search-form textarea:hover {
+    border-color: rgba(72, 211, 189, 0.36) !important;
+    background: #060808 !important;
+  }
+
+  #torrents .search-form input:not([type="checkbox"]):not([type="radio"]):focus,
+  #torrents .search-form select:focus,
+  #torrents .search-form textarea:focus {
+    border-color: var(--ptp-teal) !important;
+    background: #050808 !important;
+    box-shadow: 0 0 0 3px rgba(72, 211, 189, 0.15) !important;
+  }
+
+  #torrents .search-form input[type="checkbox"],
+  #torrents .search-form input[type="radio"] {
+    width: 18px !important;
+    height: 18px !important;
+    margin: 0 5px 0 0 !important;
+    accent-color: var(--ptp-teal);
+    vertical-align: -4px;
+  }
+
+  #torrents .search-form label {
+    color: #dfe4de !important;
+    font-size: 0.84rem !important;
+    font-weight: 600 !important;
+  }
+
+  #torrents .search-form__footer,
+  #torrents .generic-form__footer {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 14px;
+    padding-top: 14px !important;
+    border: 0 !important;
+  }
+
+  #torrents .search-form__footer__results {
+    float: none !important;
+    color: var(--ptp-muted) !important;
+    font-size: 0.82rem;
+  }
+
+  #torrents .search-form input[type="submit"],
+  #torrents .search-form input[type="reset"],
+  #torrents .search-form button {
+    min-height: 38px !important;
+    padding: 8px 14px !important;
+    border-radius: 7px !important;
+    font-size: 0.82rem !important;
+    font-weight: 700 !important;
+  }
+}
