@@ -7092,16 +7092,16 @@ table.torrent_table > tbody > tr:last-child > :last-child {
   }
 }
 
-/* The browse list has no visible sidebar, so let its main column use the page. */
-@media (min-width: 1280px) {
-  #torrents .main-column:has(:is(table.basic-movie-list, .table.basic-movie-list)) {
-    flex: 0 0 100% !important;
+/* Browse results live in #torrents-movie-view rather than .main-column. */
+@media (min-width: 992px) {
+  #torrents-movie-view:has(:is(table.basic-movie-list, .table.basic-movie-list)) {
     width: 100% !important;
     max-width: 100% !important;
+    margin-left: 0 !important;
     margin-right: 0 !important;
   }
 
-  #torrents .main-column:has(:is(table.basic-movie-list, .table.basic-movie-list))
+  #torrents-movie-view:has(:is(table.basic-movie-list, .table.basic-movie-list))
     :is(table.basic-movie-list, .table.basic-movie-list) {
     width: 100% !important;
     max-width: 100% !important;
