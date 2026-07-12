@@ -7042,3 +7042,11 @@ table.torrent_table > tbody > tr:last-child > :last-child {
   font-size: 1.1rem;
   transform: translateY(3px);
 }
+
+/* Keep forum tables aligned to the content edge with a calmer right gutter. */
+@media (min-width: 1280px) {
+  #forums :is(table.table, .table) {
+    width: calc(100% - 48px) !important;
+    margin-right: 48px !important;
+  }
+}
