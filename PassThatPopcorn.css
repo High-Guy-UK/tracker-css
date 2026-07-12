@@ -7107,3 +7107,8 @@ table.torrent_table > tbody > tr:last-child > :last-child {
   margin-left: 0 !important;
   margin-right: 0 !important;
 }
+
+/* Forum avatars sit beside the post body without a vertical divider. */
+.forum-post__avatar {
+  border-right: 0 !important;
+}
