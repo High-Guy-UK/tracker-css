@@ -7083,3 +7083,13 @@ table.torrent_table > tbody > tr:last-child > :last-child {
     margin-right: 80px !important;
   }
 }
+
+/* The browse result list is distinct from the movie-detail torrent table. */
+@media (min-width: 1280px) {
+  #torrents :is(table.basic-movie-list, .table.basic-movie-list) {
+    width: calc(100% - 80px) !important;
+    max-width: calc(100% - 80px) !important;
+    margin-left: 0 !important;
+    margin-right: 80px !important;
+  }
+}
