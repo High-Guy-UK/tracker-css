@@ -6907,22 +6907,24 @@ table.torrent_table > tbody > tr:last-child > :last-child {
   #torrents:not(:has(.sidebar)) .main-column {
     width: auto !important;
     max-width: none !important;
-    margin-right: 80px !important;
+    margin-right: 0 !important;
     overflow: visible !important;
   }
 
   #torrents:not(:has(.sidebar)) .main-column > table,
   #torrents:not(:has(.sidebar)) .main-column > .table,
   #torrents:not(:has(.sidebar)) .main-column > .torrent_table {
-    width: 100% !important;
-    max-width: 100% !important;
+    width: calc(100% - 80px) !important;
+    max-width: calc(100% - 80px) !important;
+    margin-left: 0 !important;
+    margin-right: 80px !important;
   }
 
   #torrents:not(:has(.sidebar)) :is(table.basic-movie-list, .table.basic-movie-list, table.torrent_table) {
-    width: 100% !important;
-    max-width: 100% !important;
+    width: calc(100% - 80px) !important;
+    max-width: calc(100% - 80px) !important;
     margin-left: 0 !important;
-    margin-right: 0 !important;
+    margin-right: 80px !important;
   }
 }
 
