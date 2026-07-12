@@ -7093,19 +7093,17 @@ table.torrent_table > tbody > tr:last-child > :last-child {
 }
 
 /* Browse results live in #torrents-movie-view rather than .main-column. */
-@media (min-width: 992px) {
-  #torrents-movie-view:has(:is(table.basic-movie-list, .table.basic-movie-list)) {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
+#torrents-movie-view:has(:is(table.basic-movie-list, .table.basic-movie-list)) {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
 
-  #torrents-movie-view:has(:is(table.basic-movie-list, .table.basic-movie-list))
-    :is(table.basic-movie-list, .table.basic-movie-list) {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
+#torrents-movie-view:has(:is(table.basic-movie-list, .table.basic-movie-list))
+  :is(table.basic-movie-list, .table.basic-movie-list) {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
