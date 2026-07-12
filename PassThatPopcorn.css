@@ -6641,3 +6641,26 @@ table.torrent_table > tbody > tr:last-child > :last-child {
     z-index: 2;
   }
 }
+
+/* Keep the full label rail visible while editing; clear only the active row. */
+@media (min-width: 1280px) {
+  .search-bar__list:focus-within::before {
+    opacity: 1;
+  }
+
+  .search-bar__search-field:focus-within::after {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    content: "";
+    background: #000;
+    pointer-events: none;
+  }
+
+  .search-bar input,
+  .search-bar select,
+  .search-bar button,
+  .search-bar__search-field__input {
+    z-index: 3;
+  }
+}
