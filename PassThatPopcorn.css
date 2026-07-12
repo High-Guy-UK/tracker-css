@@ -7040,4 +7040,5 @@ table.torrent_table > tbody > tr:last-child > :last-child {
 #forums td[class*="forum-topic--is-read"]::before,
 #forums td[class*="forum-topic--is-unread"]::before {
   font-size: 1.1rem;
+  transform: translateY(3px);
 }
