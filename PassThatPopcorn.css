@@ -6894,3 +6894,75 @@ table.torrent_table > tbody > tr:last-child > :last-child {
     margin-right: 0 !important;
   }
 }
+
+/* Main forum list: replace the legacy grid badges with clear read state ticks. */
+#forums td:has(.forum-topic--is-read),
+#forums td:has(.forum-topic--is-read-locked-sticky),
+#forums td:has(.forum-topic--is-read-sticky),
+#forums td:has(.forum-topic--is-read-locked),
+#forums td:has(img[src*="forums/locked_read"]),
+#forums td:has(.forum-topic--is-unread),
+#forums td:has(.forum-topic--is-unread-locked-sticky),
+#forums td:has(.forum-topic--is-unread-sticky),
+#forums td:has(.forum-topic--is-unread-locked) {
+  width: 42px !important;
+  min-width: 42px !important;
+  padding: 0 !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+}
+
+#forums td:has(.forum-topic--is-read) :is(.forum-topic--is-read, .forum-topic--is-read-locked-sticky, .forum-topic--is-read-sticky, .forum-topic--is-read-locked),
+#forums td:has(.forum-topic--is-read-locked-sticky) :is(.forum-topic--is-read, .forum-topic--is-read-locked-sticky, .forum-topic--is-read-sticky, .forum-topic--is-read-locked),
+#forums td:has(.forum-topic--is-read-sticky) :is(.forum-topic--is-read, .forum-topic--is-read-locked-sticky, .forum-topic--is-read-sticky, .forum-topic--is-read-locked),
+#forums td:has(.forum-topic--is-read-locked) :is(.forum-topic--is-read, .forum-topic--is-read-locked-sticky, .forum-topic--is-read-sticky, .forum-topic--is-read-locked),
+#forums td:has(img[src*="forums/locked_read"]) img,
+#forums td:has(.forum-topic--is-unread) :is(.forum-topic--is-unread, .forum-topic--is-unread-locked-sticky, .forum-topic--is-unread-sticky, .forum-topic--is-unread-locked),
+#forums td:has(.forum-topic--is-unread-locked-sticky) :is(.forum-topic--is-unread, .forum-topic--is-unread-locked-sticky, .forum-topic--is-unread-sticky, .forum-topic--is-unread-locked),
+#forums td:has(.forum-topic--is-unread-sticky) :is(.forum-topic--is-unread, .forum-topic--is-unread-locked-sticky, .forum-topic--is-unread-sticky, .forum-topic--is-unread-locked),
+#forums td:has(.forum-topic--is-unread-locked) :is(.forum-topic--is-unread, .forum-topic--is-unread-locked-sticky, .forum-topic--is-unread-sticky, .forum-topic--is-unread-locked) {
+  display: none !important;
+}
+
+#forums td:has(.forum-topic--is-read)::before,
+#forums td:has(.forum-topic--is-read-locked-sticky)::before,
+#forums td:has(.forum-topic--is-read-sticky)::before,
+#forums td:has(.forum-topic--is-read-locked)::before,
+#forums td:has(img[src*="forums/locked_read"])::before,
+#forums td.forum-topic--is-read::before,
+#forums td.forum-topic--is-read-locked-sticky::before,
+#forums td.forum-topic--is-read-sticky::before,
+#forums td.forum-topic--is-read-locked::before {
+  color: var(--ptp-green);
+  content: "✓";
+}
+
+#forums td:has(.forum-topic--is-unread)::before,
+#forums td:has(.forum-topic--is-unread-locked-sticky)::before,
+#forums td:has(.forum-topic--is-unread-sticky)::before,
+#forums td:has(.forum-topic--is-unread-locked)::before,
+#forums td.forum-topic--is-unread::before,
+#forums td.forum-topic--is-unread-locked-sticky::before,
+#forums td.forum-topic--is-unread-sticky::before,
+#forums td.forum-topic--is-unread-locked::before {
+  color: var(--ptp-red);
+  content: "✓";
+}
+
+#forums td:has(.forum-topic--is-read)::before,
+#forums td:has(.forum-topic--is-read-locked-sticky)::before,
+#forums td:has(.forum-topic--is-read-sticky)::before,
+#forums td:has(.forum-topic--is-read-locked)::before,
+#forums td:has(img[src*="forums/locked_read"])::before,
+#forums td:has(.forum-topic--is-unread)::before,
+#forums td:has(.forum-topic--is-unread-locked-sticky)::before,
+#forums td:has(.forum-topic--is-unread-sticky)::before,
+#forums td:has(.forum-topic--is-unread-locked)::before,
+#forums td[class*="forum-topic--is-read"]::before,
+#forums td[class*="forum-topic--is-unread"]::before {
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  font-size: 1.35rem;
+  font-weight: 900;
+  line-height: 1;
+}
