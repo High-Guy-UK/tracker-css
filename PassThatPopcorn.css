@@ -6664,3 +6664,35 @@ table.torrent_table > tbody > tr:last-child > :last-child {
     z-index: 3;
   }
 }
+
+/* Put the consistent rail labels above PTP's own inconsistent placeholders. */
+@media (min-width: 1280px) {
+  .search-bar input::placeholder,
+  .search-bar input::-webkit-input-placeholder,
+  .search-bar input::-moz-placeholder {
+    color: transparent !important;
+    opacity: 0 !important;
+  }
+
+  .search-bar__list::before {
+    z-index: 4;
+    width: calc(100% - 20px);
+    text-align: left !important;
+  }
+
+  .search-bar__list > * {
+    position: relative !important;
+  }
+
+  .search-bar__list > *:focus-within::after,
+  .search-bar__search-field:focus-within::after {
+    z-index: 5;
+  }
+
+  .search-bar input,
+  .search-bar select,
+  .search-bar button,
+  .search-bar__search-field__input {
+    z-index: 6;
+  }
+}
