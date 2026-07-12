@@ -6869,3 +6869,28 @@ table.torrent_table > tbody > tr:last-child > :last-child {
     color: var(--ptp-faint) !important;
   }
 }
+
+/* The browse page reserves a dormant right rail. Reclaim most of it for the
+   results surface while retaining a comfortable edge gutter. */
+@media (min-width: 1280px) {
+  #torrents:not(:has(#torrents-movie-view)) .main-column {
+    width: auto !important;
+    max-width: none !important;
+    margin-right: 120px !important;
+    overflow: visible !important;
+  }
+
+  #torrents:not(:has(#torrents-movie-view)) .main-column > table,
+  #torrents:not(:has(#torrents-movie-view)) .main-column > .table,
+  #torrents:not(:has(#torrents-movie-view)) .main-column > .torrent_table {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  #torrents:not(:has(#torrents-movie-view)) :is(table.basic-movie-list, .table.basic-movie-list, table.torrent_table) {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
