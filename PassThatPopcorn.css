@@ -6914,17 +6914,17 @@ table.torrent_table > tbody > tr:last-child > :last-child {
   #torrents:not(:has(.sidebar)) .main-column > table,
   #torrents:not(:has(.sidebar)) .main-column > .table,
   #torrents:not(:has(.sidebar)) .main-column > .torrent_table {
-    width: calc(100% - 80px) !important;
-    max-width: calc(100% - 80px) !important;
+    width: 100% !important;
+    max-width: 100% !important;
     margin-left: 0 !important;
-    margin-right: 80px !important;
+    margin-right: 0 !important;
   }
 
   #torrents:not(:has(.sidebar)) :is(table.basic-movie-list, .table.basic-movie-list, table.torrent_table) {
-    width: calc(100% - 80px) !important;
-    max-width: calc(100% - 80px) !important;
+    width: 100% !important;
+    max-width: 100% !important;
     margin-left: 0 !important;
-    margin-right: 80px !important;
+    margin-right: 0 !important;
   }
 }
 
@@ -7084,23 +7084,10 @@ table.torrent_table > tbody > tr:last-child > :last-child {
   }
 }
 
-/* The browse result list is distinct from the movie-detail torrent table. */
+/* Reserve the same right gutter for every torrents.php view. */
 @media (min-width: 1280px) {
-  #torrents :is(table.basic-movie-list, .table.basic-movie-list) {
-    width: calc(100% - 80px) !important;
-    max-width: calc(100% - 80px) !important;
-    margin-left: 0 !important;
-    margin-right: 80px !important;
-  }
-}
-
-/* Keep the movie-detail columns together while reserving the shared gutter. */
-@media (min-width: 1280px) {
-  #torrents-movie-view {
+  #torrents {
     box-sizing: border-box !important;
-    width: calc(100% - 80px) !important;
-    max-width: none !important;
-    margin-left: 0 !important;
-    margin-right: 80px !important;
+    padding-right: calc(26px + 80px) !important;
   }
 }
