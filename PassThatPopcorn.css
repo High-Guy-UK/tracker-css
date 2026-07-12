@@ -6583,3 +6583,19 @@ table.torrent_table > tbody > tr:last-child > :last-child {
 .last5-movies__show-all-row {
   background: #000 !important;
 }
+
+/* Some tracker search inputs have no native placeholder. They must not match
+   the typed-state rule while empty, otherwise their label is hidden forever. */
+@media (min-width: 1280px) {
+  .search-bar__search-field:has(input:not(:placeholder-shown))::before {
+    opacity: 1;
+  }
+
+  .search-bar__search-field:has(input[placeholder]):has(input:not(:placeholder-shown))::before {
+    opacity: 0;
+  }
+
+  .search-bar__search-field:focus-within:has(input:not([placeholder]))::before {
+    opacity: 0;
+  }
+}
