@@ -6799,3 +6799,73 @@ table.torrent_table > tbody > tr:last-child > :last-child {
     font-weight: 700 !important;
   }
 }
+
+/* Browse results: use more of the widescreen canvas without changing the
+   movie-detail page's two-column layout. */
+@media (min-width: 1280px) {
+  #torrents:not(:has(#torrents-movie-view)) {
+    --ptp-browse-table-bleed: clamp(26px, 3vw, 60px);
+  }
+
+  #torrents:not(:has(#torrents-movie-view)) :is(table.basic-movie-list, .table.basic-movie-list, table.torrent_table) {
+    width: calc(100% + var(--ptp-browse-table-bleed) + var(--ptp-browse-table-bleed)) !important;
+    max-width: calc(100vw - var(--ptp-rail) - 48px) !important;
+    margin-left: calc(0px - var(--ptp-browse-table-bleed)) !important;
+    margin-right: calc(0px - var(--ptp-browse-table-bleed)) !important;
+    border-color: rgba(72, 211, 189, 0.2) !important;
+    border-radius: 9px !important;
+  }
+
+  #torrents:not(:has(#torrents-movie-view)) .basic-movie-list > thead > tr {
+    background: #141a1a !important;
+  }
+
+  #torrents:not(:has(#torrents-movie-view)) .basic-movie-list > thead > tr > th {
+    padding: 11px 14px !important;
+    border-color: rgba(72, 211, 189, 0.16) !important;
+    color: #eef3ed !important;
+    font-size: 0.74rem !important;
+  }
+
+  #torrents:not(:has(#torrents-movie-view)) .basic-movie-list > tbody > tr {
+    background: #0c1010 !important;
+  }
+
+  #torrents:not(:has(#torrents-movie-view)) .basic-movie-list > tbody > tr:nth-child(even) {
+    background: #101515 !important;
+  }
+
+  #torrents:not(:has(#torrents-movie-view)) .basic-movie-list > tbody > tr:hover {
+    background: #172020 !important;
+  }
+
+  #torrents:not(:has(#torrents-movie-view)) .basic-movie-list > tbody > tr > td,
+  #torrents:not(:has(#torrents-movie-view)) .basic-movie-list > tbody > tr > th {
+    padding: 12px 14px !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+    vertical-align: top !important;
+  }
+
+  #torrents:not(:has(#torrents-movie-view)) .basic-movie-list__movie__cover {
+    width: 132px !important;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+  }
+
+  #torrents:not(:has(#torrents-movie-view)) .basic-movie-list__movie__title {
+    color: #f5f7f3 !important;
+    font-size: 0.96rem !important;
+    line-height: 1.35;
+  }
+
+  #torrents:not(:has(#torrents-movie-view)) .basic-movie-list__movie__rating-container {
+    padding: 3px 6px !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 5px !important;
+    background: #1c2424 !important;
+  }
+
+  #torrents:not(:has(#torrents-movie-view)) .basic-movie-list__movie__bookmark {
+    color: var(--ptp-faint) !important;
+  }
+}
