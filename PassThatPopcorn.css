@@ -7142,3 +7142,91 @@ table.torrent_table > tbody > tr:last-child > :last-child {
   box-shadow: inset 0 -2px #fff !important;
   color: #fff !important;
 }
+
+/* Torrent status pills: compact OLED badges with a restrained idle pulse. */
+.torrent-info__trumpable,
+.torrent-info__reported {
+  display: inline-block;
+  padding: 0.16rem 0.46rem !important;
+  border: 1px solid rgba(var(--ptp-pill-rgb), 0.28) !important;
+  border-radius: 5px !important;
+  background: rgba(var(--ptp-pill-rgb), 0.1) !important;
+  color: var(--ptp-pill-color) !important;
+  font-size: 0.64rem !important;
+  font-weight: 700 !important;
+  line-height: 1.2;
+  box-shadow: inset 0 0 0 1px rgba(var(--ptp-pill-rgb), 0.05);
+  transition:
+    transform 180ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    background-color 180ms ease,
+    box-shadow 180ms ease !important;
+  animation: ptp-torrent-pill-glow 3.8s ease-in-out infinite;
+}
+
+.torrent-info__trumpable {
+  --ptp-pill-rgb: 231, 191, 103;
+  --ptp-pill-color: #f0ca76;
+}
+
+.torrent-info__reported {
+  --ptp-pill-rgb: 255, 91, 79;
+  --ptp-pill-color: #ff857d;
+}
+
+.torrent-info__trumpable:hover,
+.torrent-info__reported:hover {
+  background: rgba(var(--ptp-pill-rgb), 0.17) !important;
+  transform: translateY(-1px);
+}
+
+@keyframes ptp-torrent-pill-glow {
+  0%,
+  100% {
+    box-shadow:
+      inset 0 0 0 1px rgba(var(--ptp-pill-rgb), 0.05),
+      0 0 0 rgba(var(--ptp-pill-rgb), 0);
+  }
+
+  50% {
+    box-shadow:
+      inset 0 0 0 1px rgba(var(--ptp-pill-rgb), 0.12),
+      0 0 8px rgba(var(--ptp-pill-rgb), 0.1);
+  }
+}
+
+/* A pointer moving down the rail creates a small, individual text wave. */
+@media (min-width: 1280px) {
+  .main-menu__link,
+  .header:not(:hover):not(:focus-within) .main-menu__link {
+    transition:
+      transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1),
+      color 180ms ease !important;
+    will-change: transform;
+  }
+
+  .main-menu__link::before {
+    display: none !important;
+  }
+
+  .main-menu__link:hover {
+    transform: translateX(5px) !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    color: #fff !important;
+  }
+
+  .main-menu__item--active .main-menu__link,
+  .main-menu__link--active {
+    background: rgba(255, 255, 255, 0.04) !important;
+    box-shadow: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .torrent-info__trumpable,
+  .torrent-info__reported,
+  .main-menu__link {
+    animation: none !important;
+    transition: none !important;
+  }
+}
