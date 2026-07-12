@@ -7091,3 +7091,21 @@ table.torrent_table > tbody > tr:last-child > :last-child {
     padding-right: calc(26px + 80px) !important;
   }
 }
+
+/* The browse list has no visible sidebar, so let its main column use the page. */
+@media (min-width: 1280px) {
+  #torrents .main-column:has(:is(table.basic-movie-list, .table.basic-movie-list)) {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-right: 0 !important;
+  }
+
+  #torrents .main-column:has(:is(table.basic-movie-list, .table.basic-movie-list))
+    :is(table.basic-movie-list, .table.basic-movie-list) {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
