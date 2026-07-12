@@ -6966,3 +6966,50 @@ table.torrent_table > tbody > tr:last-child > :last-child {
   font-weight: 900;
   line-height: 1;
 }
+
+/* Remove the image-replacement badges completely and pin the tick to centre. */
+#forums td :is(.forum-topic--is-read, .forum-topic--is-read-locked-sticky, .forum-topic--is-read-sticky, .forum-topic--is-read-locked, .forum-topic--is-unread, .forum-topic--is-unread-locked-sticky, .forum-topic--is-unread-sticky, .forum-topic--is-unread-locked),
+#forums td > img[src*="static/forums/"],
+#forums td > img[title="Unread"],
+#forums td > img[title="Read"],
+#forums td > img[alt="Unread"],
+#forums td > img[alt="Read"] {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  padding: 0 !important;
+  background: none !important;
+  background-image: none !important;
+}
+
+#forums td:is(.forum-topic--is-read, .forum-topic--is-read-locked-sticky, .forum-topic--is-read-sticky, .forum-topic--is-read-locked, .forum-topic--is-unread, .forum-topic--is-unread-locked-sticky, .forum-topic--is-unread-sticky, .forum-topic--is-unread-locked),
+#forums td:has(.forum-topic--is-read),
+#forums td:has(.forum-topic--is-read-locked-sticky),
+#forums td:has(.forum-topic--is-read-sticky),
+#forums td:has(.forum-topic--is-read-locked),
+#forums td:has(.forum-topic--is-unread),
+#forums td:has(.forum-topic--is-unread-locked-sticky),
+#forums td:has(.forum-topic--is-unread-sticky),
+#forums td:has(.forum-topic--is-unread-locked) {
+  position: relative !important;
+  background-image: none !important;
+}
+
+#forums td:has(.forum-topic--is-read)::before,
+#forums td:has(.forum-topic--is-read-locked-sticky)::before,
+#forums td:has(.forum-topic--is-read-sticky)::before,
+#forums td:has(.forum-topic--is-read-locked)::before,
+#forums td:has(img[src*="forums/locked_read"])::before,
+#forums td:has(.forum-topic--is-unread)::before,
+#forums td:has(.forum-topic--is-unread-locked-sticky)::before,
+#forums td:has(.forum-topic--is-unread-sticky)::before,
+#forums td:has(.forum-topic--is-unread-locked)::before,
+#forums td[class*="forum-topic--is-read"]::before,
+#forums td[class*="forum-topic--is-unread"]::before {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
