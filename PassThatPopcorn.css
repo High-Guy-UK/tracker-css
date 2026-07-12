@@ -7013,3 +7013,31 @@ table.torrent_table > tbody > tr:last-child > :last-child {
   justify-content: center;
   margin: 0;
 }
+
+/* Keep the status column clean: one table edge, no boxed icon well. */
+#forums td:is(.forum-topic--is-read, .forum-topic--is-read-locked-sticky, .forum-topic--is-read-sticky, .forum-topic--is-read-locked, .forum-topic--is-unread, .forum-topic--is-unread-locked-sticky, .forum-topic--is-unread-sticky, .forum-topic--is-unread-locked),
+#forums td:has(.forum-topic--is-read),
+#forums td:has(.forum-topic--is-read-locked-sticky),
+#forums td:has(.forum-topic--is-read-sticky),
+#forums td:has(.forum-topic--is-read-locked),
+#forums td:has(.forum-topic--is-unread),
+#forums td:has(.forum-topic--is-unread-locked-sticky),
+#forums td:has(.forum-topic--is-unread-sticky),
+#forums td:has(.forum-topic--is-unread-locked) {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+#forums td:has(.forum-topic--is-read)::before,
+#forums td:has(.forum-topic--is-read-locked-sticky)::before,
+#forums td:has(.forum-topic--is-read-sticky)::before,
+#forums td:has(.forum-topic--is-read-locked)::before,
+#forums td:has(img[src*="forums/locked_read"])::before,
+#forums td:has(.forum-topic--is-unread)::before,
+#forums td:has(.forum-topic--is-unread-locked-sticky)::before,
+#forums td:has(.forum-topic--is-unread-sticky)::before,
+#forums td:has(.forum-topic--is-unread-locked)::before,
+#forums td[class*="forum-topic--is-read"]::before,
+#forums td[class*="forum-topic--is-unread"]::before {
+  font-size: 1.1rem;
+}
