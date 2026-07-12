@@ -7093,3 +7093,14 @@ table.torrent_table > tbody > tr:last-child > :last-child {
     margin-right: 80px !important;
   }
 }
+
+/* Keep the movie-detail columns together while reserving the shared gutter. */
+@media (min-width: 1280px) {
+  #torrents-movie-view {
+    box-sizing: border-box !important;
+    width: calc(100% - 80px) !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 80px !important;
+  }
+}
