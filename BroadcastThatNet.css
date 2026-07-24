@@ -2565,3 +2565,492 @@ table tr:hover{
     background:var(--dash-sidebar-soft) !important;
   }
 }
+
+/* ==========================================================================
+   Dashboard tidy pass
+   Cleaner edges, sharper typography, restored sidebar flow.
+   ========================================================================== */
+
+:root{
+  --dash-bg:#0c1213;
+  --dash-sidebar:#0b1112;
+  --dash-sidebar-soft:#101819;
+  --dash-panel:#121a1b;
+  --dash-panel-alt:#162021;
+  --dash-panel-muted:#1a2527;
+  --dash-panel-raised:#0f1718;
+  --dash-border:#263638;
+  --dash-border-soft:rgba(221,235,231,0.10);
+  --dash-border-hairline:rgba(221,235,231,0.075);
+  --dash-text:#f2f6f4;
+  --dash-text-soft:#c6d0cc;
+  --dash-text-muted:#8d9b96;
+  --dash-accent:#5ce1d2;
+  --dash-accent-2:#8ee86f;
+  --dash-accent-3:#ff8652;
+  --dash-danger:#ed5550;
+  --dash-danger-hover:#ff6861;
+  --dash-warning:#e4bc62;
+  --dash-radius:8px;
+  --dash-radius-sm:6px;
+  --dash-rail:304px;
+  --dash-topbar:52px;
+  --dash-page-gap:34px;
+}
+
+body{
+  font-family:"Inter","Aptos","Segoe UI Variable","Segoe UI",Roboto,Arial,sans-serif !important;
+  font-size:15px !important;
+  font-weight:350 !important;
+  line-height:1.5 !important;
+  color:var(--dash-text-soft) !important;
+  background:var(--dash-bg) !important;
+}
+
+h1,
+h2,
+h3,
+.head,
+.box .head,
+.colhead,
+.colhead_dark,
+thead th,
+thead td,
+table tr:first-child td{
+  color:var(--dash-text) !important;
+  font-weight:780 !important;
+  letter-spacing:-0.01em !important;
+}
+
+a{
+  color:var(--dash-text-soft) !important;
+  font-weight:520;
+}
+
+a:hover{
+  color:var(--dash-accent) !important;
+}
+
+#content,
+.box,
+.forum_post,
+#slider,
+.filter_torrents,
+#forums .thin>form>table,
+body>.ui-widget-content{
+  border:1px solid var(--dash-border) !important;
+  border-radius:var(--dash-radius) !important;
+  background:var(--dash-panel) !important;
+  box-shadow:none !important;
+}
+
+#content{
+  padding:34px 36px !important;
+}
+
+.box{
+  padding:18px !important;
+}
+
+.box .head,
+#slider h2,
+.colhead,
+.colhead_dark,
+thead tr,
+table tr:first-child{
+  background:var(--dash-panel-raised) !important;
+  border-color:var(--dash-border-hairline) !important;
+}
+
+.box .head{
+  margin:0 0 14px !important;
+  padding:0 0 11px !important;
+  font-size:.94rem !important;
+}
+
+table{
+  color:var(--dash-text-soft) !important;
+}
+
+td,
+th{
+  border-color:var(--dash-border-hairline) !important;
+}
+
+#top10 table td,
+#torrents #content>.thin>table td,
+#torrents #content .thin #upload_table td,
+#torrents #content .thin+.thin table td,
+#showslist table td,
+#serieslist table td,
+#snatchlist table td,
+#userhistory table td,
+#friends table td,
+#inbox table td,
+#user table td,
+#bonus table td,
+#staff table td,
+#staffpm table td,
+#rules table td,
+#recommend table td,
+#forums .thin>table td,
+#forums .thin>form>table td,
+#requests table td,
+#collages table td,
+#nfo table td,
+#unofficial table td,
+#series .main_column table:not(.torrent_table) td,
+#content:has(.main_column>table#discog_table) .main_column table:not(.torrent_table) td,
+#series .sidebar .stats table td,
+#content:has(.main_column>table#discog_table) .sidebar .stats table td,
+#series .sidebar .box form table td,
+#content:has(.main_column>table#discog_table) .sidebar .box form table td,
+#series #content>.thin>table td,
+#content:has(.main_column>table#discog_table) #content>.thin>table td,
+#tvfavs table td,
+#tvnews table td,
+#newsletter table td,
+#upload table td,
+.filter_torrents table td,
+.torrent_table table td,
+.torrent_table td{
+  padding:10px 13px !important;
+}
+
+.filter_torrents,
+#forums .thin>form>table{
+  width:min(100%,1240px) !important;
+  padding:0 !important;
+  overflow:hidden !important;
+}
+
+.filter_torrents h3,
+#forums .thin>form>table h3{
+  margin:0 !important;
+  padding:14px 16px !important;
+  border-bottom:1px solid var(--dash-border) !important;
+  background:var(--dash-panel-raised) !important;
+  font-size:1rem !important;
+}
+
+.filter_torrents table:not(#taglist),
+#forums .thin>form>table table:not(#taglist){
+  margin:0 !important;
+}
+
+.filter_torrents table tr,
+#forums .thin>form>table table:not(#taglist) tr{
+  background:var(--dash-panel) !important;
+}
+
+.filter_torrents table tr:nth-child(odd),
+#forums .thin>form>table table:not(#taglist) tr:nth-child(odd){
+  background:var(--dash-panel-alt) !important;
+}
+
+.filter_torrents .cat_list td,
+.filter_torrents #taglist td,
+#forums .thin>form>table .cat_list td,
+#forums .thin>form>table #taglist td{
+  padding:6px !important;
+}
+
+.filter_torrents .cat_list td:not(:first-child),
+.filter_torrents #taglist td:not(:first-child),
+#forums .thin>form>table .cat_list td:not(:first-child),
+#forums .thin>form>table #taglist td:not(:first-child){
+  border:0 !important;
+  background:transparent !important;
+}
+
+.filter_torrents .cat_list label,
+.filter_torrents #taglist label,
+#forums .thin>form>table .cat_list label,
+#forums .thin>form>table #taglist label{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  min-height:34px !important;
+  padding:7px 10px !important;
+  border:1px solid var(--dash-border) !important;
+  border-radius:var(--dash-radius-sm) !important;
+  background:#101718 !important;
+  color:var(--dash-text-muted) !important;
+  font-weight:420 !important;
+}
+
+.filter_torrents .cat_list td:not(:first-child):not(:has(label)),
+.filter_torrents #taglist td:not(:first-child):not(:has(label)),
+#forums .thin>form>table .cat_list td:not(:first-child):not(:has(label)),
+#forums .thin>form>table #taglist td:not(:first-child):not(:has(label)){
+  min-height:34px !important;
+  padding:7px 10px !important;
+  border:1px solid var(--dash-border) !important;
+  border-radius:var(--dash-radius-sm) !important;
+  background:#101718 !important;
+  color:var(--dash-text-muted) !important;
+  text-align:center !important;
+}
+
+.filter_torrents .cat_list td:first-child,
+.filter_torrents #taglist td:first-child,
+#forums .thin>form>table .cat_list td:first-child,
+#forums .thin>form>table #taglist td:first-child{
+  color:var(--dash-text-soft) !important;
+  font-weight:300 !important;
+  font-style:italic !important;
+}
+
+.filter_torrents input[type="checkbox"]:checked+label,
+.filter_torrents input[type="radio"]:checked+label,
+#forums .thin>form>table input[type="checkbox"]:checked+label,
+#forums .thin>form>table input[type="radio"]:checked+label{
+  border-color:rgba(92,225,210,0.48) !important;
+  background:rgba(92,225,210,0.12) !important;
+  color:var(--dash-text) !important;
+}
+
+input:not([type="file"]),
+select,
+textarea{
+  min-height:36px !important;
+  border:1px solid var(--dash-border) !important;
+  border-radius:var(--dash-radius-sm) !important;
+  background:#080d0e !important;
+  color:var(--dash-text) !important;
+  font-weight:360 !important;
+}
+
+input:not([type="checkbox"]):not([type="radio"]),
+select{
+  padding:7px 10px !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+  border-color:var(--dash-accent) !important;
+  box-shadow:0 0 0 3px rgba(92,225,210,0.11) !important;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"]{
+  min-height:36px !important;
+  padding:8px 13px !important;
+  border-radius:var(--dash-radius-sm) !important;
+  background:var(--dash-danger) !important;
+  font-weight:760 !important;
+  box-shadow:none !important;
+}
+
+.forum_post{
+  height:auto !important;
+  overflow:hidden !important;
+  border:1px solid var(--dash-border) !important;
+  border-radius:var(--dash-radius) !important;
+  background:var(--dash-panel) !important;
+  box-shadow:none !important;
+}
+
+.forum_post+.forum_post{
+  margin-top:14px !important;
+}
+
+.forum_post tbody tr:nth-of-type(1) td{
+  padding:11px 14px !important;
+  border-bottom:1px solid var(--dash-border) !important;
+  background:var(--dash-panel-raised) !important;
+  color:var(--dash-text) !important;
+  font-size:.88rem !important;
+  font-weight:650 !important;
+}
+
+.forum_post tbody tr:nth-of-type(1) td span{
+  max-width:100% !important;
+}
+
+.forum_post tbody tr:nth-of-type(2) .avatar{
+  width:168px !important;
+  padding:14px !important;
+  border-right:1px solid var(--dash-border-hairline) !important;
+  background:var(--dash-panel-alt) !important;
+}
+
+.forum_post tbody tr:nth-of-type(2) .body{
+  border:0 !important;
+  padding:18px !important;
+  background:var(--dash-panel) !important;
+}
+
+.forum_post tbody tr:nth-of-type(2) .body .postcontent{
+  max-width:none !important;
+}
+
+.forum_post tbody tr:nth-of-type(2) .body .signature{
+  border-top:1px solid var(--dash-border-hairline) !important;
+  color:var(--dash-text-muted) !important;
+  opacity:1 !important;
+}
+
+.bbcode-btntoolbar,
+#quickpostform #quickreplytext .bbcode-btntoolbar{
+  padding:6px 0 !important;
+}
+
+#quickpostform #quickreplytext .bbcode-btntoolbar .bbcode-btn,
+#quickpostform #quickreplytext .bbcode-btntoolbar .bbcode-btnhover{
+  margin:0 6px 8px 0 !important;
+  opacity:.72 !important;
+}
+
+@media (min-width:1280px){
+  body{
+    padding:calc(var(--dash-topbar) + 34px) 32px 42px calc(var(--dash-rail) + 42px) !important;
+  }
+
+  #header{
+    padding:18px !important;
+    background:var(--dash-sidebar) !important;
+  }
+
+  #logo{
+    order:1 !important;
+    margin:0 0 28px !important;
+    padding:2px 0 0 !important;
+  }
+
+  #logo a{
+    display:block !important;
+    width:100% !important;
+    min-height:56px !important;
+    line-height:1 !important;
+  }
+
+  #logo a::before{
+    display:block !important;
+    content:"BTN";
+    width:auto !important;
+    height:auto !important;
+    margin:0 0 6px !important;
+    background:linear-gradient(135deg,var(--dash-accent-3),var(--dash-warning) 36%,var(--dash-accent-2) 68%,var(--dash-accent)) !important;
+    -webkit-background-clip:text !important;
+    background-clip:text !important;
+    -webkit-text-fill-color:transparent !important;
+    color:transparent !important;
+    font-family:"Arial Black","Segoe UI Black",Impact,sans-serif !important;
+    font-size:2.6rem !important;
+    font-weight:900 !important;
+    letter-spacing:-0.08em !important;
+    filter:none !important;
+  }
+
+  #logo a::after{
+    content:"BROADCAST THE NET" !important;
+    display:block !important;
+    background:none !important;
+    -webkit-text-fill-color:var(--dash-text) !important;
+    color:var(--dash-text) !important;
+    font-family:"Inter","Aptos","Segoe UI",Arial,sans-serif !important;
+    font-size:.78rem !important;
+    font-weight:820 !important;
+    letter-spacing:.16em !important;
+    text-transform:uppercase !important;
+  }
+
+  #menu{
+    order:2 !important;
+  }
+
+  #menu>ul{
+    gap:5px !important;
+  }
+
+  #menu>ul>li>a{
+    min-height:40px !important;
+    padding:9px 11px !important;
+    border-radius:7px !important;
+    font-size:.92rem !important;
+    font-weight:680 !important;
+  }
+
+  #menu>ul>li>a::before{
+    display:none !important;
+  }
+
+  #menu>ul>li>a:hover,
+  #menu>ul>li:hover>a{
+    background:var(--dash-sidebar-soft) !important;
+  }
+
+  .alertbar{
+    order:3 !important;
+    margin:18px 0 0 !important;
+    padding:11px 12px !important;
+    border-color:rgba(228,188,98,0.28) !important;
+    background:rgba(228,188,98,0.09) !important;
+  }
+
+  #searchbars{
+    order:10 !important;
+    margin-top:auto !important;
+    padding:12px !important;
+    background:var(--dash-sidebar-soft) !important;
+  }
+
+  #searchbars ul{
+    gap:8px !important;
+  }
+
+  #searchbars input{
+    min-height:38px !important;
+  }
+
+  #donation{
+    order:11 !important;
+    margin:12px 0 0 !important;
+    padding:9px 10px !important;
+  }
+
+  #userinfo{
+    height:var(--dash-topbar) !important;
+    min-height:var(--dash-topbar) !important;
+    padding:7px 28px !important;
+    background:rgba(11,17,18,0.98) !important;
+    box-shadow:none !important;
+  }
+
+  #userinfo a{
+    min-height:28px !important;
+    padding:4px 8px !important;
+    font-size:.84rem !important;
+    font-weight:680 !important;
+  }
+
+  #content{
+    padding:32px 36px !important;
+  }
+}
+
+@media (max-width:1279px){
+  #logo a::before{
+    display:none !important;
+  }
+
+  #logo a::after{
+    content:"BTN  BROADCAST THE NET" !important;
+    font-family:"Inter","Aptos","Segoe UI",Arial,sans-serif !important;
+    font-size:1.35rem !important;
+    font-weight:850 !important;
+    letter-spacing:.03em !important;
+  }
+
+  .alertbar{
+    order:3 !important;
+  }
+
+  #donation{
+    order:11 !important;
+  }
+}
