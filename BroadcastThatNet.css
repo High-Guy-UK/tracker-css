@@ -4530,3 +4530,67 @@ table tr:hover{
 .home .sidebar .box:has(input[type="checkbox"]) input[type="checkbox"]{
   background:transparent !important;
 }
+
+/* Modern torrent type badges for episode/season quality icons. */
+img[src*="episode-hd.png"],
+img[src*="episode-sd.png"],
+img[src*="series-hd.png"],
+img[src*="series-sd.png"],
+img[src*="episode-uhd"],
+img[src*="episode-4k"],
+img[src*="episode-2160"],
+img[src*="series-uhd"],
+img[src*="series-4k"],
+img[src*="series-2160"]{
+  display:inline-block !important;
+  width:76px !important;
+  max-width:76px !important;
+  height:48px !important;
+  object-fit:contain !important;
+  border-radius:12px !important;
+  filter:drop-shadow(0 10px 18px rgba(0,0,0,0.22)) !important;
+  vertical-align:middle !important;
+  transition:transform 160ms ease,filter 160ms ease !important;
+}
+
+tr:hover img[src*="episode-hd.png"],
+tr:hover img[src*="episode-sd.png"],
+tr:hover img[src*="series-hd.png"],
+tr:hover img[src*="series-sd.png"],
+tr:hover img[src*="episode-uhd"],
+tr:hover img[src*="episode-4k"],
+tr:hover img[src*="episode-2160"],
+tr:hover img[src*="series-uhd"],
+tr:hover img[src*="series-4k"],
+tr:hover img[src*="series-2160"]{
+  transform:translateY(-1px) !important;
+  filter:drop-shadow(0 12px 20px rgba(0,0,0,0.28)) !important;
+}
+
+img[src*="episode-hd.png"]{
+  content:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2276%22%20height%3D%2248%22%20viewBox%3D%220%200%2076%2048%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%2355c7ff%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230a84ff%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20x%3D%222%22%20y%3D%222%22%20width%3D%2272%22%20height%3D%2244%22%20rx%3D%2212%22%20fill%3D%22%23111827%22%2F%3E%3Crect%20x%3D%222.5%22%20y%3D%222.5%22%20width%3D%2271%22%20height%3D%2243%22%20rx%3D%2211.5%22%20fill%3D%22none%22%20stroke%3D%22url%28%23g%29%22%20stroke-width%3D%223%22%2F%3E%3Crect%20x%3D%229%22%20y%3D%228%22%20width%3D%2258%22%20height%3D%2223%22%20rx%3D%227%22%20fill%3D%22url%28%23g%29%22%20opacity%3D%22.16%22%2F%3E%3Ctext%20x%3D%2238%22%20y%3D%2228%22%20text-anchor%3D%22middle%22%20font-family%3D%22Inter%2CArial%2Csans-serif%22%20font-size%3D%2222%22%20font-weight%3D%22900%22%20fill%3D%22%2367d4ff%22%3EHD%3C%2Ftext%3E%3Ctext%20x%3D%2238%22%20y%3D%2240%22%20text-anchor%3D%22middle%22%20font-family%3D%22Inter%2CArial%2Csans-serif%22%20font-size%3D%229%22%20font-weight%3D%22800%22%20letter-spacing%3D%221.8%22%20fill%3D%22%2367d4ff%22%3EEPISODE%3C%2Ftext%3E%3C%2Fsvg%3E") !important;
+}
+
+img[src*="episode-sd.png"]{
+  content:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2276%22%20height%3D%2248%22%20viewBox%3D%220%200%2076%2048%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%237dd3fc%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%2364748b%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20x%3D%222%22%20y%3D%222%22%20width%3D%2272%22%20height%3D%2244%22%20rx%3D%2212%22%20fill%3D%22%23111827%22%2F%3E%3Crect%20x%3D%222.5%22%20y%3D%222.5%22%20width%3D%2271%22%20height%3D%2243%22%20rx%3D%2211.5%22%20fill%3D%22none%22%20stroke%3D%22url%28%23g%29%22%20stroke-width%3D%223%22%2F%3E%3Crect%20x%3D%229%22%20y%3D%228%22%20width%3D%2258%22%20height%3D%2223%22%20rx%3D%227%22%20fill%3D%22url%28%23g%29%22%20opacity%3D%22.14%22%2F%3E%3Ctext%20x%3D%2238%22%20y%3D%2228%22%20text-anchor%3D%22middle%22%20font-family%3D%22Inter%2CArial%2Csans-serif%22%20font-size%3D%2222%22%20font-weight%3D%22900%22%20fill%3D%22%239cc6df%22%3ESD%3C%2Ftext%3E%3Ctext%20x%3D%2238%22%20y%3D%2240%22%20text-anchor%3D%22middle%22%20font-family%3D%22Inter%2CArial%2Csans-serif%22%20font-size%3D%229%22%20font-weight%3D%22800%22%20letter-spacing%3D%221.8%22%20fill%3D%22%239cc6df%22%3EEPISODE%3C%2Ftext%3E%3C%2Fsvg%3E") !important;
+}
+
+img[src*="series-hd.png"]{
+  content:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2276%22%20height%3D%2248%22%20viewBox%3D%220%200%2076%2048%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%23ff6b7a%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23ff2d55%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20x%3D%222%22%20y%3D%222%22%20width%3D%2272%22%20height%3D%2244%22%20rx%3D%2212%22%20fill%3D%22%23111827%22%2F%3E%3Crect%20x%3D%222.5%22%20y%3D%222.5%22%20width%3D%2271%22%20height%3D%2243%22%20rx%3D%2211.5%22%20fill%3D%22none%22%20stroke%3D%22url%28%23g%29%22%20stroke-width%3D%223%22%2F%3E%3Crect%20x%3D%229%22%20y%3D%228%22%20width%3D%2258%22%20height%3D%2223%22%20rx%3D%227%22%20fill%3D%22url%28%23g%29%22%20opacity%3D%22.18%22%2F%3E%3Ctext%20x%3D%2238%22%20y%3D%2228%22%20text-anchor%3D%22middle%22%20font-family%3D%22Inter%2CArial%2Csans-serif%22%20font-size%3D%2222%22%20font-weight%3D%22900%22%20fill%3D%22%23ff6b7a%22%3EHD%3C%2Ftext%3E%3Ctext%20x%3D%2238%22%20y%3D%2240%22%20text-anchor%3D%22middle%22%20font-family%3D%22Inter%2CArial%2Csans-serif%22%20font-size%3D%229%22%20font-weight%3D%22800%22%20letter-spacing%3D%221.8%22%20fill%3D%22%23ff6b7a%22%3ESEASON%3C%2Ftext%3E%3C%2Fsvg%3E") !important;
+}
+
+img[src*="series-sd.png"]{
+  content:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2276%22%20height%3D%2248%22%20viewBox%3D%220%200%2076%2048%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%23fb7185%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23b91c1c%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20x%3D%222%22%20y%3D%222%22%20width%3D%2272%22%20height%3D%2244%22%20rx%3D%2212%22%20fill%3D%22%23111827%22%2F%3E%3Crect%20x%3D%222.5%22%20y%3D%222.5%22%20width%3D%2271%22%20height%3D%2243%22%20rx%3D%2211.5%22%20fill%3D%22none%22%20stroke%3D%22url%28%23g%29%22%20stroke-width%3D%223%22%2F%3E%3Crect%20x%3D%229%22%20y%3D%228%22%20width%3D%2258%22%20height%3D%2223%22%20rx%3D%227%22%20fill%3D%22url%28%23g%29%22%20opacity%3D%22.15%22%2F%3E%3Ctext%20x%3D%2238%22%20y%3D%2228%22%20text-anchor%3D%22middle%22%20font-family%3D%22Inter%2CArial%2Csans-serif%22%20font-size%3D%2222%22%20font-weight%3D%22900%22%20fill%3D%22%23fb7185%22%3ESD%3C%2Ftext%3E%3Ctext%20x%3D%2238%22%20y%3D%2240%22%20text-anchor%3D%22middle%22%20font-family%3D%22Inter%2CArial%2Csans-serif%22%20font-size%3D%229%22%20font-weight%3D%22800%22%20letter-spacing%3D%221.8%22%20fill%3D%22%23fb7185%22%3ESEASON%3C%2Ftext%3E%3C%2Fsvg%3E") !important;
+}
+
+img[src*="episode-uhd"],
+img[src*="episode-4k"],
+img[src*="episode-2160"]{
+  content:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2276%22%20height%3D%2248%22%20viewBox%3D%220%200%2076%2048%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%23a78bfa%22%2F%3E%3Cstop%20offset%3D%22.52%22%20stop-color%3D%22%2322d3ee%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%2334d399%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20x%3D%222%22%20y%3D%222%22%20width%3D%2272%22%20height%3D%2244%22%20rx%3D%2212%22%20fill%3D%22%23111827%22%2F%3E%3Crect%20x%3D%222.5%22%20y%3D%222.5%22%20width%3D%2271%22%20height%3D%2243%22%20rx%3D%2211.5%22%20fill%3D%22none%22%20stroke%3D%22url%28%23g%29%22%20stroke-width%3D%223%22%2F%3E%3Crect%20x%3D%229%22%20y%3D%228%22%20width%3D%2258%22%20height%3D%2223%22%20rx%3D%227%22%20fill%3D%22url%28%23g%29%22%20opacity%3D%22.17%22%2F%3E%3Ctext%20x%3D%2238%22%20y%3D%2228%22%20text-anchor%3D%22middle%22%20font-family%3D%22Inter%2CArial%2Csans-serif%22%20font-size%3D%2221%22%20font-weight%3D%22900%22%20fill%3D%22%238eeeff%22%3E4K%3C%2Ftext%3E%3Ctext%20x%3D%2238%22%20y%3D%2240%22%20text-anchor%3D%22middle%22%20font-family%3D%22Inter%2CArial%2Csans-serif%22%20font-size%3D%229%22%20font-weight%3D%22800%22%20letter-spacing%3D%221.8%22%20fill%3D%22%238eeeff%22%3EEPISODE%3C%2Ftext%3E%3C%2Fsvg%3E") !important;
+}
+
+img[src*="series-uhd"],
+img[src*="series-4k"],
+img[src*="series-2160"]{
+  content:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2276%22%20height%3D%2248%22%20viewBox%3D%220%200%2076%2048%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%23c084fc%22%2F%3E%3Cstop%20offset%3D%22.55%22%20stop-color%3D%22%23ff4d8d%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23fb7185%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20x%3D%222%22%20y%3D%222%22%20width%3D%2272%22%20height%3D%2244%22%20rx%3D%2212%22%20fill%3D%22%23111827%22%2F%3E%3Crect%20x%3D%222.5%22%20y%3D%222.5%22%20width%3D%2271%22%20height%3D%2243%22%20rx%3D%2211.5%22%20fill%3D%22none%22%20stroke%3D%22url%28%23g%29%22%20stroke-width%3D%223%22%2F%3E%3Crect%20x%3D%229%22%20y%3D%228%22%20width%3D%2258%22%20height%3D%2223%22%20rx%3D%227%22%20fill%3D%22url%28%23g%29%22%20opacity%3D%22.18%22%2F%3E%3Ctext%20x%3D%2238%22%20y%3D%2228%22%20text-anchor%3D%22middle%22%20font-family%3D%22Inter%2CArial%2Csans-serif%22%20font-size%3D%2221%22%20font-weight%3D%22900%22%20fill%3D%22%23ff8ab3%22%3E4K%3C%2Ftext%3E%3Ctext%20x%3D%2238%22%20y%3D%2240%22%20text-anchor%3D%22middle%22%20font-family%3D%22Inter%2CArial%2Csans-serif%22%20font-size%3D%229%22%20font-weight%3D%22800%22%20letter-spacing%3D%221.8%22%20fill%3D%22%23ff8ab3%22%3ESEASON%3C%2Ftext%3E%3C%2Fsvg%3E") !important;
+}
