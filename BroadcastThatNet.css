@@ -3054,3 +3054,580 @@ input[type="submit"]{
     order:11 !important;
   }
 }
+
+/* ==========================================================================
+   SwiftUI dashboard direction
+   App-style grouped surfaces, SF typography, fine borders and calmer rhythm.
+   ========================================================================== */
+
+:root{
+  --swift-bg:#0e1117;
+  --swift-bg-elevated:#131720;
+  --swift-sidebar:#10141b;
+  --swift-sidebar-2:#151a22;
+  --swift-card:#171c24;
+  --swift-card-2:#1b212a;
+  --swift-fill:#202731;
+  --swift-fill-hover:#252d38;
+  --swift-line:rgba(255,255,255,0.085);
+  --swift-line-strong:rgba(255,255,255,0.14);
+  --swift-text:#f5f7fa;
+  --swift-secondary:#c7cdd6;
+  --swift-tertiary:#8f98a6;
+  --swift-quaternary:#687281;
+  --swift-blue:#0a84ff;
+  --swift-blue-soft:rgba(10,132,255,0.16);
+  --swift-green:#32d74b;
+  --swift-orange:#ff9f0a;
+  --swift-red:#ff453a;
+  --swift-radius:8px;
+  --swift-radius-sm:6px;
+  --dash-bg:var(--swift-bg);
+  --dash-sidebar:var(--swift-sidebar);
+  --dash-sidebar-soft:var(--swift-sidebar-2);
+  --dash-panel:var(--swift-card);
+  --dash-panel-alt:var(--swift-card-2);
+  --dash-panel-muted:var(--swift-fill-hover);
+  --dash-panel-raised:var(--swift-bg-elevated);
+  --dash-border:rgba(255,255,255,0.12);
+  --dash-border-soft:var(--swift-line);
+  --dash-border-hairline:var(--swift-line);
+  --dash-text:var(--swift-text);
+  --dash-text-soft:var(--swift-secondary);
+  --dash-text-muted:var(--swift-tertiary);
+  --dash-accent:var(--swift-blue);
+  --dash-accent-soft:var(--swift-blue-soft);
+  --dash-danger:var(--swift-red);
+  --dash-danger-hover:#ff6961;
+  --dash-warning:var(--swift-orange);
+  --dash-success:var(--swift-green);
+  --dash-radius:var(--swift-radius);
+  --dash-radius-sm:var(--swift-radius-sm);
+  --dash-rail:304px;
+  --dash-topbar:54px;
+}
+
+html,
+body{
+  background:
+    linear-gradient(180deg,#10141b 0%,#0d1116 38%,#0b0e13 100%) !important;
+}
+
+body{
+  color:var(--swift-secondary) !important;
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display","Segoe UI",Roboto,Arial,sans-serif !important;
+  font-size:14px !important;
+  font-weight:300 !important;
+  line-height:1.48 !important;
+  letter-spacing:0 !important;
+}
+
+body,
+button,
+input,
+select,
+textarea{
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display","Segoe UI",Roboto,Arial,sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+.head,
+.box .head,
+.colhead,
+.colhead_dark{
+  color:var(--swift-text) !important;
+  font-weight:800 !important;
+  letter-spacing:-0.015em !important;
+}
+
+h1,
+h2{
+  font-size:1.55rem !important;
+}
+
+h3,
+.box .head{
+  font-size:.95rem !important;
+}
+
+a{
+  color:var(--swift-secondary) !important;
+  font-weight:500 !important;
+  text-decoration:none !important;
+}
+
+a:hover{
+  color:var(--swift-blue) !important;
+}
+
+#content,
+.box,
+.forum_post,
+#slider,
+.filter_torrents,
+#forums .thin>form>table,
+body>.ui-widget-content{
+  border:1px solid var(--swift-line-strong) !important;
+  border-radius:var(--swift-radius) !important;
+  background:color-mix(in srgb,var(--swift-card) 92%,#ffffff 8%) !important;
+  box-shadow:0 1px 0 rgba(255,255,255,0.04) inset,0 18px 34px rgba(0,0,0,0.18) !important;
+}
+
+#content{
+  padding:30px 32px !important;
+}
+
+.box{
+  padding:16px !important;
+}
+
+.box+.box,
+.forum_post+.forum_post{
+  margin-top:12px !important;
+}
+
+.box .head,
+#slider h2,
+.colhead,
+.colhead_dark,
+thead tr,
+table tr:first-child{
+  margin:0 0 12px !important;
+  padding:0 0 10px !important;
+  border-bottom:1px solid var(--swift-line) !important;
+  background:transparent !important;
+}
+
+.pad,
+.body,
+.code,
+body pre,
+body blockquote,
+blockquote,
+pre{
+  background:var(--swift-bg-elevated) !important;
+  border-color:var(--swift-line) !important;
+  color:var(--swift-secondary) !important;
+}
+
+table{
+  border-collapse:separate !important;
+  border-spacing:0 !important;
+  color:var(--swift-secondary) !important;
+  font-size:.92rem !important;
+}
+
+td,
+th{
+  border-color:var(--swift-line) !important;
+}
+
+thead th,
+thead td,
+.colhead td,
+.colhead_dark td,
+table tr:first-child td{
+  color:var(--swift-tertiary) !important;
+  font-size:.72rem !important;
+  font-weight:800 !important;
+  letter-spacing:.055em !important;
+  text-transform:uppercase !important;
+}
+
+#top10 table td,
+#torrents #content>.thin>table td,
+#torrents #content .thin #upload_table td,
+#torrents #content .thin+.thin table td,
+#showslist table td,
+#serieslist table td,
+#snatchlist table td,
+#userhistory table td,
+#friends table td,
+#inbox table td,
+#user table td,
+#bonus table td,
+#staff table td,
+#staffpm table td,
+#rules table td,
+#recommend table td,
+#forums .thin>table td,
+#forums .thin>form>table td,
+#requests table td,
+#collages table td,
+#nfo table td,
+#unofficial table td,
+#series .main_column table:not(.torrent_table) td,
+#content:has(.main_column>table#discog_table) .main_column table:not(.torrent_table) td,
+#series .sidebar .stats table td,
+#content:has(.main_column>table#discog_table) .sidebar .stats table td,
+#series .sidebar .box form table td,
+#content:has(.main_column>table#discog_table) .sidebar .box form table td,
+#series #content>.thin>table td,
+#content:has(.main_column>table#discog_table) #content>.thin>table td,
+#tvfavs table td,
+#tvnews table td,
+#newsletter table td,
+#upload table td,
+.filter_torrents table td,
+.torrent_table table td,
+.torrent_table td{
+  padding:9px 12px !important;
+}
+
+#top10 table tr:nth-child(odd),
+#torrents #content>.thin>table tr:nth-child(odd),
+#showslist table tr:nth-child(odd),
+#serieslist table tr:nth-child(odd),
+#snatchlist table tr:nth-child(odd),
+#userhistory table tr:nth-child(odd),
+#friends table tr:nth-child(odd),
+#inbox table tr:nth-child(odd),
+#user table tr:nth-child(odd),
+#bonus table tr:nth-child(odd),
+#staff table tr:nth-child(odd),
+#staffpm table tr:nth-child(odd),
+#rules table tr:nth-child(odd),
+#recommend table tr:nth-child(odd),
+#forums .thin>table tr:nth-child(odd),
+#requests table tr:nth-child(odd),
+#collages table tr:nth-child(odd),
+.torrent_table tr:nth-child(odd){
+  background:var(--swift-card-2) !important;
+}
+
+#top10 table tr:nth-child(even),
+#torrents #content>.thin>table tr:nth-child(even),
+#showslist table tr:nth-child(even),
+#serieslist table tr:nth-child(even),
+#snatchlist table tr:nth-child(even),
+#userhistory table tr:nth-child(even),
+#friends table tr:nth-child(even),
+#inbox table tr:nth-child(even),
+#user table tr:nth-child(even),
+#bonus table tr:nth-child(even),
+#staff table tr:nth-child(even),
+#staffpm table tr:nth-child(even),
+#rules table tr:nth-child(even),
+#recommend table tr:nth-child(even),
+#forums .thin>table tr:nth-child(even),
+#requests table tr:nth-child(even),
+#collages table tr:nth-child(even),
+.torrent_table tr:nth-child(even){
+  background:var(--swift-card) !important;
+}
+
+table tr:hover{
+  background:var(--swift-fill-hover) !important;
+}
+
+input:not([type="file"]),
+select,
+textarea{
+  min-height:34px !important;
+  border:1px solid var(--swift-line-strong) !important;
+  border-radius:var(--swift-radius-sm) !important;
+  background:#0b0f15 !important;
+  color:var(--swift-text) !important;
+  font-size:.9rem !important;
+  font-weight:350 !important;
+  box-shadow:0 1px 0 rgba(255,255,255,0.035) inset !important;
+}
+
+input:not([type="checkbox"]):not([type="radio"]),
+select{
+  padding:6px 10px !important;
+}
+
+input[type="checkbox"],
+input[type="radio"]{
+  accent-color:var(--swift-blue) !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+  border-color:rgba(10,132,255,0.8) !important;
+  box-shadow:0 0 0 3px var(--swift-blue-soft) !important;
+  outline:0 !important;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"]{
+  min-height:34px !important;
+  padding:7px 12px !important;
+  border:1px solid rgba(255,255,255,0.04) !important;
+  border-radius:var(--swift-radius-sm) !important;
+  background:var(--swift-blue) !important;
+  color:#fff !important;
+  font-size:.88rem !important;
+  font-weight:750 !important;
+  box-shadow:none !important;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover{
+  background:#2997ff !important;
+}
+
+input[value*="Delete"],
+input[value*="Reset"],
+button[name*="delete"],
+.error_message+input[type="submit"]{
+  background:var(--swift-red) !important;
+}
+
+.filter_torrents,
+#forums .thin>form>table{
+  background:var(--swift-card) !important;
+}
+
+.filter_torrents h3,
+#forums .thin>form>table h3{
+  padding:13px 16px !important;
+  background:transparent !important;
+  border-bottom:1px solid var(--swift-line) !important;
+  font-size:1rem !important;
+}
+
+.filter_torrents table tr,
+#forums .thin>form>table table:not(#taglist) tr{
+  background:transparent !important;
+}
+
+.filter_torrents .cat_list label,
+.filter_torrents #taglist label,
+#forums .thin>form>table .cat_list label,
+#forums .thin>form>table #taglist label,
+.filter_torrents .cat_list td:not(:first-child):not(:has(label)),
+.filter_torrents #taglist td:not(:first-child):not(:has(label)),
+#forums .thin>form>table .cat_list td:not(:first-child):not(:has(label)),
+#forums .thin>form>table #taglist td:not(:first-child):not(:has(label)){
+  min-height:32px !important;
+  border-color:var(--swift-line-strong) !important;
+  border-radius:var(--swift-radius-sm) !important;
+  background:var(--swift-fill) !important;
+  color:var(--swift-tertiary) !important;
+  font-weight:360 !important;
+}
+
+.filter_torrents .cat_list label:hover,
+.filter_torrents #taglist label:hover,
+.filter_torrents .cat_list td:not(:first-child):not(:has(label)):hover,
+.filter_torrents #taglist td:not(:first-child):not(:has(label)):hover{
+  border-color:rgba(10,132,255,0.35) !important;
+  background:var(--swift-fill-hover) !important;
+  color:var(--swift-secondary) !important;
+}
+
+.forum_post{
+  border-color:var(--swift-line-strong) !important;
+  background:var(--swift-card) !important;
+}
+
+.forum_post tbody tr:nth-of-type(1) td{
+  padding:10px 13px !important;
+  border-bottom:1px solid var(--swift-line) !important;
+  background:var(--swift-bg-elevated) !important;
+  font-size:.84rem !important;
+  font-weight:700 !important;
+}
+
+.forum_post tbody tr:nth-of-type(2) .avatar{
+  background:var(--swift-card-2) !important;
+}
+
+.forum_post tbody tr:nth-of-type(2) .body{
+  padding:16px !important;
+  background:var(--swift-card) !important;
+}
+
+.save_message,
+.error_message,
+.alertbar,
+#donation{
+  border-radius:var(--swift-radius) !important;
+  box-shadow:none !important;
+}
+
+.alertbar{
+  border-color:rgba(255,159,10,0.25) !important;
+  background:rgba(255,159,10,0.10) !important;
+  color:var(--swift-secondary) !important;
+}
+
+.save_message{
+  border-color:rgba(50,215,75,0.24) !important;
+  background:rgba(50,215,75,0.10) !important;
+}
+
+.error_message{
+  border-color:rgba(255,69,58,0.26) !important;
+  background:rgba(255,69,58,0.10) !important;
+}
+
+#donation{
+  border-color:rgba(50,215,75,0.24) !important;
+  background:rgba(50,215,75,0.08) !important;
+}
+
+@media (min-width:1280px){
+  body{
+    padding:calc(var(--swift-topbar, var(--dash-topbar)) + 32px) 34px 44px calc(var(--dash-rail) + 44px) !important;
+  }
+
+  #header{
+    width:var(--dash-rail) !important;
+    padding:18px !important;
+    background:rgba(16,20,27,0.98) !important;
+    border-right:1px solid var(--swift-line-strong) !important;
+  }
+
+  #logo{
+    order:1 !important;
+    margin:0 0 24px !important;
+  }
+
+  #logo a{
+    min-height:62px !important;
+  }
+
+  #logo a::before{
+    content:"BTN" !important;
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    width:58px !important;
+    height:54px !important;
+    margin:0 11px 0 0 !important;
+    border-radius:14px !important;
+    background:linear-gradient(145deg,#0a84ff 0%,#64d2ff 42%,#32d74b 100%) !important;
+    -webkit-background-clip:border-box !important;
+    background-clip:border-box !important;
+    -webkit-text-fill-color:#fff !important;
+    color:#fff !important;
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Arial,sans-serif !important;
+    font-size:1rem !important;
+    font-weight:850 !important;
+    letter-spacing:-0.06em !important;
+    vertical-align:middle !important;
+    box-shadow:0 10px 22px rgba(10,132,255,0.22),0 1px 0 rgba(255,255,255,0.22) inset !important;
+  }
+
+  #logo a::after{
+    content:"Broadcast\A The Net" !important;
+    display:inline-block !important;
+    width:calc(100% - 76px) !important;
+    background:none !important;
+    -webkit-text-fill-color:var(--swift-text) !important;
+    color:var(--swift-text) !important;
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Arial,sans-serif !important;
+    font-size:1.02rem !important;
+    font-weight:800 !important;
+    line-height:1.06 !important;
+    letter-spacing:-0.025em !important;
+    text-transform:none !important;
+    white-space:pre-line !important;
+    vertical-align:middle !important;
+  }
+
+  #menu{
+    order:2 !important;
+  }
+
+  #menu>ul{
+    gap:4px !important;
+  }
+
+  #menu>ul>li>a{
+    min-height:38px !important;
+    padding:8px 10px !important;
+    border-radius:var(--swift-radius-sm) !important;
+    color:var(--swift-secondary) !important;
+    font-size:.9rem !important;
+    font-weight:560 !important;
+  }
+
+  #menu>ul>li>a:hover,
+  #menu>ul>li:hover>a{
+    background:var(--swift-fill) !important;
+    color:var(--swift-text) !important;
+  }
+
+  .alertbar{
+    order:3 !important;
+    margin:16px 0 0 !important;
+    padding:10px 11px !important;
+  }
+
+  #searchbars{
+    order:10 !important;
+    margin-top:auto !important;
+    padding:12px !important;
+    border-color:var(--swift-line-strong) !important;
+    background:var(--swift-sidebar-2) !important;
+  }
+
+  #searchbars ul{
+    gap:7px !important;
+  }
+
+  #searchbars input{
+    min-height:36px !important;
+    border-color:var(--swift-line-strong) !important;
+    background:#0b0f15 !important;
+  }
+
+  #donation{
+    order:11 !important;
+    margin:12px 0 0 !important;
+    padding:9px 10px !important;
+  }
+
+  #userinfo{
+    height:var(--dash-topbar) !important;
+    min-height:var(--dash-topbar) !important;
+    padding:8px 30px !important;
+    border-color:var(--swift-line-strong) !important;
+    background:rgba(14,17,23,0.96) !important;
+    backdrop-filter:blur(18px) saturate(1.3);
+  }
+
+  #userinfo a{
+    min-height:28px !important;
+    padding:4px 8px !important;
+    border-radius:var(--swift-radius-sm) !important;
+    font-size:.82rem !important;
+    font-weight:600 !important;
+  }
+
+  #userinfo a:hover{
+    background:var(--swift-blue-soft) !important;
+    color:var(--swift-text) !important;
+  }
+
+  #content{
+    width:min(100%,1680px) !important;
+    padding:30px 34px !important;
+  }
+}
+
+@media (max-width:1279px){
+  #logo a::before{
+    display:none !important;
+  }
+
+  #logo a::after{
+    content:"Broadcast The Net" !important;
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Arial,sans-serif !important;
+    font-size:1.28rem !important;
+    font-weight:800 !important;
+    letter-spacing:-0.025em !important;
+    text-transform:none !important;
+  }
+}
