@@ -4453,3 +4453,80 @@ table tr:hover{
 .home .main_column>.box img{
   background:transparent !important;
 }
+
+/* Restore table frames and unify homepage poll colour. */
+.torrent_table,
+.torrent_table table,
+#requests table,
+.requests table{
+  overflow:hidden !important;
+  border:1px solid rgba(255,255,255,0.115) !important;
+  border-radius:9px !important;
+  background:rgba(23,28,36,0.82) !important;
+  box-shadow:0 1px 0 rgba(255,255,255,0.035) inset !important;
+}
+
+.torrent_table>tbody>tr:first-child>td,
+.torrent_table table>tbody>tr:first-child>td,
+#requests table>tbody>tr:first-child>td,
+.requests table>tbody>tr:first-child>td{
+  border-top:1px solid rgba(255,255,255,0.075) !important;
+}
+
+.torrent_table>tbody>tr:last-child>td,
+.torrent_table table>tbody>tr:last-child>td,
+#requests table>tbody>tr:last-child>td,
+.requests table>tbody>tr:last-child>td{
+  border-bottom:1px solid rgba(255,255,255,0.075) !important;
+}
+
+.torrent_table>tbody>tr:first-child>td:first-child,
+.torrent_table table>tbody>tr:first-child>td:first-child,
+#requests table>tbody>tr:first-child>td:first-child,
+.requests table>tbody>tr:first-child>td:first-child{
+  border-top-left-radius:8px !important;
+}
+
+.torrent_table>tbody>tr:first-child>td:last-child,
+.torrent_table table>tbody>tr:first-child>td:last-child,
+#requests table>tbody>tr:first-child>td:last-child,
+.requests table>tbody>tr:first-child>td:last-child{
+  border-top-right-radius:8px !important;
+}
+
+.torrent_table>tbody>tr:last-child>td:first-child,
+.torrent_table table>tbody>tr:last-child>td:first-child,
+#requests table>tbody>tr:last-child>td:first-child,
+.requests table>tbody>tr:last-child>td:first-child{
+  border-bottom-left-radius:8px !important;
+}
+
+.torrent_table>tbody>tr:last-child>td:last-child,
+.torrent_table table>tbody>tr:last-child>td:last-child,
+#requests table>tbody>tr:last-child>td:last-child,
+.requests table>tbody>tr:last-child>td:last-child{
+  border-bottom-right-radius:8px !important;
+}
+
+.home .sidebar .box:has(input[type="radio"]),
+.home .sidebar .box:has(input[type="checkbox"]),
+.home .sidebar .box:has(.poll),
+.home .sidebar .poll{
+  border-color:rgba(255,255,255,0.105) !important;
+  background:rgba(23,28,36,0.74) !important;
+  background-color:rgba(23,28,36,0.74) !important;
+}
+
+.home .sidebar .box:has(input[type="radio"]) :is(.pad,.body,form,table,tbody,tr,td,div),
+.home .sidebar .box:has(input[type="checkbox"]) :is(.pad,.body,form,table,tbody,tr,td,div),
+.home .sidebar .box:has(.poll) :is(.pad,.body,form,table,tbody,tr,td,div),
+.home .sidebar .poll :is(.pad,.body,form,table,tbody,tr,td,div){
+  background:transparent !important;
+  background-color:transparent !important;
+  box-shadow:none !important;
+}
+
+.home .sidebar .box:has(input[type="radio"]) input[type="radio"],
+.home .sidebar .box:has(input[type="checkbox"]) input[type="checkbox"]{
+  background:transparent !important;
+}
