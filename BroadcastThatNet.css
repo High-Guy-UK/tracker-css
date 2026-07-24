@@ -4188,3 +4188,221 @@ table tr:hover{
     min-height:36px !important;
   }
 }
+
+/* Modern sidebar menu, search fields, and animated flyouts. */
+@keyframes btnFlyoutIn{
+  from{
+    opacity:0;
+    transform:translateX(-8px) scale(.975);
+  }
+  to{
+    opacity:1;
+    transform:translateX(0) scale(1);
+  }
+}
+
+@media (min-width:1280px){
+  #menu{
+    padding:0 !important;
+    background:transparent !important;
+  }
+
+  #menu>ul{
+    gap:8px !important;
+  }
+
+  #menu>ul>li{
+    isolation:isolate !important;
+  }
+
+  #menu>ul>li>a{
+    position:relative !important;
+    display:flex !important;
+    align-items:center !important;
+    min-height:42px !important;
+    padding:10px 12px 10px 14px !important;
+    border:1px solid transparent !important;
+    border-radius:10px !important;
+    background:linear-gradient(90deg,rgba(255,255,255,0.025),rgba(255,255,255,0)) !important;
+    color:rgba(226,232,240,0.76) !important;
+    font-size:.92rem !important;
+    font-weight:680 !important;
+    letter-spacing:-0.01em !important;
+    overflow:hidden !important;
+    transition:transform 180ms ease,background 180ms ease,border-color 180ms ease,color 180ms ease,box-shadow 180ms ease !important;
+  }
+
+  #menu>ul>li>a::before{
+    content:"" !important;
+    flex:0 0 auto !important;
+    width:4px !important;
+    height:18px !important;
+    margin:0 10px 0 0 !important;
+    border-radius:999px !important;
+    background:rgba(148,163,184,0.18) !important;
+    box-shadow:none !important;
+    transition:height 180ms ease,background 180ms ease,box-shadow 180ms ease !important;
+  }
+
+  #menu>ul>li>a::after{
+    content:"" !important;
+    position:absolute !important;
+    inset:0 !important;
+    z-index:-1 !important;
+    border-radius:inherit !important;
+    background:linear-gradient(110deg,rgba(10,132,255,0.18),rgba(100,210,255,0.08) 42%,rgba(50,215,75,0.08)) !important;
+    opacity:0 !important;
+    transition:opacity 180ms ease !important;
+  }
+
+  #menu>ul>li:hover>a,
+  #menu>ul>li:focus-within>a,
+  #menu>ul>li>a:hover{
+    transform:translateX(4px) !important;
+    border-color:rgba(255,255,255,0.12) !important;
+    background:rgba(255,255,255,0.045) !important;
+    color:var(--swift-text) !important;
+    box-shadow:0 10px 24px rgba(0,0,0,0.16),0 1px 0 rgba(255,255,255,0.055) inset !important;
+  }
+
+  #menu>ul>li:hover>a::before,
+  #menu>ul>li:focus-within>a::before,
+  #menu>ul>li>a:hover::before{
+    height:24px !important;
+    background:linear-gradient(180deg,#64d2ff,#32d74b) !important;
+    box-shadow:0 0 16px rgba(100,210,255,0.42) !important;
+  }
+
+  #menu>ul>li:hover>a::after,
+  #menu>ul>li:focus-within>a::after,
+  #menu>ul>li>a:hover::after{
+    opacity:1 !important;
+  }
+
+  #menu>ul>li>ul{
+    left:100% !important;
+    min-width:236px !important;
+    padding:8px 8px 8px 16px !important;
+    border:1px solid rgba(255,255,255,0.13) !important;
+    border-left:8px solid transparent !important;
+    border-radius:12px !important;
+    background:rgba(18,23,31,0.96) !important;
+    box-shadow:0 24px 52px rgba(0,0,0,0.38),0 1px 0 rgba(255,255,255,0.08) inset !important;
+    opacity:0 !important;
+    visibility:hidden !important;
+    pointer-events:none !important;
+    transform:translateX(-8px) scale(.975) !important;
+    transform-origin:left top !important;
+    transition:opacity 160ms ease,visibility 160ms ease,transform 160ms ease !important;
+    backdrop-filter:blur(22px) saturate(1.28);
+  }
+
+  #menu>ul>li:hover>ul,
+  #menu>ul>li:focus-within>ul{
+    opacity:1 !important;
+    visibility:visible !important;
+    pointer-events:auto !important;
+    transform:translateX(0) scale(1) !important;
+    animation:btnFlyoutIn 180ms ease both !important;
+  }
+
+  #menu>ul>li>ul>li>a{
+    position:relative !important;
+    min-height:36px !important;
+    padding:8px 11px !important;
+    border-radius:8px !important;
+    color:rgba(226,232,240,0.78) !important;
+    font-size:.88rem !important;
+    transition:transform 160ms ease,background 160ms ease,color 160ms ease !important;
+  }
+
+  #menu>ul>li>ul>li>a:hover,
+  #menu>ul>li>ul>li>a:focus{
+    transform:translateX(3px) !important;
+    background:rgba(10,132,255,0.16) !important;
+    color:var(--swift-text) !important;
+  }
+
+  #searchbars{
+    border:1px solid rgba(255,255,255,0.12) !important;
+    border-radius:12px !important;
+    background:linear-gradient(180deg,rgba(255,255,255,0.045),rgba(255,255,255,0.018)) !important;
+    box-shadow:0 12px 28px rgba(0,0,0,0.16),0 1px 0 rgba(255,255,255,0.06) inset !important;
+  }
+
+  #searchbars ul{
+    gap:7px !important;
+  }
+
+  #searchbars ul li{
+    position:relative !important;
+  }
+
+  #searchbars ul li::before{
+    content:"" !important;
+    position:absolute !important;
+    top:50% !important;
+    left:13px !important;
+    z-index:2 !important;
+    width:10px !important;
+    height:10px !important;
+    border:2px solid rgba(199,205,214,0.44) !important;
+    border-radius:50% !important;
+    transform:translateY(-58%) !important;
+    pointer-events:none !important;
+  }
+
+  #searchbars ul li::after{
+    content:"" !important;
+    position:absolute !important;
+    top:50% !important;
+    left:25px !important;
+    z-index:2 !important;
+    width:7px !important;
+    height:2px !important;
+    border-radius:999px !important;
+    background:rgba(199,205,214,0.44) !important;
+    transform:translateY(5px) rotate(45deg) !important;
+    pointer-events:none !important;
+  }
+
+  #searchbars input{
+    min-height:38px !important;
+    padding:7px 11px 7px 38px !important;
+    border:1px solid rgba(255,255,255,0.12) !important;
+    border-radius:9px !important;
+    background:rgba(5,9,14,0.72) !important;
+    color:var(--swift-text) !important;
+    box-shadow:0 1px 0 rgba(255,255,255,0.035) inset !important;
+    transition:border-color 180ms ease,box-shadow 180ms ease,background 180ms ease,transform 180ms ease !important;
+  }
+
+  #searchbars input::placeholder{
+    color:rgba(199,205,214,0.58) !important;
+  }
+
+  #searchbars input:hover{
+    border-color:rgba(100,210,255,0.28) !important;
+    background:rgba(7,12,19,0.86) !important;
+  }
+
+  #searchbars input:focus{
+    border-color:rgba(100,210,255,0.52) !important;
+    background:rgba(7,12,19,0.95) !important;
+    box-shadow:0 0 0 3px rgba(100,210,255,0.12),0 1px 0 rgba(255,255,255,0.055) inset !important;
+    transform:translateY(-1px) !important;
+  }
+}
+
+@media (prefers-reduced-motion:reduce){
+  #menu>ul>li>a,
+  #menu>ul>li>a::before,
+  #menu>ul>li>a::after,
+  #menu>ul>li>ul,
+  #menu>ul>li>ul>li>a,
+  #searchbars input{
+    animation:none !important;
+    transition:none !important;
+    transform:none !important;
+  }
+}
