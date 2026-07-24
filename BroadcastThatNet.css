@@ -4406,3 +4406,50 @@ table tr:hover{
     transform:none !important;
   }
 }
+
+/* Final homepage article colour unification. */
+.home .main_column>.box,
+.home .main_column>.box>.pad,
+.home .main_column>.box>.body,
+.home .main_column>.box .pad,
+.home .main_column>.box .body,
+.home .main_column>.box .box,
+.home .main_column>.box .code,
+.home .main_column>.box blockquote,
+.home .main_column>.box pre{
+  background:rgba(23,28,36,0.88) !important;
+  background-color:rgba(23,28,36,0.88) !important;
+}
+
+.home .main_column>.box>.pad,
+.home .main_column>.box>.body,
+.home .main_column>.box .pad,
+.home .main_column>.box .body{
+  border:0 !important;
+  box-shadow:none !important;
+}
+
+.home .main_column>.box :is(div,section,article,table,tbody,tr,td)[style],
+.home .main_column>.box :is(table,tbody,tr,td):not(.colhead):not(.colhead_dark){
+  background:transparent !important;
+  background-color:transparent !important;
+  box-shadow:none !important;
+}
+
+.home .main_column>.box :is(div,table,td)[style*="background"],
+.home .main_column>.box :is(div,table,td)[style*="border"]{
+  border-color:rgba(255,255,255,0.07) !important;
+}
+
+.home .main_column>.box :is(div,table,td)[style*="border"]{
+  background:rgba(255,255,255,0.018) !important;
+  background-color:rgba(255,255,255,0.018) !important;
+}
+
+.home .main_column>.box :is(table,tbody,tr,td):not(.colhead):not(.colhead_dark){
+  border-color:rgba(255,255,255,0.05) !important;
+}
+
+.home .main_column>.box img{
+  background:transparent !important;
+}
