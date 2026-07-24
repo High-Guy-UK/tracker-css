@@ -3886,3 +3886,135 @@ table tr:hover{
     width:14px;
   }
 }
+
+/* Forum density and article blending. */
+#forums .thin>table:not(.forum_post){
+  border-collapse:separate !important;
+  border-spacing:0 5px !important;
+  font-size:.9rem !important;
+}
+
+#forums .thin>table:not(.forum_post)>tbody>tr:not(.colhead):not(.colhead_dark):not(:first-child){
+  background:transparent !important;
+  border:0 !important;
+}
+
+#forums .thin>table:not(.forum_post)>tbody>tr:not(.colhead):not(.colhead_dark):not(:first-child)>td{
+  padding:10px 13px !important;
+  line-height:1.26 !important;
+  vertical-align:middle !important;
+  border-top:1px solid rgba(255,255,255,0.055) !important;
+  border-bottom:1px solid rgba(255,255,255,0.055) !important;
+  background:rgba(255,255,255,0.018) !important;
+}
+
+#forums .thin>table:not(.forum_post)>tbody>tr:not(.colhead):not(.colhead_dark):not(:first-child):nth-child(even)>td{
+  background:rgba(255,255,255,0.028) !important;
+}
+
+#forums .thin>table:not(.forum_post)>tbody>tr:not(.colhead):not(.colhead_dark):not(:first-child):hover>td{
+  background:rgba(10,132,255,0.075) !important;
+}
+
+#forums .thin>table:not(.forum_post)>tbody>tr:not(.colhead):not(.colhead_dark):not(:first-child)>td:first-child{
+  width:52px !important;
+  padding-left:15px !important;
+  border-left:1px solid rgba(255,255,255,0.055) !important;
+  border-radius:7px 0 0 7px !important;
+  text-align:center !important;
+}
+
+#forums .thin>table:not(.forum_post)>tbody>tr:not(.colhead):not(.colhead_dark):not(:first-child)>td:last-child{
+  border-right:1px solid rgba(255,255,255,0.055) !important;
+  border-radius:0 7px 7px 0 !important;
+}
+
+#forums .thin>table:not(.forum_post)>tbody>tr:not(.colhead):not(.colhead_dark):not(:first-child)>td:first-child img,
+#forums .thin>table:not(.forum_post)>tbody>tr:not(.colhead):not(.colhead_dark):not(:first-child)>td:first-child svg{
+  width:20px !important;
+  height:20px !important;
+  opacity:.86 !important;
+}
+
+#forums .thin>table:not(.forum_post)>tbody>tr:not(.colhead):not(.colhead_dark):not(:first-child)>td:nth-child(2){
+  max-width:460px !important;
+}
+
+#forums .thin>table:not(.forum_post)>tbody>tr:not(.colhead):not(.colhead_dark):not(:first-child)>td:nth-child(2) a,
+#forums .thin>table:not(.forum_post)>tbody>tr:not(.colhead):not(.colhead_dark):not(:first-child)>td:nth-child(2) strong{
+  font-size:.94rem !important;
+  font-weight:700 !important;
+}
+
+#forums .thin>table:not(.forum_post)>tbody>tr:not(.colhead):not(.colhead_dark):not(:first-child)>td:nth-child(2) br{
+  content:"" !important;
+  display:block !important;
+  margin-top:5px !important;
+}
+
+#forums .thin>table:not(.forum_post)>tbody>tr:not(.colhead):not(.colhead_dark):not(:first-child)>td:nth-child(3),
+#forums .thin>table:not(.forum_post)>tbody>tr:not(.colhead):not(.colhead_dark):not(:first-child)>td:nth-child(4){
+  width:78px !important;
+  color:var(--swift-secondary) !important;
+  font-variant-numeric:tabular-nums !important;
+}
+
+#forums .thin>table:not(.forum_post)>tbody>tr:not(.colhead):not(.colhead_dark):not(:first-child)>td:last-child{
+  color:rgba(199,205,214,0.78) !important;
+  font-size:.88rem !important;
+}
+
+#forums .thin>table:not(.forum_post)>tbody>tr.colhead td,
+#forums .thin>table:not(.forum_post)>tbody>tr.colhead_dark td,
+#forums .thin>table:not(.forum_post)>tbody>tr:first-child td{
+  padding:9px 13px !important;
+  background:rgba(255,255,255,0.026) !important;
+}
+
+#tvnews .main_column .box{
+  overflow:hidden !important;
+  border-color:var(--swift-line-strong) !important;
+  background:var(--swift-card) !important;
+}
+
+#tvnews .main_column .box .head{
+  margin-bottom:8px !important;
+  padding-bottom:8px !important;
+}
+
+#tvnews .main_column .box .body,
+#tvnews .main_column .box .pad{
+  padding:8px 0 0 !important;
+  border:0 !important;
+  background:transparent !important;
+  background-color:transparent !important;
+}
+
+#tvnews .main_column .box .body>div,
+#tvnews .main_column .box .pad>div,
+#tvnews .main_column .box div[style*="background"],
+#tvnews .main_column .box table[style*="background"],
+#tvnews .main_column .box td[style*="background"]{
+  border:1px solid rgba(255,255,255,0.055) !important;
+  border-left-color:rgba(10,132,255,0.18) !important;
+  border-radius:6px !important;
+  background:rgba(255,255,255,0.016) !important;
+  background-color:rgba(255,255,255,0.016) !important;
+  box-shadow:none !important;
+}
+
+#tvnews .main_column .box .body>div,
+#tvnews .main_column .box .pad>div{
+  padding:10px 12px !important;
+}
+
+#tvnews .main_column .box .body p,
+#tvnews .main_column .box .pad p{
+  margin:0 0 10px !important;
+  line-height:1.42 !important;
+}
+
+#tvnews .main_column .box .body p:last-child,
+#tvnews .main_column .box .pad p:last-child{
+  margin-bottom:0 !important;
+}
