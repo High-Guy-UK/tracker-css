@@ -2245,3 +2245,323 @@ input[type="submit"]:hover{
     width:100% !important;
   }
 }
+
+/* ==========================================================================
+   Sidebar/topbar correction
+   Keep BTN's left rail layout and restore account info to the top-right bar.
+   ========================================================================== */
+
+:root{
+  --dash-bg:#0b1112;
+  --dash-sidebar:#0d1415;
+  --dash-sidebar-soft:#121b1d;
+  --dash-panel:#121a1c;
+  --dash-panel-alt:#162022;
+  --dash-panel-muted:#1a2628;
+  --dash-panel-raised:#101819;
+  --dash-border:#2a393c;
+  --dash-border-soft:rgba(207,222,217,0.11);
+  --dash-text:#edf2ef;
+  --dash-text-soft:#c8d1cd;
+  --dash-text-muted:#93a09b;
+  --dash-accent:#55d8c9;
+  --dash-accent-soft:rgba(85,216,201,0.13);
+  --dash-danger:#e0524d;
+  --dash-warning:#dfb85b;
+  --dash-success:#79d58c;
+  --dash-rail:304px;
+  --dash-topbar:54px;
+  --dash-page-gap:34px;
+}
+
+html,
+body{
+  background:var(--dash-bg) !important;
+}
+
+body{
+  color:var(--dash-text-soft) !important;
+}
+
+#content,
+.box,
+.forum_post,
+#slider,
+.filter_torrents,
+#forums .thin>form>table,
+body>.ui-widget-content{
+  border-color:var(--dash-border) !important;
+  background:var(--dash-panel) !important;
+}
+
+.box .head,
+#slider h2,
+.colhead,
+.colhead_dark,
+thead tr,
+table tr:first-child{
+  background:var(--dash-panel-raised) !important;
+  border-color:var(--dash-border-soft) !important;
+}
+
+.pad,
+.body,
+.code,
+body pre,
+body blockquote,
+blockquote,
+pre,
+#quickpostform #quickreplypreview,
+.forum_post tbody tr:nth-of-type(2) .body .postcontent strong+a[onclick]+div,
+#content div[style*="background: #000"],
+#content div[style*="background:#000"],
+#content div[style*="background-color: #000"],
+#content div[style*="background-color:#000"],
+#content table[style*="background: #000"],
+#content table[style*="background:#000"],
+#content table[style*="background-color: #000"],
+#content table[style*="background-color:#000"]{
+  border-color:var(--dash-border-soft) !important;
+  background:var(--dash-panel-raised) !important;
+  background-color:var(--dash-panel-raised) !important;
+  color:var(--dash-text-soft) !important;
+}
+
+#top10 table tr:nth-child(odd),
+#torrents #content>.thin>table tr:nth-child(odd),
+#torrents #content .thin #upload_table tr:nth-child(odd),
+#torrents #content .thin+.thin table tr:nth-child(odd),
+#showslist table tr:nth-child(odd),
+#serieslist table tr:nth-child(odd),
+#snatchlist table tr:nth-child(odd),
+#userhistory table tr:nth-child(odd),
+#friends table tr:nth-child(odd),
+#inbox table tr:nth-child(odd),
+#user table tr:nth-child(odd),
+#bonus table tr:nth-child(odd),
+#staff table tr:nth-child(odd),
+#staffpm table tr:nth-child(odd),
+#rules table tr:nth-child(odd),
+#recommend table tr:nth-child(odd),
+#forums .thin>table tr:nth-child(odd),
+#forums .thin>form>table tr:nth-child(odd),
+#requests table tr:nth-child(odd),
+#collages table tr:nth-child(odd),
+#nfo table tr:nth-child(odd),
+#unofficial table tr:nth-child(odd),
+#series .main_column table:not(.torrent_table) tr:nth-child(odd),
+#content:has(.main_column>table#discog_table) .main_column table:not(.torrent_table) tr:nth-child(odd),
+#series .sidebar .stats table tr:nth-child(odd),
+#content:has(.main_column>table#discog_table) .sidebar .stats table tr:nth-child(odd),
+#series .sidebar .box form table tr:nth-child(odd),
+#content:has(.main_column>table#discog_table) .sidebar .box form table tr:nth-child(odd),
+#series #content>.thin>table tr:nth-child(odd),
+#content:has(.main_column>table#discog_table) #content>.thin>table tr:nth-child(odd),
+#tvfavs table tr:nth-child(odd),
+#tvnews table tr:nth-child(odd),
+#newsletter table tr:nth-child(odd),
+#upload table tr:nth-child(odd),
+.filter_torrents table tr:nth-child(odd),
+.torrent_table table tr:nth-child(odd),
+.torrent_table tr:nth-child(odd){
+  background:var(--dash-panel-alt) !important;
+}
+
+#top10 table tr:nth-child(even),
+#torrents #content>.thin>table tr:nth-child(even),
+#torrents #content .thin #upload_table tr:nth-child(even),
+#torrents #content .thin+.thin table tr:nth-child(even),
+#showslist table tr:nth-child(even),
+#serieslist table tr:nth-child(even),
+#snatchlist table tr:nth-child(even),
+#userhistory table tr:nth-child(even),
+#friends table tr:nth-child(even),
+#inbox table tr:nth-child(even),
+#user table tr:nth-child(even),
+#bonus table tr:nth-child(even),
+#staff table tr:nth-child(even),
+#staffpm table tr:nth-child(even),
+#rules table tr:nth-child(even),
+#recommend table tr:nth-child(even),
+#forums .thin>table tr:nth-child(even),
+#forums .thin>form>table tr:nth-child(even),
+#requests table tr:nth-child(even),
+#collages table tr:nth-child(even),
+#nfo table tr:nth-child(even),
+#unofficial table tr:nth-child(even),
+#series .main_column table:not(.torrent_table) tr:nth-child(even),
+#content:has(.main_column>table#discog_table) .main_column table:not(.torrent_table) tr:nth-child(even),
+#series .sidebar .stats table tr:nth-child(even),
+#content:has(.main_column>table#discog_table) .sidebar .stats table tr:nth-child(even),
+#series .sidebar .box form table tr:nth-child(even),
+#content:has(.main_column>table#discog_table) .sidebar .box form table tr:nth-child(even),
+#series #content>.thin>table tr:nth-child(even),
+#content:has(.main_column>table#discog_table) #content>.thin>table tr:nth-child(even),
+#tvfavs table tr:nth-child(even),
+#tvnews table tr:nth-child(even),
+#newsletter table tr:nth-child(even),
+#upload table tr:nth-child(even),
+.filter_torrents table tr:nth-child(even),
+.torrent_table table tr:nth-child(even),
+.torrent_table tr:nth-child(even){
+  background:var(--dash-panel) !important;
+}
+
+table tr:hover{
+  background:var(--dash-panel-muted) !important;
+}
+
+@media (min-width:1280px){
+  body{
+    padding:calc(var(--dash-topbar) + var(--dash-page-gap)) 32px 42px calc(var(--dash-rail) + 44px) !important;
+  }
+
+  #header{
+    position:fixed !important;
+    top:0 !important;
+    left:0 !important;
+    z-index:80 !important;
+    display:flex !important;
+    flex-direction:column !important;
+    width:var(--dash-rail) !important;
+    height:100vh !important;
+    padding:18px !important;
+    border-right:1px solid var(--dash-border) !important;
+    background:var(--dash-sidebar) !important;
+    box-shadow:none !important;
+    overflow-y:auto !important;
+    overflow-x:hidden !important;
+  }
+
+  #header::before{
+    display:none !important;
+  }
+
+  #donation{
+    order:1 !important;
+    position:static !important;
+    margin:0 0 10px !important;
+  }
+
+  .alertbar{
+    order:0 !important;
+    margin:0 0 14px !important;
+  }
+
+  #logo{
+    order:2 !important;
+    margin:0 0 20px !important;
+  }
+
+  #menu{
+    order:3 !important;
+  }
+
+  #menu>ul>li>a{
+    min-height:42px !important;
+  }
+
+  #searchbars{
+    order:10 !important;
+    margin-top:auto !important;
+  }
+
+  #userinfo{
+    position:fixed !important;
+    top:0 !important;
+    left:var(--dash-rail) !important;
+    right:0 !important;
+    z-index:120 !important;
+    display:flex !important;
+    flex-direction:row !important;
+    align-items:center !important;
+    justify-content:flex-end !important;
+    gap:14px !important;
+    width:auto !important;
+    height:var(--dash-topbar) !important;
+    min-height:var(--dash-topbar) !important;
+    margin:0 !important;
+    padding:8px 28px !important;
+    border-width:0 0 1px !important;
+    border-style:solid !important;
+    border-color:var(--dash-border) !important;
+    border-radius:0 !important;
+    background:rgba(13,20,21,0.96) !important;
+    box-shadow:0 10px 24px rgba(0,0,0,0.18) !important;
+    overflow:visible !important;
+    white-space:nowrap !important;
+    backdrop-filter:blur(10px);
+  }
+
+  #userinfo::before{
+    display:none !important;
+  }
+
+  #userinfo #userinfo_minor{
+    display:none !important;
+  }
+
+  #userinfo ul{
+    display:inline-flex !important;
+    flex:0 1 auto !important;
+    flex-direction:row !important;
+    align-items:center !important;
+    justify-content:flex-end !important;
+    gap:8px !important;
+    width:auto !important;
+    margin:0 !important;
+    padding:0 !important;
+    list-style:none !important;
+  }
+
+  #userinfo ul li{
+    display:inline-flex !important;
+    align-items:center !important;
+    min-height:0 !important;
+    padding:0 !important;
+  }
+
+  #userinfo a{
+    display:inline-flex !important;
+    align-items:center !important;
+    min-height:30px !important;
+    padding:5px 9px !important;
+    border-radius:7px !important;
+    color:var(--dash-text-soft) !important;
+    font-size:.86rem !important;
+    font-weight:650 !important;
+  }
+
+  #userinfo a:hover{
+    background:var(--dash-accent-soft) !important;
+    color:var(--dash-text) !important;
+  }
+
+  #userinfo #userinfo_stats,
+  #userinfo #userinfo_major,
+  #userinfo #userinfo_username{
+    flex-basis:auto !important;
+    margin:0 !important;
+    padding:0 !important;
+    border:0 !important;
+  }
+
+  #content{
+    margin-top:0 !important;
+    background:var(--dash-panel) !important;
+  }
+}
+
+@media (max-width:1279px){
+  #userinfo{
+    position:static !important;
+    flex-direction:row !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+    margin:0 0 14px !important;
+    padding:10px !important;
+    border:1px solid var(--dash-border) !important;
+    border-radius:var(--dash-radius-sm) !important;
+    background:var(--dash-sidebar-soft) !important;
+  }
+}
