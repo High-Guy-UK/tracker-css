@@ -3862,3 +3862,27 @@ table tr:hover{
     z-index:1500 !important;
   }
 }
+
+/* Keep sidebar flyouts hoverable by removing the dead gap between item and menu. */
+@media (min-width:1280px){
+  #menu>ul>li{
+    position:relative !important;
+  }
+
+  #menu>ul>li>ul{
+    left:100% !important;
+    margin-left:0 !important;
+    padding:6px 6px 6px 14px !important;
+    border-left:8px solid transparent !important;
+    background-clip:padding-box !important;
+  }
+
+  #menu>ul>li>ul::before{
+    content:"";
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:-14px;
+    width:14px;
+  }
+}
