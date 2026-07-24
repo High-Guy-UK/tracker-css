@@ -4133,3 +4133,58 @@ table tr:hover{
     background:linear-gradient(180deg,rgba(0,0,0,0.18),rgba(0,0,0,0)) !important;
   }
 }
+
+/* Sidebar bottom-stack alignment. */
+@media (min-width:1280px){
+  #header{
+    padding-bottom:32px !important;
+  }
+
+  #searchbars{
+    margin-top:auto !important;
+    margin-bottom:8px !important;
+    padding:10px 12px !important;
+  }
+
+  #searchbars ul{
+    gap:6px !important;
+  }
+
+  #searchbars input{
+    min-height:34px !important;
+  }
+
+  #donation{
+    position:relative !important;
+    display:flex !important;
+    align-items:center !important;
+    min-height:36px !important;
+    margin:0 !important;
+    padding:0 14px !important;
+    line-height:1 !important;
+  }
+
+  #donation #DonBr{
+    position:absolute !important;
+    top:50% !important;
+    left:14px !important;
+    height:18px !important;
+    max-height:18px !important;
+    border-radius:4px !important;
+    transform:translateY(-50%) !important;
+    transform-origin:left center !important;
+    background:linear-gradient(180deg,#8cff00 0%,#62c800 100%) !important;
+  }
+
+  #donation #DonInfo{
+    position:relative !important;
+    z-index:1 !important;
+    line-height:1 !important;
+  }
+
+  #donation #DonInfo a{
+    display:inline-flex !important;
+    align-items:center !important;
+    min-height:36px !important;
+  }
+}
