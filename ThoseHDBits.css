@@ -1,6 +1,6 @@
 /*!
  * Theme Name:     ThoseHDBits
- * Version:        1.1
+ * Version:        1.2
  * Last Updated:   2026-07-24
  * Based on:       HDBits Berlin 1.4
  */
@@ -3040,5 +3040,136 @@ textarea,
 
   td#sidebar-container + * {
     padding-left: 238px !important;
+  }
+}
+
+/* Dashboard layout repair: avoid double-reserving sidebar space. */
+body .menu {
+  width: 220px !important;
+}
+
+body .menu,
+body .menu tbody,
+body .menu tr,
+body .menu td,
+body .menu #menusides {
+  background: #2f3437 !important;
+  border-color: transparent !important;
+}
+
+body .menu td {
+  display: block !important;
+  padding: 0 !important;
+}
+
+body .menu a.normal,
+body .menu a.normal:link,
+body .menu a.normal:visited {
+  display: block !important;
+  min-height: 38px;
+  line-height: 38px;
+  padding: 0 16px !important;
+  color: #e7edf0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+}
+
+body .menu a.normal:focus,
+body .menu a.normal:hover {
+  background: rgba(255,255,255,.1) !important;
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+body > table.menu + table.main {
+  width: calc(100% - 220px) !important;
+  margin: 0 0 0 220px !important;
+  table-layout: auto !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+}
+
+body > table.menu + table.main > tbody,
+body > table.menu + table.main > tbody > tr {
+  display: table-row-group;
+}
+
+body > table.menu + table.main > tbody > tr {
+  display: table-row !important;
+}
+
+td#sidebar-container {
+  position: static !important;
+  display: table-cell !important;
+  width: 250px !important;
+  min-width: 250px;
+  max-width: 250px;
+  height: auto !important;
+  max-height: none !important;
+  padding: 18px 14px !important;
+  overflow: visible !important;
+  vertical-align: top;
+  background: #e3eaee !important;
+  border-right: 1px solid #c8d2d8 !important;
+}
+
+td#sidebar-container .main,
+td#sidebar-container:hover .main {
+  position: static !important;
+  left: auto !important;
+}
+
+td#sidebar-container .embedded h2 {
+  min-height: 0;
+  line-height: 1.2;
+  padding: 9px 11px !important;
+  color: #ffffff !important;
+  background: #455a64 !important;
+  font-size: 14px !important;
+  font-weight: 700;
+}
+
+td#sidebar-container .embedded table {
+  background: #ffffff !important;
+  color: #37474f !important;
+}
+
+td#sidebar-container .embedded table td {
+  padding: 8px 10px !important;
+}
+
+td#sidebar-container + *,
+td#sidebar-container + td.bottom {
+  padding: 20px 28px 48px !important;
+  background: transparent !important;
+  vertical-align: top;
+}
+
+td.bottom > table.main,
+td.bottom > div,
+td.bottom > form,
+td.bottom > h1,
+td.bottom > h2 {
+  max-width: 1280px;
+}
+
+@media only screen and (max-width: 1180px) {
+  body .menu {
+    width: 190px !important;
+  }
+
+  body > table.menu + table.main {
+    width: calc(100% - 190px) !important;
+    margin-left: 190px !important;
+  }
+
+  td#sidebar-container {
+    width: 220px !important;
+    min-width: 220px;
+    max-width: 220px;
   }
 }
