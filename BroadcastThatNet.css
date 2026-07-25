@@ -4827,3 +4827,150 @@ img[src*="series-2160"]{
 #content:has(.main_column>table#discog_table) .torrent_table{
   margin-top:0 !important;
 }
+
+/* Series info panel: promote metadata from sidebar into a horizontal dashboard strip. */
+#series .thin,
+#content:has(.main_column>table#discog_table) .thin{
+  display:grid !important;
+  grid-template-columns:minmax(220px,280px) minmax(0,1fr) !important;
+  align-items:start !important;
+  gap:12px !important;
+  overflow:visible !important;
+}
+
+#series .thin>.linkbox,
+#content:has(.main_column>table#discog_table) .thin>.linkbox{
+  grid-column:1 / -1 !important;
+  order:1 !important;
+}
+
+#series .thin .sidebar,
+#series .thin .main_column,
+#content:has(.main_column>table#discog_table) .thin .sidebar,
+#content:has(.main_column>table#discog_table) .thin .main_column{
+  display:contents !important;
+}
+
+#series .thin .sidebar>.box:not(:has(.stats)),
+#content:has(.main_column>table#discog_table) .thin .sidebar>.box:not(:has(.stats)){
+  grid-column:1 !important;
+  order:2 !important;
+  width:auto !important;
+}
+
+#series .thin .main_column>*,
+#content:has(.main_column>table#discog_table) .thin .main_column>*{
+  grid-column:2 !important;
+  order:3 !important;
+  width:100% !important;
+}
+
+#series .thin .main_column>.box:not(:last-of-type),
+#content:has(.main_column>table#discog_table) .thin .main_column>.box:not(:last-of-type){
+  order:2 !important;
+}
+
+#series .thin .sidebar>.box:has(.stats),
+#content:has(.main_column>table#discog_table) .thin .sidebar>.box:has(.stats){
+  grid-column:2 !important;
+  order:4 !important;
+  width:auto !important;
+  margin:0 !important;
+  padding:14px 16px !important;
+  border-color:rgba(255,255,255,0.13) !important;
+  background:linear-gradient(180deg,rgba(255,255,255,0.045),rgba(255,255,255,0.018)) !important;
+  box-shadow:0 1px 0 rgba(255,255,255,0.07) inset,0 16px 34px rgba(0,0,0,0.18) !important;
+}
+
+#series .thin .main_column>.box:last-of-type,
+#content:has(.main_column>table#discog_table) .thin .main_column>.box:last-of-type{
+  order:5 !important;
+}
+
+#series .thin .sidebar>.box:has(.stats) .head,
+#content:has(.main_column>table#discog_table) .thin .sidebar>.box:has(.stats) .head{
+  margin:0 0 12px !important;
+  padding:0 0 10px !important;
+  border-bottom:1px solid rgba(255,255,255,0.08) !important;
+  background:transparent !important;
+  color:var(--swift-text) !important;
+  font-size:1rem !important;
+  font-weight:780 !important;
+  letter-spacing:0 !important;
+  text-transform:none !important;
+}
+
+#series .thin .sidebar>.box:has(.stats) .stats,
+#content:has(.main_column>table#discog_table) .thin .sidebar>.box:has(.stats) .stats{
+  padding:0 !important;
+}
+
+#series .thin .sidebar>.box:has(.stats) .stats table,
+#series .thin .sidebar>.box:has(.stats) .stats tbody,
+#content:has(.main_column>table#discog_table) .thin .sidebar>.box:has(.stats) .stats table,
+#content:has(.main_column>table#discog_table) .thin .sidebar>.box:has(.stats) .stats tbody{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  gap:9px !important;
+  width:100% !important;
+  border:0 !important;
+  background:transparent !important;
+}
+
+#series .thin .sidebar>.box:has(.stats) .stats tr,
+#content:has(.main_column>table#discog_table) .thin .sidebar>.box:has(.stats) .stats tr{
+  display:flex !important;
+  flex:1 1 160px !important;
+  min-width:150px !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  gap:12px !important;
+  padding:9px 11px !important;
+  border:1px solid rgba(255,255,255,0.08) !important;
+  border-radius:999px !important;
+  background:rgba(7,12,19,0.56) !important;
+  box-shadow:0 1px 0 rgba(255,255,255,0.045) inset !important;
+}
+
+#series .thin .sidebar>.box:has(.stats) .stats td,
+#content:has(.main_column>table#discog_table) .thin .sidebar>.box:has(.stats) .stats td{
+  display:block !important;
+  width:auto !important;
+  padding:0 !important;
+  border:0 !important;
+  background:transparent !important;
+  line-height:1.15 !important;
+}
+
+#series .thin .sidebar>.box:has(.stats) .stats td:first-child,
+#content:has(.main_column>table#discog_table) .thin .sidebar>.box:has(.stats) .stats td:first-child{
+  color:var(--swift-tertiary) !important;
+  font-size:.66rem !important;
+  font-weight:820 !important;
+  letter-spacing:.055em !important;
+  text-transform:uppercase !important;
+}
+
+#series .thin .sidebar>.box:has(.stats) .stats td:last-child,
+#content:has(.main_column>table#discog_table) .thin .sidebar>.box:has(.stats) .stats td:last-child{
+  color:rgba(245,247,250,0.95) !important;
+  font-size:.9rem !important;
+  font-weight:720 !important;
+  text-align:right !important;
+}
+
+@media (max-width:992px){
+  #series .thin,
+  #content:has(.main_column>table#discog_table) .thin{
+    grid-template-columns:1fr !important;
+  }
+
+  #series .thin .sidebar>.box:not(:has(.stats)),
+  #series .thin .main_column>*,
+  #series .thin .sidebar>.box:has(.stats),
+  #content:has(.main_column>table#discog_table) .thin .sidebar>.box:not(:has(.stats)),
+  #content:has(.main_column>table#discog_table) .thin .main_column>*,
+  #content:has(.main_column>table#discog_table) .thin .sidebar>.box:has(.stats){
+    grid-column:1 !important;
+  }
+}
