@@ -5041,3 +5041,76 @@ img[src*="series-2160"]{
     width:100% !important;
   }
 }
+
+/* Forum image lightbox: keep the preview above the frosted page layer. */
+#lightbox,
+#lightbox[style="display: block;"],
+#lightbox[style*="display: block"]{
+  position:fixed !important;
+  inset:0 !important;
+  z-index:12000 !important;
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:center !important;
+  width:auto !important;
+  height:auto !important;
+  max-width:none !important;
+  max-height:none !important;
+  padding:34px !important;
+  border:0 !important;
+  border-radius:0 !important;
+  background:rgba(5,9,14,0.86) !important;
+  box-shadow:none !important;
+  box-sizing:border-box !important;
+  cursor:zoom-out !important;
+  backdrop-filter:blur(12px) saturate(1.15);
+}
+
+html:has(#lightbox[style*="display: block"]) #content,
+body:has(#lightbox[style*="display: block"]) #content{
+  filter:none !important;
+}
+
+#lightbox a{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  max-width:calc(100vw - 68px) !important;
+  max-height:calc(100vh - 68px) !important;
+  cursor:zoom-in !important;
+}
+
+#lightbox img{
+  display:block !important;
+  width:auto !important;
+  height:auto !important;
+  max-width:calc(100vw - 68px) !important;
+  max-height:calc(100vh - 68px) !important;
+  object-fit:contain !important;
+  border:1px solid rgba(255,255,255,0.18) !important;
+  border-radius:12px !important;
+  background:#05090e !important;
+  box-shadow:0 24px 80px rgba(0,0,0,0.48),0 1px 0 rgba(255,255,255,0.12) inset !important;
+  opacity:1 !important;
+  visibility:visible !important;
+}
+
+#lightbox::before{
+  content:"x" !important;
+  position:fixed !important;
+  top:18px !important;
+  right:24px !important;
+  width:38px !important;
+  height:38px !important;
+  display:grid !important;
+  place-items:center !important;
+  border:1px solid rgba(255,255,255,0.18) !important;
+  border-radius:999px !important;
+  background:rgba(12,18,27,0.84) !important;
+  color:rgba(255,255,255,0.94) !important;
+  font-size:1.7rem !important;
+  font-weight:300 !important;
+  line-height:1 !important;
+  pointer-events:none !important;
+}
