@@ -4985,3 +4985,59 @@ img[src*="series-2160"]{
     max-width:none !important;
   }
 }
+
+/* Correct series promotion: only Series Info and Summary move up. */
+#series .thin,
+#content:has(.main_column>table#discog_table) .thin{
+  position:relative !important;
+}
+
+#series .thin .main_column,
+#content:has(.main_column>table#discog_table) .thin .main_column{
+  padding-top:154px !important;
+}
+
+#series .thin .main_column>.box:not(:last-of-type),
+#content:has(.main_column>table#discog_table) .thin .main_column>.box:not(:last-of-type){
+  order:3 !important;
+}
+
+#series .thin .main_column>.box:has(img[src*="tvicon/tvdb"]),
+#series .thin .main_column>.box:has(img[src*="tvicon/imdb"]),
+#series .thin .main_column>.box:has(img[src*="tvicon/wikipedia"]),
+#content:has(.main_column>table#discog_table) .thin .main_column>.box:has(img[src*="tvicon/tvdb"]),
+#content:has(.main_column>table#discog_table) .thin .main_column>.box:has(img[src*="tvicon/imdb"]),
+#content:has(.main_column>table#discog_table) .thin .main_column>.box:has(img[src*="tvicon/wikipedia"]){
+  order:-3 !important;
+}
+
+#series .thin .sidebar>.box:has(.stats),
+#content:has(.main_column>table#discog_table) .thin .sidebar>.box:has(.stats){
+  position:absolute !important;
+  top:48px !important;
+  right:0 !important;
+  left:292px !important;
+  z-index:3 !important;
+  width:auto !important;
+  max-width:none !important;
+}
+
+#series .thin .sidebar>.box:not(:has(.stats)),
+#content:has(.main_column>table#discog_table) .thin .sidebar>.box:not(:has(.stats)){
+  position:static !important;
+  width:100% !important;
+  max-width:100% !important;
+}
+
+@media (max-width:992px){
+  #series .thin .main_column,
+  #content:has(.main_column>table#discog_table) .thin .main_column{
+    padding-top:0 !important;
+  }
+
+  #series .thin .sidebar>.box:has(.stats),
+  #content:has(.main_column>table#discog_table) .thin .sidebar>.box:has(.stats){
+    position:static !important;
+    width:100% !important;
+  }
+}
