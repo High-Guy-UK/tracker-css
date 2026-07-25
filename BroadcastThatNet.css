@@ -4777,3 +4777,29 @@ img[src*="series-2160"]{
   background-color:rgba(255,255,255,0.016) !important;
   box-shadow:none !important;
 }
+
+/* General body-panel colour unification across older Gazelle pages. */
+#content :is(.box,.thin):not(.forum_post):not(.filter_torrents):not(:has(.torrent_table)):not(:has(#taglist)):not(:has(.cat_list)) > :is(.body,.pad),
+#content :is(.box,.thin):not(.forum_post):not(.filter_torrents):not(:has(.torrent_table)):not(:has(#taglist)):not(:has(.cat_list)) .box > :is(.body,.pad),
+#content :is(.box,.thin):not(.forum_post):not(.filter_torrents):not(:has(.torrent_table)):not(:has(#taglist)):not(:has(.cat_list)) > form > :is(.body,.pad){
+  border-color:transparent !important;
+  background:transparent !important;
+  background-color:transparent !important;
+  box-shadow:none !important;
+}
+
+#content :is(.box,.thin):not(.forum_post):not(.filter_torrents):not(:has(.torrent_table)):not(:has(#taglist)):not(:has(.cat_list)) :is(.body,.pad) > :is(div,section,article,table,tbody,tr,td)[style*="background"],
+#content :is(.box,.thin):not(.forum_post):not(.filter_torrents):not(:has(.torrent_table)):not(:has(#taglist)):not(:has(.cat_list)) :is(.body,.pad) > :is(div,section,article,table,tbody,tr,td)[style*="border"],
+#content :is(.box,.thin):not(.forum_post):not(.filter_torrents):not(:has(.torrent_table)):not(:has(#taglist)):not(:has(.cat_list)) :is(.body,.pad) :is(blockquote,pre,.code){
+  border-color:rgba(255,255,255,0.06) !important;
+  background:rgba(255,255,255,0.014) !important;
+  background-color:rgba(255,255,255,0.014) !important;
+  box-shadow:none !important;
+}
+
+#content :is(.box,.thin):not(.forum_post):not(.filter_torrents):not(:has(.torrent_table)):not(:has(#taglist)):not(:has(.cat_list)) :is(.body,.pad) > table:not(.torrent_table):not(#taglist),
+#content :is(.box,.thin):not(.forum_post):not(.filter_torrents):not(:has(.torrent_table)):not(:has(#taglist)):not(:has(.cat_list)) :is(.body,.pad) > table:not(.torrent_table):not(#taglist) :is(tbody,tr,td):not(.colhead):not(.colhead_dark){
+  background:transparent !important;
+  background-color:transparent !important;
+  box-shadow:none !important;
+}
