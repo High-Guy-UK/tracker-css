@@ -5043,7 +5043,6 @@ img[src*="series-2160"]{
 }
 
 /* Forum image lightbox: keep the preview above the frosted page layer. */
-#lightbox,
 #lightbox[style="display: block;"],
 #lightbox[style*="display: block"]{
   position:fixed !important;
@@ -5065,6 +5064,10 @@ img[src*="series-2160"]{
   box-sizing:border-box !important;
   cursor:zoom-out !important;
   backdrop-filter:blur(12px) saturate(1.15);
+}
+
+#lightbox:not([style*="display: block"]){
+  display:none !important;
 }
 
 html:has(#lightbox[style*="display: block"]) #content,
