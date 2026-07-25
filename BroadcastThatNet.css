@@ -4692,3 +4692,57 @@ img[src*="series-2160"]{
     left:calc(var(--dash-rail, 290px) + 618px) !important;
   }
 }
+
+/* Softer white notification chip focus with breathing frame. */
+@keyframes btnNoticeBreathe{
+  0%,
+  100%{
+    border-color:rgba(255,255,255,0.18);
+    box-shadow:0 10px 24px rgba(0,0,0,0.18),0 1px 0 rgba(255,255,255,0.10) inset,0 0 0 0 rgba(255,255,255,0.08);
+  }
+  50%{
+    border-color:rgba(255,255,255,0.34);
+    box-shadow:0 12px 28px rgba(0,0,0,0.22),0 1px 0 rgba(255,255,255,0.14) inset,0 0 0 4px rgba(255,255,255,0.055);
+  }
+}
+
+@media (min-width:1280px){
+  #header .alertbar,
+  body>.alertbar{
+    top:10px !important;
+    min-height:30px !important;
+    padding:4px 12px 4px 10px !important;
+    border-color:rgba(255,255,255,0.22) !important;
+    background:linear-gradient(180deg,rgba(255,255,255,0.11),rgba(255,255,255,0.055)) !important;
+    color:var(--swift-text) !important;
+    animation:btnNoticeBreathe 3.8s ease-in-out infinite !important;
+  }
+
+  #header .alertbar::before,
+  body>.alertbar::before{
+    width:7px !important;
+    height:7px !important;
+    margin-right:8px !important;
+    background:rgba(255,255,255,0.92) !important;
+    box-shadow:0 0 0 4px rgba(255,255,255,0.075),0 0 16px rgba(255,255,255,0.28) !important;
+  }
+
+  #header .alertbar a,
+  body>.alertbar a{
+    font-size:.8rem !important;
+    color:rgba(245,247,250,0.94) !important;
+  }
+
+  #header .alertbar:hover,
+  body>.alertbar:hover{
+    border-color:rgba(255,255,255,0.42) !important;
+    background:linear-gradient(180deg,rgba(255,255,255,0.15),rgba(255,255,255,0.075)) !important;
+  }
+}
+
+@media (prefers-reduced-motion:reduce){
+  #header .alertbar,
+  body>.alertbar{
+    animation:none !important;
+  }
+}
