@@ -4746,3 +4746,34 @@ img[src*="series-2160"]{
     animation:none !important;
   }
 }
+
+/* Blog/news page body panels should blend with their cards. */
+:is(#blog,#blogs,#news,#tvnews,#newsletter,body[id*="blog"],body[id*="news"]) :is(.main_column,#content)>.box,
+:is(#blog,#blogs,#news,#tvnews,#newsletter,body[id*="blog"],body[id*="news"]) :is(.main_column,#content) .box{
+  border-color:rgba(255,255,255,0.105) !important;
+  background:rgba(23,28,36,0.86) !important;
+  background-color:rgba(23,28,36,0.86) !important;
+}
+
+:is(#blog,#blogs,#news,#tvnews,#newsletter,body[id*="blog"],body[id*="news"]) :is(.main_column,#content) .box :is(.body,.pad){
+  border:0 !important;
+  background:transparent !important;
+  background-color:transparent !important;
+  box-shadow:none !important;
+}
+
+:is(#blog,#blogs,#news,#tvnews,#newsletter,body[id*="blog"],body[id*="news"]) :is(.main_column,#content) .box :is(div,section,article,table,tbody,tr,td)[style],
+:is(#blog,#blogs,#news,#tvnews,#newsletter,body[id*="blog"],body[id*="news"]) :is(.main_column,#content) .box :is(table,tbody,tr,td):not(.colhead):not(.colhead_dark){
+  background:transparent !important;
+  background-color:transparent !important;
+  box-shadow:none !important;
+}
+
+:is(#blog,#blogs,#news,#tvnews,#newsletter,body[id*="blog"],body[id*="news"]) :is(.main_column,#content) .box :is(div,table,td)[style*="background"],
+:is(#blog,#blogs,#news,#tvnews,#newsletter,body[id*="blog"],body[id*="news"]) :is(.main_column,#content) .box :is(div,table,td)[style*="border"],
+:is(#blog,#blogs,#news,#tvnews,#newsletter,body[id*="blog"],body[id*="news"]) :is(.main_column,#content) .box :is(blockquote,pre,.code){
+  border-color:rgba(255,255,255,0.06) !important;
+  background:rgba(255,255,255,0.016) !important;
+  background-color:rgba(255,255,255,0.016) !important;
+  box-shadow:none !important;
+}
