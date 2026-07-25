@@ -4803,3 +4803,27 @@ img[src*="series-2160"]{
   background-color:transparent !important;
   box-shadow:none !important;
 }
+
+/* Compact series pages: hide the wide backdrop banner and pull torrents upward. */
+#series .thin>center,
+#content:has(.main_column>table#discog_table) .thin>center{
+  display:none !important;
+}
+
+#series .thin>.linkbox,
+#content:has(.main_column>table#discog_table) .thin>.linkbox{
+  margin-bottom:12px !important;
+  padding-bottom:0 !important;
+}
+
+#series .thin .sidebar,
+#series .thin .main_column,
+#content:has(.main_column>table#discog_table) .thin .sidebar,
+#content:has(.main_column>table#discog_table) .thin .main_column{
+  margin-top:0 !important;
+}
+
+#series .torrent_table,
+#content:has(.main_column>table#discog_table) .torrent_table{
+  margin-top:0 !important;
+}
