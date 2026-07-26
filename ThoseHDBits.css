@@ -1,6 +1,6 @@
 /*!
  * Theme Name:     ThoseHDBits
- * Version:        5.7
+ * Version:        5.8
  * Last Updated:   2026-07-24
  * Based on:       HDBits Berlin 1.4
  */
@@ -8958,4 +8958,79 @@ html .rc__film__poster {
     url("https://hdbits.org/pic/imdb.png")
     center / 36px auto
     no-repeat !important;
+}
+
+/* v5.8: let film/detail pages use the full canvas beside the sidebar. */
+body:has(#details) td#sidebar-container + td.bottom,
+body:has(#showpage) td#sidebar-container + td.bottom,
+body:has(.film-info) td#sidebar-container + td.bottom {
+  width: calc(100vw - 252px) !important;
+  max-width: none !important;
+  padding-right: 28px !important;
+  box-sizing: border-box !important;
+}
+
+body:has(#details) td.bottom > table.main,
+body:has(#details) td.bottom > table:not(.menu),
+body:has(#details) td.bottom > div,
+body:has(#details) td.bottom > form,
+body:has(#details) td.bottom > h1,
+body:has(#details) td.bottom > h2,
+body:has(#showpage) td.bottom > table.main,
+body:has(#showpage) td.bottom > table:not(.menu),
+body:has(#showpage) td.bottom > div,
+body:has(#showpage) td.bottom > form,
+body:has(#showpage) td.bottom > h1,
+body:has(#showpage) td.bottom > h2,
+body:has(.film-info) td.bottom > table.main,
+body:has(.film-info) td.bottom > table:not(.menu),
+body:has(.film-info) td.bottom > div,
+body:has(.film-info) td.bottom > form,
+body:has(.film-info) td.bottom > h1,
+body:has(.film-info) td.bottom > h2 {
+  width: 100% !important;
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  box-sizing: border-box !important;
+}
+
+body:has(#details) #details,
+body:has(#details) #details ~ table.main,
+body:has(#details) #details ~ table,
+body:has(#showpage) #showpage,
+body:has(#showpage) #showpage ~ table.main,
+body:has(#showpage) #showpage ~ table,
+body:has(.film-info) .film-info,
+body:has(.film-info) .contentlayout,
+body:has(.film-info) .content,
+body:has(.film-info) td.bottom table[width="800"],
+body:has(.film-info) td.bottom table[width="850"],
+body:has(.film-info) td.bottom table[width="900"],
+body:has(.film-info) td.bottom table[width="930"] {
+  width: 100% !important;
+  max-width: none !important;
+  box-sizing: border-box !important;
+}
+
+body:has(#details) #details table,
+body:has(#showpage) #showpage table,
+body:has(.film-info) .film-info table,
+body:has(.film-info) .contentlayout table {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+body:has(#details) td.bottom > table[width="800"] + table.main + h2:only-of-type,
+body:has(#details) td.bottom > table[width="800"] + table.main + h2:only-of-type + table:last-of-type,
+body:has(#details) #details ~ table.main:last-of-type {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+body:has(#details) td.bottom > table[width="800"] + table.main + h2:only-of-type + table:last-of-type .comment img,
+body:has(#details) .previewbox img,
+body:has(#showpage) .previewbox img {
+  max-width: 100% !important;
+  height: auto !important;
 }
