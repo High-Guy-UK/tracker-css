@@ -1,6 +1,6 @@
 /*!
  * Theme Name:     ThoseHDBits
- * Version:        4.8
+ * Version:        4.9
  * Last Updated:   2026-07-24
  * Based on:       HDBits Berlin 1.4
  */
@@ -8358,4 +8358,112 @@ body > table:first-of-type .embedded:nth-of-type(3) font {
 #torrent-list a[href*="film/info"]:hover {
   color: #ffe29a !important;
   text-shadow: 0 0 8px rgba(255, 209, 102, .25) !important;
+}
+
+/* v4.9: hide the remaining original torrent icons and normalize spacing. */
+#torrent-list > tbody > tr > td:first-child,
+#torrent-list > tbody > tr > td.catcell {
+  width: 44px !important;
+  min-width: 44px !important;
+  max-width: 44px !important;
+  padding: 4px 5px !important;
+  text-align: center !important;
+}
+
+#torrent-list > tbody > tr > td:first-child img,
+#torrent-list > tbody > tr > td.catcell img {
+  display: none !important;
+  visibility: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
+  opacity: 0 !important;
+}
+
+#torrent-list > tbody > tr > td:first-child a,
+#torrent-list > tbody > tr > td.catcell a {
+  width: 32px !important;
+  min-width: 32px !important;
+  max-width: 32px !important;
+  height: 26px !important;
+  min-height: 26px !important;
+  max-height: 26px !important;
+  overflow: hidden !important;
+  color: transparent !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  background-image: none !important;
+}
+
+#torrent-list > tbody > tr > td:first-child a::before,
+#torrent-list > tbody > tr > td.catcell a::before {
+  flex: 0 0 21px !important;
+  width: 21px !important;
+  height: 21px !important;
+}
+
+#torrent-list > tbody > tr > td:nth-child(2) a:has(> img) {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 18px !important;
+  min-width: 18px !important;
+  height: 18px !important;
+  min-height: 18px !important;
+  margin: 4px 2px 0 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  vertical-align: middle !important;
+  color: transparent !important;
+  background: var(--hdb-icon-cyan-soft) !important;
+  border: 1px solid rgba(86, 217, 255, .24) !important;
+  border-radius: 5px !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.035) !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  text-decoration: none !important;
+}
+
+#torrent-list > tbody > tr > td:nth-child(2) a:has(> img) > img {
+  display: none !important;
+  visibility: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
+  opacity: 0 !important;
+}
+
+#torrent-list > tbody > tr > td:nth-child(2) a:has(> img)::before {
+  content: "" !important;
+  display: block !important;
+  width: 13px !important;
+  height: 13px !important;
+  background: var(--hdb-icon-cyan) !important;
+  filter: drop-shadow(0 0 4px rgba(86,217,255,.28)) !important;
+  mask: var(--hdb-mask-wishlist) center / contain no-repeat !important;
+  -webkit-mask: var(--hdb-mask-wishlist) center / contain no-repeat !important;
+}
+
+#torrent-list > tbody > tr > td:nth-child(2) a:has(> img):hover {
+  background: rgba(86, 217, 255, .26) !important;
+  border-color: rgba(86, 217, 255, .5) !important;
+}
+
+#torrent-list > tbody > tr > td:nth-child(2) a[href*="download"]:has(> img)::before {
+  mask: var(--hdb-mask-download) center / contain no-repeat !important;
+  -webkit-mask: var(--hdb-mask-download) center / contain no-repeat !important;
+}
+
+#torrent-list > tbody > tr > td:nth-child(2) a[href^="javascript:addRss"]:has(> img)::before {
+  mask: var(--hdb-mask-rss) center / contain no-repeat !important;
+  -webkit-mask: var(--hdb-mask-rss) center / contain no-repeat !important;
+}
+
+#torrent-list > tbody > tr > td:nth-child(2) a[href^="javascript:addBookm"]:has(> img)::before {
+  mask: var(--hdb-mask-bookmark) center / contain no-repeat !important;
+  -webkit-mask: var(--hdb-mask-bookmark) center / contain no-repeat !important;
+}
+
+#torrent-list > tbody > tr > td:nth-child(2) a:has(> img[alt*="wish" i])::before,
+#torrent-list > tbody > tr > td:nth-child(2) a:has(> img[title*="wish" i])::before {
+  mask: var(--hdb-mask-wishlist) center / contain no-repeat !important;
+  -webkit-mask: var(--hdb-mask-wishlist) center / contain no-repeat !important;
 }
