@@ -1,6 +1,6 @@
 /*!
  * Theme Name:     ThoseHDBits
- * Version:        1.6
+ * Version:        1.7
  * Last Updated:   2026-07-24
  * Based on:       HDBits Berlin 1.4
  */
@@ -3998,4 +3998,108 @@ td#sidebar-container + td.bottom {
 body > table:first-of-type input:not([type=hidden]),
 body > table:first-of-type button {
   display: none !important;
+}
+
+/* ==========================================================================
+   Sane single rail correction
+   ========================================================================== */
+body .menu {
+  width: 220px !important;
+  padding: 78px 16px 18px !important;
+  overflow: hidden !important;
+}
+
+body .menu::before {
+  top: 22px;
+  left: 22px;
+  font-size: 24px;
+}
+
+body .menu::after {
+  top: 52px;
+  left: 23px;
+  font-size: 8px;
+  letter-spacing: .42em;
+}
+
+body .menu tbody,
+body .menu tr,
+body .menu td,
+body .menu #menusides {
+  display: block !important;
+  width: 100% !important;
+}
+
+body .menu tbody {
+  display: block !important;
+}
+
+body .menu td {
+  margin: 0 0 6px !important;
+}
+
+body .menu a.normal,
+body .menu a.normal:link,
+body .menu a.normal:visited {
+  min-height: 31px;
+  line-height: 31px;
+  padding: 0 12px !important;
+  border-radius: 6px;
+  font-size: 12px;
+  text-align: left;
+}
+
+td#sidebar-container {
+  display: none !important;
+}
+
+td#sidebar-container + *,
+td#sidebar-container + td.bottom {
+  display: block !important;
+  width: auto !important;
+  padding: 28px 38px 64px !important;
+}
+
+body > table:first-of-type {
+  left: 220px !important;
+  width: calc(100% - 220px) !important;
+}
+
+body > table.menu + table.main {
+  display: block !important;
+  width: calc(100% - 220px) !important;
+  margin-left: 220px !important;
+}
+
+body > table.menu + table.main > tbody,
+body > table.menu + table.main > tbody > tr {
+  display: block !important;
+  width: 100% !important;
+}
+
+#sitesearch,
+#sitesearchform {
+  display: none !important;
+}
+
+@media only screen and (max-height: 820px) {
+  body .menu {
+    padding-top: 68px !important;
+  }
+
+  body .menu::before {
+    top: 15px;
+  }
+
+  body .menu::after {
+    top: 43px;
+  }
+
+  body .menu a.normal,
+  body .menu a.normal:link,
+  body .menu a.normal:visited {
+    min-height: 28px;
+    line-height: 28px;
+    font-size: 11px;
+  }
 }
