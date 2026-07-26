@@ -1,6 +1,6 @@
 /*!
  * Theme Name:     ThoseHDBits
- * Version:        2.1
+ * Version:        2.2
  * Last Updated:   2026-07-24
  * Based on:       HDBits Berlin 1.4
  */
@@ -4546,5 +4546,52 @@ td#sidebar-container::before {
   td#sidebar-container::before {
     height: 10px;
     margin-bottom: 9px;
+  }
+}
+
+/* Stronger secondary menu separation. */
+td#sidebar-container {
+  top: 592px !important;
+  left: 28px !important;
+  width: 178px !important;
+  min-width: 178px !important;
+  max-width: 178px !important;
+}
+
+td#sidebar-container::before {
+  content: "Quick links";
+  display: flex;
+  align-items: center;
+  height: 24px;
+  margin: 0 0 10px;
+  color: #708092;
+  border-top: 1px solid #2b3542;
+  border-bottom: 1px solid #202832;
+  background: transparent;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+td#sidebar-container .embedded h2 {
+  min-height: 23px;
+  line-height: 23px;
+  margin-bottom: 5px !important;
+  padding: 0 9px !important;
+  color: #9ba7b5 !important;
+  background: #121923 !important;
+  border-color: #1d2632 !important;
+  font-size: 10px !important;
+}
+
+td#sidebar-container .embedded h2:hover {
+  color: #ffffff !important;
+  background: #1a2330 !important;
+}
+
+@media only screen and (max-height: 820px) {
+  td#sidebar-container {
+    top: 526px !important;
   }
 }
