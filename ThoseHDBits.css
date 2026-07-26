@@ -1,6 +1,6 @@
 /*!
  * Theme Name:     ThoseHDBits
- * Version:        5.2
+ * Version:        5.3
  * Last Updated:   2026-07-24
  * Based on:       HDBits Berlin 1.4
  */
@@ -8803,4 +8803,37 @@ html .rc__film__poster {
 #torrent-list button.tvdb_button:active {
   top: auto !important;
   transform: translateY(1px) !important;
+}
+
+/* v5.3: hard-center category tiles inside their actual table cells. */
+#torrent-list > tbody > tr > td:first-child,
+#torrent-list > tbody > tr > td.catcell {
+  position: relative !important;
+  width: 72px !important;
+  min-width: 72px !important;
+  max-width: 72px !important;
+  padding: 0 !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+}
+
+#torrent-list > tbody > tr > td:first-child a,
+#torrent-list > tbody > tr > td.catcell a {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  width: 46px !important;
+  min-width: 46px !important;
+  max-width: 46px !important;
+  height: 46px !important;
+  min-height: 46px !important;
+  max-height: 46px !important;
+  margin: 0 !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+#torrent-list > tbody > tr > td:first-child a::after,
+#torrent-list > tbody > tr > td.catcell a::after {
+  inset: 6px !important;
+  transform: none !important;
 }
