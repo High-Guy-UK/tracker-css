@@ -1,6 +1,6 @@
 /*!
  * Theme Name:     ThoseHDBits
- * Version:        2.7
+ * Version:        2.8
  * Last Updated:   2026-07-24
  * Based on:       HDBits Berlin 1.4
  */
@@ -5143,4 +5143,134 @@ form:has(#searchbox) #searchbox tr:has(input#search) button {
   align-items: center !important;
   justify-content: center !important;
   font-size: 11px !important;
+}
+
+/* Visual polish for the header toolbar to match the sidebar controls. */
+body > table:first-of-type {
+  background: #0f1722 !important;
+  border-bottom-color: #1b2430 !important;
+}
+
+form:has(#searchbox) ul#tabs {
+  gap: 8px !important;
+}
+
+html body table.main tbody tr td.bottom form:has(#searchbox) ul#tabs li.tab,
+form:has(#searchbox) ul#tabs li,
+form:has(#searchbox) ul#tabs li.tab {
+  min-width: 92px !important;
+  height: 30px !important;
+  color: #aeb7c3 !important;
+  background: #171e29 !important;
+  border: 1px solid #1b2430 !important;
+  border-radius: 6px !important;
+  box-shadow: none !important;
+  font-family: "Inter", "Roboto", "Helvetica Neue", Arial, sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0 !important;
+}
+
+form:has(#searchbox) ul#tabs li *,
+form:has(#searchbox) ul#tabs li.tab *,
+form:has(#searchbox) ul#tabs li a,
+form:has(#searchbox) ul#tabs li.tab a {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: inherit !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  font: inherit !important;
+  text-decoration: none !important;
+}
+
+form:has(#searchbox) ul#tabs li.selected,
+form:has(#searchbox) ul#tabs li.tab.selected,
+form:has(#searchbox) ul#tabs li:hover,
+form:has(#searchbox) ul#tabs li.tab:hover {
+  color: #f1f6fb !important;
+  background: #1d2633 !important;
+  border-color: rgba(85, 163, 255, .22) !important;
+}
+
+form:has(#searchbox) #searchbox {
+  top: 13px !important;
+  height: 30px !important;
+}
+
+form:has(#searchbox) #searchbox tr:has(input#search),
+form:has(#searchbox) #searchbox tr:has(input#search) td {
+  height: 30px !important;
+}
+
+form:has(#searchbox) #searchbox input#search,
+form:has(#searchbox) #searchbox tr:has(input#search) input#search {
+  height: 30px !important;
+  color: #c3cbd6 !important;
+  background: #0a1018 !important;
+  border-color: #1b2430 !important;
+  border-radius: 6px 0 0 6px !important;
+  font-family: "Inter", "Roboto", "Helvetica Neue", Arial, sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0 !important;
+}
+
+form:has(#searchbox) #searchbox input#search::placeholder {
+  color: #748092 !important;
+  font-weight: 700 !important;
+}
+
+form:has(#searchbox) #searchbox input[type=submit],
+form:has(#searchbox) #searchbox button,
+form:has(#searchbox) #searchbox tr:has(input#search) input[type=submit],
+form:has(#searchbox) #searchbox tr:has(input#search) button {
+  height: 30px !important;
+  color: #aeb7c3 !important;
+  background: #171e29 !important;
+  border-color: #1b2430 !important;
+  border-radius: 0 6px 6px 0 !important;
+  font-family: "Inter", "Roboto", "Helvetica Neue", Arial, sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0 !important;
+  line-height: 1 !important;
+}
+
+form:has(#searchbox) #searchbox input[type=submit]:hover,
+form:has(#searchbox) #searchbox button:hover {
+  color: #f1f6fb !important;
+  background: #1d2633 !important;
+  border-color: rgba(85, 163, 255, .22) !important;
+}
+
+body > table:first-of-type .embedded:nth-of-type(3),
+body > table:first-of-type .embedded:nth-of-type(3) *,
+body > table:first-of-type .embedded:nth-of-type(3) a,
+body > table:first-of-type .embedded:nth-of-type(3) .curuser-stats {
+  color: #aeb7c3 !important;
+  font-family: "Inter", "Roboto", "Helvetica Neue", Arial, sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0 !important;
+}
+
+body > table:first-of-type .embedded:nth-of-type(3) font[color="#1900D1"],
+body > table:first-of-type .embedded:nth-of-type(3) * font[color="#1900D1"],
+body > table:first-of-type .embedded:nth-of-type(3) font[color=blue],
+body > table:first-of-type .embedded:nth-of-type(3) * font[color=blue],
+body > table:first-of-type .embedded:nth-of-type(3) font[color=green],
+body > table:first-of-type .embedded:nth-of-type(3) * font[color=green],
+body > table:first-of-type .embedded:nth-of-type(3) font[color=red],
+body > table:first-of-type .embedded:nth-of-type(3) * font[color=red],
+body > table:first-of-type .embedded:nth-of-type(3) font[color=darkred],
+body > table:first-of-type .embedded:nth-of-type(3) * font[color=darkred],
+body > table:first-of-type .embedded:nth-of-type(3) a[href*="bonus"] {
+  color: #aeb7c3 !important;
 }
