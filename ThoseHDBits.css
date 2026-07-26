@@ -1,6 +1,6 @@
 /*!
  * Theme Name:     ThoseHDBits
- * Version:        1.7
+ * Version:        1.8
  * Last Updated:   2026-07-24
  * Based on:       HDBits Berlin 1.4
  */
@@ -4005,7 +4005,7 @@ body > table:first-of-type button {
    ========================================================================== */
 body .menu {
   width: 220px !important;
-  padding: 78px 16px 18px !important;
+  padding: 112px 16px 18px !important;
   overflow: hidden !important;
 }
 
@@ -4047,6 +4047,58 @@ body .menu a.normal:visited {
   border-radius: 6px;
   font-size: 12px;
   text-align: left;
+  border-bottom: 1px solid transparent !important;
+}
+
+body .menu a.normal::before,
+body .menu a.normal::after,
+body .menu a.normal:link::before,
+body .menu a.normal:link::after,
+body .menu a.normal:visited::before,
+body .menu a.normal:visited::after {
+  display: none !important;
+  content: none !important;
+  animation: none !important;
+}
+
+body .menu a.normal:focus,
+body .menu a.normal:hover {
+  border-bottom-color: transparent !important;
+}
+
+body > table:first-of-type .embedded:nth-of-type(1) {
+  visibility: visible !important;
+}
+
+body > table:first-of-type .embedded:nth-of-type(1) a {
+  position: fixed !important;
+  top: 78px;
+  left: 16px;
+  z-index: 41;
+  display: block !important;
+  width: 188px;
+  height: 31px;
+  line-height: 31px;
+  padding: 0 12px !important;
+  color: #aeb7c3 !important;
+  background: rgba(255, 255, 255, .025) !important;
+  border: 1px solid transparent !important;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: left;
+  text-decoration: none !important;
+}
+
+body > table:first-of-type .embedded:nth-of-type(1) a::after {
+  content: "Home";
+}
+
+body > table:first-of-type .embedded:nth-of-type(1) a:hover {
+  color: #ffffff !important;
+  background: rgba(85, 163, 255, .09) !important;
+  border-color: rgba(85, 163, 255, .18) !important;
 }
 
 td#sidebar-container {
@@ -4084,7 +4136,7 @@ body > table.menu + table.main > tbody > tr {
 
 @media only screen and (max-height: 820px) {
   body .menu {
-    padding-top: 68px !important;
+    padding-top: 100px !important;
   }
 
   body .menu::before {
