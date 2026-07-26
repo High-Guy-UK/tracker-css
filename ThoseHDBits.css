@@ -1,6 +1,6 @@
 /*!
  * Theme Name:     ThoseHDBits
- * Version:        2.8
+ * Version:        2.9
  * Last Updated:   2026-07-24
  * Based on:       HDBits Berlin 1.4
  */
@@ -5273,4 +5273,88 @@ body > table:first-of-type .embedded:nth-of-type(3) font[color=darkred],
 body > table:first-of-type .embedded:nth-of-type(3) * font[color=darkred],
 body > table:first-of-type .embedded:nth-of-type(3) a[href*="bonus"] {
   color: #aeb7c3 !important;
+}
+
+/* Surface blending: make sidebar, header, and content share the same inner shade. */
+:root {
+  --hdb-surface-seam: #111923;
+  --hdb-surface-deep: #0b1119;
+  --hdb-surface-soft: #151f2b;
+  --hdb-surface-lift: #182331;
+}
+
+html,
+body {
+  background:
+    radial-gradient(circle at -18vw -22vh, rgba(85, 163, 255, .08), transparent 42vh),
+    linear-gradient(135deg, var(--hdb-surface-seam) 0, var(--hdb-surface-seam) 28%, var(--hdb-surface-soft) 100%) !important;
+}
+
+body .menu {
+  background:
+    linear-gradient(90deg, var(--hdb-surface-deep) 0, var(--hdb-surface-seam) 82%, var(--hdb-surface-seam) 100%) !important;
+  border-right-color: #1b2430 !important;
+  box-shadow: 18px 0 54px rgba(0, 0, 0, .18) !important;
+}
+
+body > table:first-of-type {
+  background:
+    linear-gradient(180deg, var(--hdb-surface-seam) 0, var(--hdb-surface-seam) 58%, #101821 100%) !important;
+  border-bottom-color: #1b2430 !important;
+}
+
+body > table.menu + table.main {
+  background:
+    radial-gradient(circle at -12vw -20vh, rgba(85, 163, 255, .045), transparent 42vh),
+    linear-gradient(135deg, var(--hdb-surface-seam) 0, var(--hdb-surface-seam) 18%, var(--hdb-surface-soft) 58%, var(--hdb-surface-lift) 100%) !important;
+}
+
+body > table.menu + table.main > tbody,
+body > table.menu + table.main > tbody > tr,
+td#sidebar-container + *,
+td#sidebar-container + td.bottom {
+  background: transparent !important;
+}
+
+td#sidebar-container + *,
+td#sidebar-container + td.bottom {
+  border-left: 1px solid #1b2430 !important;
+}
+
+table,
+table.main,
+table.mainouter,
+table.message,
+table.poll,
+table.sources_table,
+table.tablesorter,
+table[border="1"],
+.content,
+.contentlayout,
+.hideablecontent,
+.invite_notice,
+.std-content,
+html .item .item-body,
+html .list-description,
+#details,
+#displayarea table.main,
+#donate,
+#list-add table,
+#list-add-container,
+#profilesettings,
+#searchbox,
+#showpage,
+#tabs ~ form + table,
+.film-info,
+.film-list-container,
+td.comment,
+td.text {
+  background: #121b26 !important;
+  border-color: #223040 !important;
+}
+
+#torrent-list,
+#torrent-list tbody,
+#torrent-list > tbody > tr {
+  background-color: transparent !important;
 }
