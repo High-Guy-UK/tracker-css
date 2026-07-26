@@ -1,6 +1,6 @@
 /*!
  * Theme Name:     ThoseHDBits
- * Version:        2.4
+ * Version:        2.5
  * Last Updated:   2026-07-24
  * Based on:       HDBits Berlin 1.4
  */
@@ -4751,4 +4751,168 @@ td#sidebar-container .embedded h2 {
   color: #a8b2bf !important;
   font-size: 11px !important;
   font-weight: 500 !important;
+}
+
+/* Level top account row with search brought into the header bar. */
+body > table:first-of-type {
+  display: flex !important;
+  align-items: center !important;
+  height: 56px !important;
+  padding: 0 22px !important;
+  box-sizing: border-box;
+}
+
+body > table:first-of-type tbody,
+body > table:first-of-type tr {
+  display: flex !important;
+  align-items: center !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+body > table:first-of-type td {
+  display: flex !important;
+  align-items: center !important;
+  height: 100% !important;
+}
+
+body > table:first-of-type .embedded:nth-of-type(1) {
+  display: none !important;
+}
+
+body > table:first-of-type .embedded:nth-of-type(2) {
+  display: block !important;
+  width: 0 !important;
+  min-width: 0 !important;
+  padding: 0 !important;
+  overflow: visible !important;
+  visibility: visible !important;
+}
+
+body > table:first-of-type .embedded:nth-of-type(3) {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 13px !important;
+  height: 100% !important;
+  margin-left: auto !important;
+  padding: 0 !important;
+  color: #8f9aaa !important;
+  font-size: 11px !important;
+  font-weight: 400 !important;
+  line-height: 1 !important;
+}
+
+body > table:first-of-type .embedded:nth-of-type(3),
+body > table:first-of-type .embedded:nth-of-type(3) *,
+body > table:first-of-type .embedded:nth-of-type(3) a,
+body > table:first-of-type .embedded:nth-of-type(3) font,
+body > table:first-of-type .embedded:nth-of-type(3) .curuser-stats {
+  vertical-align: middle !important;
+  line-height: 1 !important;
+}
+
+body > table:first-of-type .embedded:nth-of-type(3) a,
+body > table:first-of-type .embedded:nth-of-type(3) .curuser-stats {
+  display: inline-flex !important;
+  align-items: center !important;
+  min-height: 18px !important;
+}
+
+#sitesearch,
+#sitesearchform {
+  display: block !important;
+  visibility: visible !important;
+}
+
+#sitesearch {
+  position: fixed !important;
+  top: 12px !important;
+  left: 242px !important;
+  bottom: auto !important;
+  z-index: 45 !important;
+  width: 340px !important;
+  max-width: calc(100vw - 900px) !important;
+  min-width: 260px !important;
+  height: 32px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+}
+
+#sitesearchform {
+  position: fixed !important;
+  top: 12px !important;
+  left: 242px !important;
+  bottom: auto !important;
+  z-index: 46 !important;
+  display: flex !important;
+  align-items: center !important;
+  width: 340px !important;
+  max-width: calc(100vw - 900px) !important;
+  min-width: 260px !important;
+  height: 32px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  visibility: visible !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+#sitesearchinput,
+body > table:first-of-type #sitesearchinput {
+  display: block !important;
+  visibility: visible !important;
+  height: 30px !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 10px !important;
+  color: #aeb8c5 !important;
+  background: #080d14 !important;
+  border: 1px solid #202b38 !important;
+  border-right: 0 !important;
+  border-radius: 7px 0 0 7px !important;
+  box-shadow: none !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+
+#sitesearchsubmit,
+body > table:first-of-type #sitesearchsubmit,
+body > table:first-of-type button#sitesearchsubmit {
+  display: block !important;
+  visibility: visible !important;
+  height: 30px !important;
+  width: 34px !important;
+  min-width: 34px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: transparent !important;
+  background-color: #182231 !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  border: 1px solid #202b38 !important;
+  border-left: 0 !important;
+  border-radius: 0 7px 7px 0 !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+}
+
+#sitesearchinput:focus,
+div#sitesearch form#sitesearchform input#sitesearchinput:focus {
+  border-color: #304156 !important;
+  box-shadow: none !important;
+}
+
+@media only screen and (max-width: 1320px) {
+  #sitesearch,
+  #sitesearchform {
+    width: 280px !important;
+    max-width: 280px !important;
+    min-width: 240px !important;
+  }
 }
