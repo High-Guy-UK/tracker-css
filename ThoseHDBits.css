@@ -1,6 +1,6 @@
 /*!
  * Theme Name:     ThoseHDBits
- * Version:        3.3
+ * Version:        3.4
  * Last Updated:   2026-07-24
  * Based on:       HDBits Berlin 1.4
  */
@@ -5914,6 +5914,169 @@ form:has(#searchbox) table#searchcriteria:focus-within tr,
 form:has(#searchbox) table#searchcriteria:focus-within td {
   opacity: 1 !important;
   pointer-events: auto !important;
+}
+
+@media only screen and (max-width: 1500px) {
+  form:has(#searchbox) #searchcriteria,
+  form:has(#searchbox) table#searchcriteria,
+  form:has(#searchbox):hover #searchcriteria,
+  form:has(#searchbox):hover table#searchcriteria,
+  form:has(#searchbox):focus-within #searchcriteria,
+  form:has(#searchbox):focus-within table#searchcriteria {
+    left: 858px !important;
+  }
+
+  form:has(#searchbox) #searchcriteria:hover,
+  form:has(#searchbox) table#searchcriteria:hover,
+  form:has(#searchbox) #searchcriteria:focus-within,
+  form:has(#searchbox) table#searchcriteria:focus-within {
+    width: min(540px, calc(100vw - 884px)) !important;
+  }
+}
+
+/* Use a real table cell as the Options hover target. */
+form:has(#searchbox)::after,
+form:has(#searchbox) #searchcriteria::before,
+form:has(#searchbox) table#searchcriteria::before {
+  content: none !important;
+  display: none !important;
+}
+
+form:has(#searchbox) #searchcriteria,
+form:has(#searchbox) table#searchcriteria,
+form:has(#searchbox):hover #searchcriteria,
+form:has(#searchbox):hover table#searchcriteria,
+form:has(#searchbox):focus-within #searchcriteria,
+form:has(#searchbox):focus-within table#searchcriteria {
+  position: fixed !important;
+  top: 14px !important;
+  left: calc(640px + clamp(260px, 20vw, 380px) + 8px) !important;
+  right: auto !important;
+  z-index: 95 !important;
+  display: block !important;
+  width: 78px !important;
+  height: 28px !important;
+  max-height: 28px !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  color: #aeb7c3 !important;
+  background: rgba(23, 30, 41, .86) !important;
+  border: 1px solid rgba(85, 163, 255, .14) !important;
+  border-radius: 6px !important;
+  box-sizing: border-box !important;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, .18) !important;
+  backdrop-filter: blur(14px) saturate(130%) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(130%) !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  cursor: default !important;
+}
+
+form:has(#searchbox) #searchcriteria tbody,
+form:has(#searchbox) #searchcriteria tr {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+form:has(#searchbox) #searchcriteria td {
+  display: none !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+form:has(#searchbox) #searchcriteria tr:first-child td:first-child {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 28px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: transparent !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-sizing: border-box !important;
+  font-size: 0 !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+}
+
+form:has(#searchbox) #searchcriteria tr:first-child td:first-child::before {
+  content: "Options";
+  color: #aeb7c3;
+  font-family: "Inter", "Roboto", "Helvetica Neue", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+form:has(#searchbox) #searchcriteria:hover,
+form:has(#searchbox) table#searchcriteria:hover,
+form:has(#searchbox) #searchcriteria:focus-within,
+form:has(#searchbox) table#searchcriteria:focus-within {
+  width: min(620px, calc(100vw - 960px)) !important;
+  height: auto !important;
+  min-height: 220px !important;
+  max-height: 58vh !important;
+  padding: 38px 12px 12px !important;
+  overflow: auto !important;
+  background: rgba(18, 27, 38, .74) !important;
+  border-color: rgba(122, 151, 184, .24) !important;
+  border-radius: 10px !important;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, .42), inset 0 1px 0 rgba(255, 255, 255, .045) !important;
+  backdrop-filter: blur(18px) saturate(145%) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(145%) !important;
+}
+
+form:has(#searchbox) #searchcriteria:hover tbody,
+form:has(#searchbox) table#searchcriteria:hover tbody,
+form:has(#searchbox) #searchcriteria:focus-within tbody,
+form:has(#searchbox) table#searchcriteria:focus-within tbody {
+  display: table-row-group !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+form:has(#searchbox) #searchcriteria:hover tr,
+form:has(#searchbox) table#searchcriteria:hover tr,
+form:has(#searchbox) #searchcriteria:focus-within tr,
+form:has(#searchbox) table#searchcriteria:focus-within tr {
+  display: table-row !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+form:has(#searchbox) #searchcriteria:hover td,
+form:has(#searchbox) table#searchcriteria:hover td,
+form:has(#searchbox) #searchcriteria:focus-within td,
+form:has(#searchbox) table#searchcriteria:focus-within td {
+  display: table-cell !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 4px 6px !important;
+  color: #aeb7c3 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  font-family: "Inter", "Roboto", "Helvetica Neue", Arial, sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  white-space: nowrap !important;
+}
+
+form:has(#searchbox) #searchcriteria:hover tr:first-child td:first-child::before,
+form:has(#searchbox) table#searchcriteria:hover tr:first-child td:first-child::before,
+form:has(#searchbox) #searchcriteria:focus-within tr:first-child td:first-child::before,
+form:has(#searchbox) table#searchcriteria:focus-within tr:first-child td:first-child::before {
+  content: none !important;
 }
 
 @media only screen and (max-width: 1500px) {
