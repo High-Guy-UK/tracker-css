@@ -1,6 +1,6 @@
 /*!
  * Theme Name:     ThoseHDBits
- * Version:        2.3
+ * Version:        2.4
  * Last Updated:   2026-07-24
  * Based on:       HDBits Berlin 1.4
  */
@@ -4694,4 +4694,61 @@ body > table:first-of-type .embedded:nth-of-type(3) * font[color=darkred] {
     height: 12px;
     margin-bottom: 6px;
   }
+}
+
+/* Lighter account strip and lower quick-link text alignment. */
+body > table:first-of-type {
+  height: 54px !important;
+  padding-top: 6px !important;
+  box-sizing: border-box;
+}
+
+body > table:first-of-type .embedded:nth-of-type(3) {
+  align-items: flex-start !important;
+  padding-top: 8px !important;
+  color: #8792a0 !important;
+  font-size: 11px !important;
+  font-weight: 400 !important;
+}
+
+body > table:first-of-type .embedded:nth-of-type(3),
+body > table:first-of-type .embedded:nth-of-type(3) *,
+body > table:first-of-type .embedded:nth-of-type(3) font {
+  font-weight: 400 !important;
+}
+
+body > table:first-of-type .embedded:nth-of-type(3) a {
+  color: #aab4c1 !important;
+  font-weight: 500 !important;
+}
+
+body > table:first-of-type .embedded:nth-of-type(3) font[color="#1900D1"],
+body > table:first-of-type .embedded:nth-of-type(3) * font[color="#1900D1"],
+body > table:first-of-type .embedded:nth-of-type(3) font[color=blue],
+body > table:first-of-type .embedded:nth-of-type(3) * font[color=blue] {
+  color: #8fa7c4 !important;
+}
+
+body > table:first-of-type .embedded:nth-of-type(3) font[color=green],
+body > table:first-of-type .embedded:nth-of-type(3) * font[color=green] {
+  color: #8fb49a !important;
+}
+
+body > table:first-of-type .embedded:nth-of-type(3) font[color=red],
+body > table:first-of-type .embedded:nth-of-type(3) * font[color=red],
+body > table:first-of-type .embedded:nth-of-type(3) font[color=darkred],
+body > table:first-of-type .embedded:nth-of-type(3) * font[color=darkred],
+body > table:first-of-type .embedded:nth-of-type(3) a[href*="bonus"] {
+  color: #c19797 !important;
+}
+
+td#sidebar-container .embedded h2 {
+  display: flex !important;
+  align-items: center !important;
+  min-height: 25px;
+  line-height: 1 !important;
+  padding: 2px 10px 0 !important;
+  color: #a8b2bf !important;
+  font-size: 11px !important;
+  font-weight: 500 !important;
 }
