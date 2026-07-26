@@ -1,6 +1,6 @@
 /*!
  * Theme Name:     ThoseHDBits
- * Version:        2.6
+ * Version:        2.7
  * Last Updated:   2026-07-24
  * Based on:       HDBits Berlin 1.4
  */
@@ -5107,4 +5107,40 @@ form:has(#searchbox) #searchcriteria {
     left: 710px !important;
     width: 300px !important;
   }
+}
+
+/* Guardrail: keep only the compact browse search row in the app bar. */
+form:has(#searchbox) #searchcriteria,
+form:has(#searchbox) table#searchcriteria,
+form:has(#searchbox) #searchbox tr,
+form:has(#searchbox) #searchbox tr:first-child,
+form:has(#searchbox) #searchbox tr:not(:has(input#search)) {
+  display: none !important;
+}
+
+form:has(#searchbox) #searchbox tr:has(input#search) {
+  display: flex !important;
+  align-items: center !important;
+  width: 100% !important;
+  height: 30px !important;
+}
+
+form:has(#searchbox) #searchbox tr:has(input#search) td {
+  display: flex !important;
+  align-items: center !important;
+  width: 100% !important;
+  height: 30px !important;
+  font-size: 0 !important;
+}
+
+form:has(#searchbox) #searchbox tr:has(input#search) input#search {
+  width: calc(100% - 42px) !important;
+}
+
+form:has(#searchbox) #searchbox tr:has(input#search) input[type=submit],
+form:has(#searchbox) #searchbox tr:has(input#search) button {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 11px !important;
 }
