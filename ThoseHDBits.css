@@ -1,6 +1,6 @@
 /*!
  * Theme Name:     ThoseHDBits
- * Version:        2.0
+ * Version:        2.1
  * Last Updated:   2026-07-24
  * Based on:       HDBits Berlin 1.4
  */
@@ -4496,5 +4496,55 @@ td#sidebar-container .embedded h2 {
 
   td#sidebar-container {
     top: 470px !important;
+  }
+}
+
+/* Final header and menu-group spacing polish. */
+body > table:first-of-type .embedded:nth-of-type(3) {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 10px;
+  width: 100% !important;
+  white-space: nowrap !important;
+  line-height: 48px !important;
+  overflow: hidden;
+}
+
+body > table:first-of-type .embedded:nth-of-type(3) a,
+body > table:first-of-type .embedded:nth-of-type(3) .curuser-stats {
+  display: inline-flex !important;
+  align-items: center !important;
+  margin: 0 !important;
+  white-space: nowrap !important;
+  line-height: 1 !important;
+}
+
+body > table:first-of-type .embedded:nth-of-type(3) br {
+  display: none !important;
+}
+
+td#sidebar-container {
+  top: 548px !important;
+}
+
+td#sidebar-container::before {
+  content: "";
+  display: block;
+  height: 14px;
+  margin: 0 0 12px;
+  border-top: 1px solid #2c3847;
+  background: linear-gradient(180deg, rgba(85, 163, 255, .16), rgba(85, 163, 255, 0));
+  opacity: .95;
+}
+
+@media only screen and (max-height: 820px) {
+  td#sidebar-container {
+    top: 492px !important;
+  }
+
+  td#sidebar-container::before {
+    height: 10px;
+    margin-bottom: 9px;
   }
 }
