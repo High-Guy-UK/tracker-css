@@ -1,6 +1,6 @@
 /*!
  * Theme Name:     ThoseHDBits
- * Version:        3.9
+ * Version:        4.0
  * Last Updated:   2026-07-24
  * Based on:       HDBits Berlin 1.4
  */
@@ -6630,6 +6630,33 @@ body form:has(#searchbox) table#searchbox > tbody > tr:first-child a::before {
   body form:has(#searchbox) table#searchbox > tbody > tr:first-child:not(:has(input#search)) {
     left: 980px !important;
   }
+}
+
+/* v4.0: give the real Options link a non-collapsing pill box. */
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox > tbody > tr:first-child,
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox > tbody > tr:first-child:not(:has(input#search)),
+body form:has(#searchbox) table#searchbox > tbody > tr:first-child,
+body form:has(#searchbox) table#searchbox > tbody > tr:first-child:not(:has(input#search)) {
+  width: 76px !important;
+  min-width: 76px !important;
+  max-width: 76px !important;
+}
+
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox > tbody > tr:first-child th,
+body form:has(#searchbox) table#searchbox > tbody > tr:first-child th,
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox > tbody > tr:first-child a,
+body form:has(#searchbox) table#searchbox > tbody > tr:first-child a {
+  width: 74px !important;
+  min-width: 74px !important;
+  max-width: 74px !important;
+  box-sizing: border-box !important;
+}
+
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox > tbody > tr:first-child a::before,
+body form:has(#searchbox) table#searchbox > tbody > tr:first-child a::before {
+  display: inline-block !important;
+  width: auto !important;
+  min-width: 0 !important;
 }
 
 /* Final override: show the real HDBits options link, not a fake table button. */
