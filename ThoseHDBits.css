@@ -1,6 +1,6 @@
 /*!
  * Theme Name:     ThoseHDBits
- * Version:        2.2
+ * Version:        2.3
  * Last Updated:   2026-07-24
  * Based on:       HDBits Berlin 1.4
  */
@@ -4593,5 +4593,105 @@ td#sidebar-container .embedded h2:hover {
 @media only screen and (max-height: 820px) {
   td#sidebar-container {
     top: 526px !important;
+  }
+}
+
+/* Quiet secondary menu and account strip. */
+td#sidebar-container {
+  top: 574px !important;
+  left: 14px !important;
+  width: 192px !important;
+  min-width: 192px !important;
+  max-width: 192px !important;
+}
+
+td#sidebar-container::before {
+  content: "" !important;
+  display: block;
+  height: 18px;
+  margin: 0 0 8px;
+  border-top: 1px solid #25303c;
+  border-bottom: 0;
+  background: transparent !important;
+}
+
+td#sidebar-container .embedded h2 {
+  min-height: 25px;
+  line-height: 25px;
+  margin-bottom: 4px !important;
+  padding: 0 10px !important;
+  color: #c3cbd6 !important;
+  background: #171e29 !important;
+  border: 1px solid #1b2430 !important;
+  border-radius: 6px;
+  font-size: 11px !important;
+  font-weight: 700;
+}
+
+body > table:first-of-type .embedded:nth-of-type(3) {
+  gap: 12px;
+  color: #8c97a5 !important;
+  font-family: "Inter", "Roboto", "Helvetica Neue", Arial, sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0;
+}
+
+body > table:first-of-type .embedded:nth-of-type(3),
+body > table:first-of-type .embedded:nth-of-type(3) *,
+body > table:first-of-type .embedded:nth-of-type(3) font {
+  color: #9aa5b3 !important;
+  text-shadow: none !important;
+}
+
+body > table:first-of-type .embedded:nth-of-type(3) a {
+  color: #c2cad4 !important;
+  font-weight: 700 !important;
+}
+
+body > table:first-of-type .embedded:nth-of-type(3) a:hover {
+  color: #ffffff !important;
+}
+
+body > table:first-of-type .embedded:nth-of-type(3) font[color="#1900D1"],
+body > table:first-of-type .embedded:nth-of-type(3) font[color=blue] {
+  color: #7fa8d8 !important;
+}
+
+body > table:first-of-type .embedded:nth-of-type(3) font[color=green] {
+  color: #86bd93 !important;
+}
+
+body > table:first-of-type .embedded:nth-of-type(3) font[color=red],
+body > table:first-of-type .embedded:nth-of-type(3) font[color=darkred] {
+  color: #c98b8b !important;
+}
+
+body > table:first-of-type .embedded:nth-of-type(3) a[href*="bonus"] {
+  color: #d3a0a0 !important;
+}
+
+body > table:first-of-type .embedded:nth-of-type(3) * font[color="#1900D1"],
+body > table:first-of-type .embedded:nth-of-type(3) * font[color=blue] {
+  color: #7fa8d8 !important;
+}
+
+body > table:first-of-type .embedded:nth-of-type(3) * font[color=green] {
+  color: #86bd93 !important;
+}
+
+body > table:first-of-type .embedded:nth-of-type(3) * font[color=red],
+body > table:first-of-type .embedded:nth-of-type(3) * font[color=darkred] {
+  color: #c98b8b !important;
+}
+
+@media only screen and (max-height: 820px) {
+  td#sidebar-container {
+    top: 504px !important;
+  }
+
+  td#sidebar-container::before {
+    height: 12px;
+    margin-bottom: 6px;
   }
 }
