@@ -1,6 +1,6 @@
 /*!
  * Theme Name:     ThoseHDBits
- * Version:        1.5
+ * Version:        1.6
  * Last Updated:   2026-07-24
  * Based on:       HDBits Berlin 1.4
  */
@@ -3992,5 +3992,10 @@ td#sidebar-container + td.bottom {
 /* Hide the old global search; browse/search pages already provide local search. */
 #sitesearch,
 #sitesearchform {
+  display: none !important;
+}
+
+body > table:first-of-type input:not([type=hidden]),
+body > table:first-of-type button {
   display: none !important;
 }
