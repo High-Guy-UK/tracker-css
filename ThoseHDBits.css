@@ -1,6 +1,6 @@
 /*!
  * Theme Name:     ThoseHDBits
- * Version:        4.5
+ * Version:        4.7
  * Last Updated:   2026-07-24
  * Based on:       HDBits Berlin 1.4
  */
@@ -7976,6 +7976,243 @@ body > table:first-of-type .embedded:nth-of-type(3) font {
   form:has(#searchbox) #searchbox:hover,
   form:has(#searchbox) #searchbox:focus-within {
     right: 72px !important;
+    width: 260px !important;
+  }
+}
+
+/* v4.7: single top browse row, no Options, no hover panel. */
+body > table:first-of-type {
+  height: 56px !important;
+  background: #0f1722 !important;
+  border-bottom: 1px solid #1b2430 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+body > table.menu + table.main {
+  margin-top: 56px !important;
+}
+
+td#sidebar-container + *,
+td#sidebar-container + td.bottom {
+  padding-top: 10px !important;
+}
+
+form:has(#searchbox)::after,
+form:has(#searchbox) #searchbox > tbody > tr:first-child,
+form:has(#searchbox) #searchbox > tbody > tr:first-child *,
+form:has(#searchbox) #searchbox tr[id^="moresearch"],
+form:has(#searchbox) #searchcriteria,
+form:has(#searchbox) table#searchcriteria,
+form:has(#searchbox):hover #searchcriteria,
+form:has(#searchbox):hover table#searchcriteria,
+form:has(#searchbox):focus-within #searchcriteria,
+form:has(#searchbox):focus-within table#searchcriteria {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+form:has(#searchbox) {
+  position: static !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+form:has(#searchbox) ul#tabs {
+  position: fixed !important;
+  top: 14px !important;
+  left: 292px !important;
+  right: auto !important;
+  z-index: 220 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 8px !important;
+  width: auto !important;
+  height: 28px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  list-style: none !important;
+}
+
+html body table.main tbody tr td.bottom form:has(#searchbox) ul#tabs li.tab,
+form:has(#searchbox) ul#tabs li,
+form:has(#searchbox) ul#tabs li.tab {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: auto !important;
+  min-width: 0 !important;
+  height: 28px !important;
+  margin: 0 !important;
+  padding: 0 11px !important;
+  color: #aeb7c3 !important;
+  background: #171e29 !important;
+  border: 1px solid #1f2a38 !important;
+  border-radius: 7px !important;
+  box-sizing: border-box !important;
+  font-family: "Inter", "Roboto", "Helvetica Neue", Arial, sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0 !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+}
+
+form:has(#searchbox) ul#tabs li *,
+form:has(#searchbox) ul#tabs li.tab *,
+form:has(#searchbox) ul#tabs li a,
+form:has(#searchbox) ul#tabs li.tab a {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: inherit !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  font: inherit !important;
+  text-decoration: none !important;
+}
+
+form:has(#searchbox) ul#tabs li.selected,
+form:has(#searchbox) ul#tabs li.tab.selected,
+form:has(#searchbox) ul#tabs li:hover,
+form:has(#searchbox) ul#tabs li.tab:hover {
+  color: #d7e6f6 !important;
+  background: #1b2532 !important;
+  border-color: #2b3b4e !important;
+}
+
+form:has(#searchbox) #searchbox,
+form:has(#searchbox) #searchbox:hover,
+form:has(#searchbox) #searchbox:focus-within {
+  position: fixed !important;
+  top: 14px !important;
+  left: 740px !important;
+  right: auto !important;
+  z-index: 220 !important;
+  display: block !important;
+  width: 300px !important;
+  height: 28px !important;
+  min-height: 28px !important;
+  max-height: 28px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: visible !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-collapse: collapse !important;
+  border-spacing: 0 !important;
+}
+
+form:has(#searchbox) #searchbox tbody,
+form:has(#searchbox) #searchbox tr:has(input#search),
+form:has(#searchbox) #searchbox tr:has(input#search) td,
+form:has(#searchbox) #searchbox:hover tr:has(input#search),
+form:has(#searchbox) #searchbox:hover tr:has(input#search) td,
+form:has(#searchbox) #searchbox:focus-within tr:has(input#search),
+form:has(#searchbox) #searchbox:focus-within tr:has(input#search) td {
+  position: static !important;
+  display: flex !important;
+  align-items: center !important;
+  width: 100% !important;
+  height: 28px !important;
+  min-height: 28px !important;
+  max-height: 28px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: visible !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  font-size: 0 !important;
+}
+
+form:has(#searchbox) #searchbox input#search,
+form:has(#searchbox) #searchbox tr:has(input#search) input#search {
+  display: block !important;
+  flex: 1 1 auto !important;
+  width: calc(100% - 48px) !important;
+  height: 28px !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 10px !important;
+  color: #bac4d0 !important;
+  background: #0a1018 !important;
+  border: 1px solid #1f2a38 !important;
+  border-right: 0 !important;
+  border-radius: 7px 0 0 7px !important;
+  box-shadow: none !important;
+  box-sizing: border-box !important;
+  font-family: "Inter", "Roboto", "Helvetica Neue", Arial, sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 28px !important;
+}
+
+form:has(#searchbox) #searchbox input[type=submit],
+form:has(#searchbox) #searchbox button,
+form:has(#searchbox) #searchbox tr:has(input#search) input[type=submit],
+form:has(#searchbox) #searchbox tr:has(input#search) button {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 48px !important;
+  min-width: 48px !important;
+  height: 28px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #b9c3cf !important;
+  background: #171e29 !important;
+  border: 1px solid #1f2a38 !important;
+  border-left: 0 !important;
+  border-radius: 0 7px 7px 0 !important;
+  box-shadow: none !important;
+  box-sizing: border-box !important;
+  font-family: "Inter", "Roboto", "Helvetica Neue", Arial, sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1 !important;
+}
+
+body > table:first-of-type .embedded:nth-of-type(3),
+body > table:first-of-type .embedded:nth-of-type(3) *,
+body > table:first-of-type .embedded:nth-of-type(3) a,
+body > table:first-of-type .embedded:nth-of-type(3) font {
+  color: #aeb7c3 !important;
+  font-family: "Inter", "Roboto", "Helvetica Neue", Arial, sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 500 !important;
+}
+
+@media only screen and (max-width: 1500px) {
+  form:has(#searchbox) ul#tabs {
+    left: 270px !important;
+    gap: 6px !important;
+  }
+
+  html body table.main tbody tr td.bottom form:has(#searchbox) ul#tabs li.tab,
+  form:has(#searchbox) ul#tabs li,
+  form:has(#searchbox) ul#tabs li.tab {
+    padding: 0 9px !important;
+  }
+
+  form:has(#searchbox) #searchbox,
+  form:has(#searchbox) #searchbox:hover,
+  form:has(#searchbox) #searchbox:focus-within {
+    left: 640px !important;
     width: 260px !important;
   }
 }
