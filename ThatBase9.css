@@ -19,14 +19,14 @@
   --tb9-text: #d8dce6;
   --tb9-text-strong: #f7f8fb;
   --tb9-muted: #a3a9b8;
-  --tb9-accent: #d875ff;
-  --tb9-accent-2: #43d2c1;
+  --tb9-accent: #d7dbe3;
+  --tb9-accent-2: #737b88;
   --tb9-warn: #f2bb63;
   --tb9-danger: #ee6268;
   --tb9-success: #68c26d;
   --tb9-shadow: 0 14px 42px rgba(0, 0, 0, 0.34);
   --tb9-radius: 8px;
-  --tb9-logo-svg: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20460%2088'%20role='img'%20aria-label='DeepBassNine'%3E%3Cdefs%3E%3ClinearGradient%20id='g'%20x1='0'%20x2='1'%20y1='0'%20y2='1'%3E%3Cstop%20offset='0'%20stop-color='%2343d2c1'/%3E%3Cstop%20offset='.52'%20stop-color='%23f7f8fb'/%3E%3Cstop%20offset='1'%20stop-color='%23d875ff'/%3E%3C/linearGradient%3E%3Cfilter%20id='glow'%20x='-10%25'%20y='-40%25'%20width='120%25'%20height='180%25'%3E%3CfeGaussianBlur%20stdDeviation='2.4'%20result='blur'/%3E%3CfeMerge%3E%3CfeMergeNode%20in='blur'/%3E%3CfeMergeNode%20in='SourceGraphic'/%3E%3C/feMerge%3E%3C/filter%3E%3C/defs%3E%3Crect%20x='2'%20y='2'%20width='456'%20height='84'%20rx='14'%20fill='%2310151f'%20fill-opacity='.82'%20stroke='%23ffffff'%20stroke-opacity='.12'/%3E%3Cpath%20d='M28%2067V21h8l18%2030%2018-30h8v46h-9V38L56%2063h-5L36%2038v29z'%20fill='%2343d2c1'%20opacity='.9'/%3E%3Ctext%20x='102'%20y='52'%20font-family='Inter,Segoe%20UI,Arial,sans-serif'%20font-size='34'%20font-weight='800'%20letter-spacing='1.4'%20fill='url(%23g)'%20filter='url(%23glow)'%3EDeepBassNine%3C/text%3E%3Ctext%20x='105'%20y='68'%20font-family='Inter,Segoe%20UI,Arial,sans-serif'%20font-size='10'%20font-weight='700'%20letter-spacing='5'%20fill='%23a3a9b8'%3EDB9%20WIDESCREEN%3C/text%3E%3C/svg%3E");
+  --tb9-logo-svg: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20460%2088%22%20role%3D%22img%22%20aria-label%3D%22DeepBassNine%22%3E%0A%3Cdefs%3E%0A%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%239aa1ad%22%2F%3E%3Cstop%20offset%3D%22.52%22%20stop-color%3D%22%23f7f8fb%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23565d69%22%2F%3E%3C%2FlinearGradient%3E%0A%3Cfilter%20id%3D%22glow%22%20x%3D%22-10%25%22%20y%3D%22-40%25%22%20width%3D%22120%25%22%20height%3D%22180%25%22%3E%3CfeGaussianBlur%20stdDeviation%3D%221.8%22%20result%3D%22blur%22%2F%3E%3CfeMerge%3E%3CfeMergeNode%20in%3D%22blur%22%2F%3E%3CfeMergeNode%20in%3D%22SourceGraphic%22%2F%3E%3C%2FfeMerge%3E%3C%2Ffilter%3E%0A%3C%2Fdefs%3E%0A%3Crect%20x%3D%222%22%20y%3D%222%22%20width%3D%22456%22%20height%3D%2284%22%20rx%3D%2214%22%20fill%3D%22%230c0e12%22%20fill-opacity%3D%22.9%22%20stroke%3D%22%23ffffff%22%20stroke-opacity%3D%22.13%22%2F%3E%0A%3Cg%20transform%3D%22translate(25%2012)%22%20fill%3D%22none%22%20stroke%3D%22%23cbd1dc%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20filter%3D%22url(%23glow)%22%3E%0A%3Cpath%20d%3D%22M27%2024C17%209%2015%203%2020%200c9%205%2016%2014%2019%2025%22%20stroke-width%3D%225%22%2F%3E%0A%3Cpath%20d%3D%22M53%2025C56%2014%2063%205%2072%200c5%203%203%209-7%2024%22%20stroke-width%3D%225%22%2F%3E%0A%3Cpath%20d%3D%22M18%2031c-7-4-13-2-16%204%206%201%2012%204%2016%209%22%20stroke-width%3D%224%22%2F%3E%0A%3Cpath%20d%3D%22M72%2031c7-4%2013-2%2016%204-6%201-12%204-16%209%22%20stroke-width%3D%224%22%2F%3E%0A%3Cpath%20d%3D%22M22%2035c0-13%2010-22%2023-22s23%209%2023%2022v9c0%2012-9%2022-23%2022S22%2056%2022%2044z%22%20fill%3D%22%23cbd1dc%22%20stroke-width%3D%223%22%2F%3E%0A%3Cpath%20d%3D%22M36%2059l9%2013%209-13%22%20fill%3D%22%238e96a3%22%20stroke-width%3D%223%22%2F%3E%0A%3Cpath%20d%3D%22M37%2043c4%203%2012%203%2016%200%22%20stroke%3D%22%2311151b%22%20stroke-width%3D%223%22%2F%3E%0A%3Ccircle%20cx%3D%2236%22%20cy%3D%2234%22%20r%3D%222.8%22%20fill%3D%22%2311151b%22%20stroke%3D%22none%22%2F%3E%0A%3Ccircle%20cx%3D%2254%22%20cy%3D%2234%22%20r%3D%222.8%22%20fill%3D%22%2311151b%22%20stroke%3D%22none%22%2F%3E%0A%3C%2Fg%3E%0A%3Ctext%20x%3D%22128%22%20y%3D%2252%22%20font-family%3D%22Inter%2CSegoe%20UI%2CArial%2Csans-serif%22%20font-size%3D%2234%22%20font-weight%3D%22800%22%20letter-spacing%3D%221.4%22%20fill%3D%22url(%23g)%22%20filter%3D%22url(%23glow)%22%3EDeepBassNine%3C%2Ftext%3E%0A%3Ctext%20x%3D%22131%22%20y%3D%2268%22%20font-family%3D%22Inter%2CSegoe%20UI%2CArial%2Csans-serif%22%20font-size%3D%2210%22%20font-weight%3D%22700%22%20letter-spacing%3D%225%22%20fill%3D%22%23a3a9b8%22%3EDB9%20WIDESCREEN%3C%2Ftext%3E%0A%3C%2Fsvg%3E");
 }
 
 *,
@@ -44,8 +44,8 @@ body {
   min-width: 0;
   color: var(--tb9-text);
   background:
-    linear-gradient(135deg, rgba(67, 210, 193, 0.08), transparent 32%),
-    linear-gradient(315deg, rgba(216, 117, 255, 0.12), transparent 38%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.045), transparent 34%),
+    linear-gradient(315deg, rgba(0, 0, 0, 0.42), transparent 40%),
     var(--tb9-bg);
   background-attachment: fixed;
   font-size: 13px;
@@ -120,7 +120,7 @@ a:hover {
 
 ::selection {
   color: #fff;
-  background-color: rgba(216, 117, 255, 0.48);
+  background-color: rgba(215, 219, 227, 0.36);
 }
 
 blockquote,
@@ -169,14 +169,14 @@ table .rowb:nth-child(odd),
 
 tr:not(.colhead):not(.colhead_dark):hover,
 .torrent_table tr:not(.colhead):not(.colhead_dark):hover {
-  background-color: rgba(216, 117, 255, 0.09);
+  background-color: rgba(255, 255, 255, 0.07);
 }
 
 .colhead,
 .colhead_dark,
 tr.colheadb_dark {
   color: var(--tb9-text-strong);
-  background: linear-gradient(90deg, rgba(67, 210, 193, 0.18), rgba(216, 117, 255, 0.16));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.13), rgba(86, 93, 105, 0.18));
 }
 
 form {
@@ -197,10 +197,10 @@ input[type="button"],
 input[type="submit"] {
   height: 34px;
   color: #10131a;
-  border: 1px solid rgba(216, 117, 255, 0.32);
+  border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 6px;
-  background: linear-gradient(180deg, #f8f0ff, #d9b2ec);
-  box-shadow: 0 8px 22px rgba(216, 117, 255, 0.14);
+  background: linear-gradient(180deg, #f4f5f7, #b7bdc8);
+  box-shadow: 0 8px 22px rgba(255, 255, 255, 0.08);
   cursor: pointer;
   transition: transform 140ms ease, box-shadow 140ms ease, background 140ms ease;
 }
@@ -209,8 +209,8 @@ button:hover,
 input[type="button"]:hover,
 input[type="submit"]:hover {
   color: #fff;
-  background: linear-gradient(180deg, var(--tb9-accent), #9850ba);
-  box-shadow: 0 10px 28px rgba(216, 117, 255, 0.3);
+  background: linear-gradient(180deg, #ccd2dc, #737b88);
+  box-shadow: 0 10px 28px rgba(255, 255, 255, 0.16);
   transform: translateY(-1px);
 }
 
@@ -234,9 +234,9 @@ input[type="text"]:focus,
 select:focus,
 textarea:focus {
   color: var(--tb9-text-strong);
-  border-color: rgba(67, 210, 193, 0.68);
+  border-color: rgba(215, 219, 227, 0.64);
   background: rgba(12, 15, 22, 0.9);
-  box-shadow: 0 0 0 3px rgba(67, 210, 193, 0.15);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.11);
   outline: 0;
 }
 
@@ -276,7 +276,7 @@ span[style*="color: green"] {
 }
 
 span[style*="color: blue"] {
-  color: #7aa8ff !important;
+  color: #9fb1c8 !important;
 }
 
 .box,
@@ -316,7 +316,7 @@ span[style*="color: blue"] {
 }
 
 .autocomplete-suggestions .autocomplete-suggestion.autocomplete-selected {
-  background-color: #ead5f5;
+  background-color: #d9dde5;
 }
 
 .autocomplete-suggestions .autocomplete-suggestion strong {
@@ -394,7 +394,7 @@ span[style*="color: blue"] {
   border-radius: 10px 10px 0 0;
   overflow: hidden;
   background:
-    linear-gradient(90deg, rgba(67, 210, 193, 0.13), rgba(216, 117, 255, 0.11)),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.11), rgba(88, 94, 106, 0.14)),
     rgba(13, 16, 23, 0.92);
   border: 1px solid var(--tb9-line);
   border-bottom: 0;
@@ -422,7 +422,7 @@ span[style*="color: blue"] {
 }
 
 #menu > ul a:hover {
-  box-shadow: inset 0 0 0 1px rgba(216, 117, 255, 0.2);
+  box-shadow: inset 0 0 0 1px rgba(215, 219, 227, 0.2);
 }
 
 #menu > ul a:hover,
@@ -430,7 +430,7 @@ span[style*="color: blue"] {
 #userinfo_username:hover a:hover,
 #welcomeusername a:hover {
   color: #fff;
-  background-color: rgba(216, 117, 255, 0.22);
+  background-color: rgba(255, 255, 255, 0.13);
 }
 
 #nav_staff > a:hover,
@@ -465,7 +465,7 @@ span[style*="color: blue"] {
 
 #searchbars .search_form input:focus {
   background: rgba(4, 6, 10, 0.82);
-  box-shadow: 0 0 0 3px rgba(67, 210, 193, 0.16);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
 }
 
 #userinfo_username {
@@ -543,7 +543,7 @@ span[style*="color: blue"] {
 }
 
 .tooltipster-default {
-  border: 1px solid rgba(216, 117, 255, 0.24);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 6px;
   background-color: #f7f8fb;
 }
@@ -557,7 +557,7 @@ span[style*="color: blue"] {
 
 .tooltipster-default .tooltipster-content a:hover,
 #musicbrainz_popup a:hover {
-  color: #8d3fb0;
+  color: #4b5563;
 }
 
 #userform #settings_sections h2 a,
@@ -566,7 +566,7 @@ span[style*="color: blue"] {
 }
 
 .poll .graph {
-  background-color: rgba(67, 210, 193, 0.12);
+  background-color: rgba(255, 255, 255, 0.09);
 }
 
 .poll .graph span {
@@ -585,12 +585,12 @@ span#newtorrentnumber {
 @keyframes tb9-glow {
   from {
     color: #fff;
-    text-shadow: 0 0 5px rgba(67, 210, 193, 0.72), 0 0 14px rgba(67, 210, 193, 0.42);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.56), 0 0 14px rgba(170, 176, 187, 0.34);
   }
 
   to {
     color: #fff;
-    text-shadow: 0 0 7px rgba(216, 117, 255, 0.82), 0 0 18px rgba(242, 187, 99, 0.45);
+    text-shadow: 0 0 7px rgba(215, 219, 227, 0.7), 0 0 18px rgba(86, 93, 105, 0.46);
   }
 }
 
