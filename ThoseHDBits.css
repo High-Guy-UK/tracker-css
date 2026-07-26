@@ -1,6 +1,6 @@
 /*!
  * Theme Name:     ThoseHDBits
- * Version:        4.1
+ * Version:        4.2
  * Last Updated:   2026-07-24
  * Based on:       HDBits Berlin 1.4
  */
@@ -6749,6 +6749,49 @@ body form:has(#searchbox) table#searchbox:focus-within tr:has(input#search) {
     left: 710px !important;
     width: 260px !important;
   }
+}
+
+/* v4.2: final override for the old hidden-row guardrail. */
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox > tbody > tr[id^="moresearch"][style*="table-row"],
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox:hover > tbody > tr[id^="moresearch"],
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox:focus-within > tbody > tr[id^="moresearch"],
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox > tbody > tr:first-child:hover ~ tr[id^="moresearch"],
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox > tbody > tr:first-child:focus-within ~ tr[id^="moresearch"],
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox > tbody > tr[id^="moresearch"][style*="display: table-row"],
+body form:has(#searchbox) table#searchbox > tbody > tr[id^="moresearch"][style*="table-row"],
+body form:has(#searchbox) table#searchbox:hover > tbody > tr[id^="moresearch"],
+body form:has(#searchbox) table#searchbox:focus-within > tbody > tr[id^="moresearch"],
+body form:has(#searchbox) table#searchbox > tbody > tr:first-child:hover ~ tr[id^="moresearch"],
+body form:has(#searchbox) table#searchbox > tbody > tr:first-child:focus-within ~ tr[id^="moresearch"],
+body form:has(#searchbox) table#searchbox > tbody > tr[id^="moresearch"][style*="display: table-row"] {
+  position: static !important;
+  display: table-row !important;
+  width: auto !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  visibility: visible !important;
+}
+
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox > tbody > tr[id^="moresearch"][style*="table-row"] > td,
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox:hover > tbody > tr[id^="moresearch"] > td,
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox:focus-within > tbody > tr[id^="moresearch"] > td,
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox > tbody > tr:first-child:hover ~ tr[id^="moresearch"] > td,
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox > tbody > tr:first-child:focus-within ~ tr[id^="moresearch"] > td,
+body form:has(#searchbox) table#searchbox > tbody > tr[id^="moresearch"][style*="table-row"] > td,
+body form:has(#searchbox) table#searchbox:hover > tbody > tr[id^="moresearch"] > td,
+body form:has(#searchbox) table#searchbox:focus-within > tbody > tr[id^="moresearch"] > td,
+body form:has(#searchbox) table#searchbox > tbody > tr:first-child:hover ~ tr[id^="moresearch"] > td,
+body form:has(#searchbox) table#searchbox > tbody > tr:first-child:focus-within ~ tr[id^="moresearch"] > td {
+  display: table-cell !important;
+  width: auto !important;
+  height: auto !important;
+  padding: 0 !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  visibility: visible !important;
 }
 
 /* Final override: show the real HDBits options link, not a fake table button. */
