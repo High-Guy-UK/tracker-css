@@ -1,6 +1,6 @@
 /*!
  * Theme Name:     ThoseHDBits
- * Version:        6.0
+ * Version:        6.1
  * Last Updated:   2026-07-24
  * Based on:       HDBits Berlin 1.4
  */
@@ -9497,4 +9497,105 @@ body:has(.film-info) .tag-content {
   background: #172331 !important;
   color: #bcd5e7 !important;
   box-shadow: none !important;
+}
+
+/* v6.1: disable shade/box changes on detail-page hover states. */
+body:has(#details) #details:hover,
+body:has(#showpage) #showpage:hover,
+body:has(.film-info) .film-info:hover,
+body:has(#details) #details table:hover,
+body:has(#showpage) #showpage table:hover,
+body:has(.film-info) .film-info table:hover,
+body:has(#details) #details tr:hover,
+body:has(#showpage) #showpage tr:hover,
+body:has(.film-info) .film-info tr:hover,
+body:has(#details) #details td:hover,
+body:has(#showpage) #showpage td:hover,
+body:has(.film-info) .film-info td:hover {
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+body:has(#details) #details:hover,
+body:has(#showpage) #showpage:hover,
+body:has(.film-info) .film-info:hover {
+  background: var(--hdb-detail-surface) !important;
+  border-color: var(--hdb-detail-line) !important;
+  box-shadow: 0 18px 42px rgba(0,0,0,.2) !important;
+}
+
+body:has(#details) #showpage:hover,
+body:has(#details) .contentlayout:hover,
+body:has(#showpage) .contentlayout:hover,
+body:has(.film-info) .contentlayout:hover {
+  background: var(--hdb-detail-surface) !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+body:has(#details) #showpage > tbody > tr > td:hover,
+body:has(#showpage) #showpage > tbody > tr > td:hover,
+body:has(#details) #showpage > tbody > tr:last-child > td:hover,
+body:has(#showpage) #showpage > tbody > tr:last-child > td:hover {
+  background: var(--hdb-detail-surface) !important;
+}
+
+body:has(#details) #details ~ table:hover,
+body:has(#details) #details ~ table.main:hover,
+body:has(#showpage) #showpage ~ table:hover,
+body:has(#showpage) #showpage ~ table.main:hover,
+body:has(.film-info) td.bottom > table:not(.menu):hover {
+  background: var(--hdb-detail-surface) !important;
+  border-color: var(--hdb-detail-line) !important;
+  box-shadow: none !important;
+}
+
+body:has(#details) #details table tr:hover td,
+body:has(#details) #details table tr:hover th,
+body:has(#showpage) #showpage table tr:hover td,
+body:has(#showpage) #showpage table tr:hover th,
+body:has(.film-info) .film-info table tr:hover td,
+body:has(.film-info) .film-info table tr:hover th,
+body:has(.film-info) .contentlayout table tr:hover td,
+body:has(.film-info) .contentlayout table tr:hover th {
+  background: transparent !important;
+  border-color: var(--hdb-detail-line-soft) !important;
+  color: var(--hdb-detail-text) !important;
+}
+
+body:has(#details) #details table tr:hover td:first-child,
+body:has(#details) #details table tr:hover th,
+body:has(#showpage) #showpage table tr:hover td:first-child,
+body:has(#showpage) #showpage table tr:hover th,
+body:has(.film-info) .film-info table tr:hover td:first-child,
+body:has(.film-info) .film-info table tr:hover th {
+  color: #d6e4f0 !important;
+}
+
+body:has(#details) a:hover,
+body:has(#showpage) a:hover,
+body:has(.film-info) a:hover {
+  text-shadow: none !important;
+}
+
+body:has(#details) .tag:hover,
+body:has(#details) .tag-content:hover,
+body:has(#showpage) .tag:hover,
+body:has(#showpage) .tag-content:hover,
+body:has(.film-info) .tag:hover,
+body:has(.film-info) .tag-content:hover {
+  border-color: var(--hdb-detail-line) !important;
+  background: #172331 !important;
+  color: #bcd5e7 !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+body:has(#details) img:hover,
+body:has(#showpage) img:hover,
+body:has(.film-info) img:hover {
+  filter: none !important;
+  transform: none !important;
 }
