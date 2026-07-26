@@ -3382,14 +3382,28 @@ body > table:first-of-type a:hover {
   box-sizing: border-box;
 }
 
-#searchselector {
-  display: none !important;
+#sitesearchform {
+  position: fixed !important;
+  left: 16px !important;
+  bottom: 72px !important;
+  z-index: 41;
+  display: flex !important;
+  width: 244px !important;
+  max-width: 244px !important;
+  padding: 10px;
+  visibility: visible !important;
+  background: #151b24 !important;
+  border: 1px solid #27303b;
+  border-radius: 8px;
+  box-sizing: border-box;
 }
 
-#sitesearchform {
-  display: flex !important;
-  width: 100%;
-  max-width: none;
+#sitesearchform * {
+  visibility: visible !important;
+}
+
+#searchselector {
+  display: none !important;
 }
 
 #sitesearchinput {
