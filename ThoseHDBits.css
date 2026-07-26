@@ -1,6 +1,6 @@
 /*!
  * Theme Name:     ThoseHDBits
- * Version:        2.5
+ * Version:        2.6
  * Last Updated:   2026-07-24
  * Based on:       HDBits Berlin 1.4
  */
@@ -4914,5 +4914,197 @@ div#sitesearch form#sitesearchform input#sitesearchinput:focus {
     width: 280px !important;
     max-width: 280px !important;
     min-width: 240px !important;
+  }
+}
+
+/* Browse toolbar: move the page search controls into the solid app bar. */
+body > table:first-of-type {
+  height: 56px !important;
+  background: #0f1722 !important;
+  border-bottom: 1px solid #1c2633 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+#sitesearch,
+#sitesearchform {
+  display: none !important;
+}
+
+body > table.menu + table.main {
+  margin-top: 56px !important;
+}
+
+td#sidebar-container + *,
+td#sidebar-container + td.bottom {
+  padding-top: 12px !important;
+}
+
+form:has(#searchbox) {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+form:has(#searchbox) ul#tabs {
+  position: fixed !important;
+  top: 12px !important;
+  left: 242px !important;
+  z-index: 62 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  width: auto !important;
+  height: 32px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  list-style: none !important;
+}
+
+html body table.main tbody tr td.bottom form:has(#searchbox) ul#tabs li.tab,
+form:has(#searchbox) ul#tabs li,
+form:has(#searchbox) ul#tabs li.tab {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 86px !important;
+  height: 30px !important;
+  margin: 0 !important;
+  padding: 0 12px !important;
+  color: #aeb8c5 !important;
+  background: #18212d !important;
+  border: 1px solid #202b38 !important;
+  border-radius: 7px !important;
+  box-sizing: border-box !important;
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+}
+
+form:has(#searchbox) ul#tabs li a,
+form:has(#searchbox) ul#tabs li.tab a {
+  color: inherit !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  text-decoration: none !important;
+}
+
+form:has(#searchbox) ul#tabs li.selected,
+form:has(#searchbox) ul#tabs li.tab.selected,
+form:has(#searchbox) ul#tabs li:hover,
+form:has(#searchbox) ul#tabs li.tab:hover {
+  color: #d7e6f6 !important;
+  background: #1b2735 !important;
+  border-color: #2a3a4d !important;
+}
+
+form:has(#searchbox) #searchbox {
+  position: fixed !important;
+  top: 12px !important;
+  left: 820px !important;
+  z-index: 62 !important;
+  display: block !important;
+  width: clamp(320px, calc(100vw - 1460px), 520px) !important;
+  height: 32px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #aeb8c5 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  border-collapse: collapse !important;
+}
+
+form:has(#searchbox) #searchbox tbody,
+form:has(#searchbox) #searchbox tr,
+form:has(#searchbox) #searchbox td {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+form:has(#searchbox) #searchbox tr:first-child,
+form:has(#searchbox) #searchbox .colhead,
+form:has(#searchbox) #searchbox h2 {
+  display: none !important;
+}
+
+form:has(#searchbox) #searchbox tr:not(:first-child) {
+  display: flex !important;
+  align-items: center !important;
+}
+
+form:has(#searchbox) #searchbox tr:not(:first-child) td {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0 !important;
+  font-size: 0 !important;
+  line-height: 1 !important;
+}
+
+form:has(#searchbox) #searchbox input#search {
+  display: block !important;
+  flex: 1 1 auto !important;
+  height: 30px !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 10px !important;
+  color: #bac4d0 !important;
+  background: #080d14 !important;
+  border: 1px solid #202b38 !important;
+  border-right: 0 !important;
+  border-radius: 7px 0 0 7px !important;
+  box-shadow: none !important;
+  box-sizing: border-box !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+
+form:has(#searchbox) #searchbox input[type=submit],
+form:has(#searchbox) #searchbox button {
+  display: block !important;
+  width: 42px !important;
+  min-width: 42px !important;
+  height: 30px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #d6deea !important;
+  background: #1b2735 !important;
+  border: 1px solid #202b38 !important;
+  border-left: 0 !important;
+  border-radius: 0 7px 7px 0 !important;
+  box-shadow: none !important;
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  line-height: 30px !important;
+}
+
+form:has(#searchbox) #searchbox input#search:focus {
+  border-color: #324256 !important;
+  box-shadow: none !important;
+}
+
+form:has(#searchbox) #searchcriteria {
+  margin-top: 8px !important;
+}
+
+@media only screen and (max-width: 1500px) {
+  form:has(#searchbox) ul#tabs li,
+  form:has(#searchbox) ul#tabs li.tab {
+    min-width: 72px !important;
+    padding: 0 9px !important;
+  }
+
+  form:has(#searchbox) #searchbox {
+    left: 710px !important;
+    width: 300px !important;
   }
 }
