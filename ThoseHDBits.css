@@ -1,6 +1,6 @@
 /*!
  * Theme Name:     ThoseHDBits
- * Version:        1.9
+ * Version:        2.0
  * Last Updated:   2026-07-24
  * Based on:       HDBits Berlin 1.4
  */
@@ -3989,6 +3989,76 @@ td#sidebar-container + td.bottom {
   }
 }
 
+/* ==========================================================================
+   Sidebar polish: unified menus and HDBits wordmark
+   ========================================================================== */
+body .menu::before {
+  content: "HDBits";
+  top: 24px;
+  left: 22px;
+  color: #69adff;
+  font-size: 26px;
+  letter-spacing: 0;
+}
+
+body .menu::after {
+  content: none !important;
+  display: none !important;
+}
+
+body .menu {
+  padding-top: 86px !important;
+}
+
+body .menu a.normal,
+body .menu a.normal:link,
+body .menu a.normal:visited,
+td#sidebar-container .embedded h2 {
+  color: #c3cbd6 !important;
+  background: #171e29 !important;
+  border: 1px solid #1b2430 !important;
+  box-shadow: none !important;
+}
+
+body .menu a.normal:focus,
+body .menu a.normal:hover,
+td#sidebar-container .embedded h2:hover {
+  color: #ffffff !important;
+  background: #1d2633 !important;
+  border-color: rgba(85, 163, 255, .28) !important;
+}
+
+td#sidebar-container {
+  top: 574px !important;
+}
+
+td#sidebar-container::before {
+  content: "";
+  display: block;
+  height: 1px;
+  margin: 0 0 10px;
+  background: linear-gradient(90deg, transparent, #263241 18%, #263241 82%, transparent);
+}
+
+td#sidebar-container .embedded h2 {
+  margin-bottom: 6px !important;
+}
+
+@media only screen and (max-height: 820px) {
+  body .menu {
+    padding-top: 76px !important;
+  }
+
+  body .menu::before {
+    top: 18px;
+    font-size: 24px;
+  }
+
+  td#sidebar-container {
+    top: 506px !important;
+  }
+}
+
 /* Hide the old global search; browse/search pages already provide local search. */
 #sitesearch,
 #sitesearchform {
@@ -4359,5 +4429,72 @@ body > table.menu + table.main {
     line-height: 21px;
     margin-bottom: 3px !important;
     font-size: 10px !important;
+  }
+}
+
+/* Final sidebar polish override. */
+body .menu {
+  padding-top: 70px !important;
+}
+
+body .menu::before {
+  content: "HDBits" !important;
+  top: 22px !important;
+  left: 20px !important;
+  color: #69adff !important;
+  font-size: 26px !important;
+  letter-spacing: 0 !important;
+}
+
+body .menu::after {
+  content: none !important;
+  display: none !important;
+}
+
+body .menu a.normal,
+body .menu a.normal:link,
+body .menu a.normal:visited,
+td#sidebar-container .embedded h2 {
+  color: #c3cbd6 !important;
+  background: #171e29 !important;
+  border: 1px solid #1b2430 !important;
+}
+
+body .menu a.normal:hover,
+body .menu a.normal:focus,
+td#sidebar-container .embedded h2:hover {
+  color: #ffffff !important;
+  background: #1d2633 !important;
+  border-color: rgba(85, 163, 255, .28) !important;
+}
+
+td#sidebar-container {
+  top: 526px !important;
+}
+
+td#sidebar-container::before {
+  content: "";
+  display: block;
+  height: 1px;
+  margin: 0 0 10px;
+  background: linear-gradient(90deg, transparent, #263241 18%, #263241 82%, transparent);
+}
+
+td#sidebar-container .embedded h2 {
+  margin-bottom: 6px !important;
+}
+
+@media only screen and (max-height: 820px) {
+  body .menu {
+    padding-top: 60px !important;
+  }
+
+  body .menu::before {
+    top: 16px !important;
+    font-size: 24px !important;
+  }
+
+  td#sidebar-container {
+    top: 470px !important;
   }
 }
