@@ -1,6 +1,6 @@
 /*!
  * Theme Name:     ThoseHDBits
- * Version:        3.2
+ * Version:        3.3
  * Last Updated:   2026-07-24
  * Based on:       HDBits Berlin 1.4
  */
@@ -5803,5 +5803,133 @@ form:has(#searchbox) #searchcriteria input[type=radio] {
   form:has(#searchbox) table#searchcriteria {
     left: 590px !important;
     width: min(560px, calc(100vw - 620px)) !important;
+  }
+}
+
+/* Make the real options table act as the hover target. */
+form:has(#searchbox)::after {
+  content: none !important;
+  display: none !important;
+}
+
+form:has(#searchbox) #searchcriteria,
+form:has(#searchbox) table#searchcriteria,
+form:has(#searchbox):hover #searchcriteria,
+form:has(#searchbox):hover table#searchcriteria,
+form:has(#searchbox):focus-within #searchcriteria,
+form:has(#searchbox):focus-within table#searchcriteria {
+  position: fixed !important;
+  top: 14px !important;
+  left: calc(640px + clamp(260px, 20vw, 380px) + 8px) !important;
+  right: auto !important;
+  z-index: 95 !important;
+  display: block !important;
+  width: 78px !important;
+  height: 28px !important;
+  max-height: 28px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  color: #aeb7c3 !important;
+  background: rgba(23, 30, 41, .82) !important;
+  border: 1px solid rgba(85, 163, 255, .14) !important;
+  border-radius: 6px !important;
+  box-sizing: border-box !important;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, .18) !important;
+  backdrop-filter: blur(14px) saturate(130%) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(130%) !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  cursor: default !important;
+}
+
+form:has(#searchbox) #searchcriteria::before,
+form:has(#searchbox) table#searchcriteria::before {
+  content: "Options";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aeb7c3;
+  font-family: "Inter", "Roboto", "Helvetica Neue", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+  pointer-events: none;
+}
+
+form:has(#searchbox) #searchcriteria:hover,
+form:has(#searchbox) table#searchcriteria:hover,
+form:has(#searchbox) #searchcriteria:focus-within,
+form:has(#searchbox) table#searchcriteria:focus-within {
+  top: 14px !important;
+  width: min(620px, calc(100vw - 960px)) !important;
+  height: auto !important;
+  min-height: 220px !important;
+  max-height: 58vh !important;
+  padding: 38px 12px 12px !important;
+  overflow: auto !important;
+  background: rgba(18, 27, 38, .74) !important;
+  border-color: rgba(122, 151, 184, .24) !important;
+  border-radius: 10px !important;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, .42), inset 0 1px 0 rgba(255, 255, 255, .045) !important;
+  backdrop-filter: blur(18px) saturate(145%) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(145%) !important;
+}
+
+form:has(#searchbox) #searchcriteria:hover::before,
+form:has(#searchbox) table#searchcriteria:hover::before,
+form:has(#searchbox) #searchcriteria:focus-within::before,
+form:has(#searchbox) table#searchcriteria:focus-within::before {
+  inset: 0 auto auto 0;
+  width: 78px;
+  height: 28px;
+  color: #f1f6fb;
+  background: rgba(29, 38, 51, .9);
+  border-right: 1px solid rgba(85, 163, 255, .16);
+  border-bottom: 1px solid rgba(85, 163, 255, .16);
+  border-radius: 9px 0 8px 0;
+}
+
+form:has(#searchbox) #searchcriteria tbody,
+form:has(#searchbox) #searchcriteria tr,
+form:has(#searchbox) #searchcriteria td {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+form:has(#searchbox) #searchcriteria:hover tbody,
+form:has(#searchbox) #searchcriteria:hover tr,
+form:has(#searchbox) #searchcriteria:hover td,
+form:has(#searchbox) table#searchcriteria:hover tbody,
+form:has(#searchbox) table#searchcriteria:hover tr,
+form:has(#searchbox) table#searchcriteria:hover td,
+form:has(#searchbox) #searchcriteria:focus-within tbody,
+form:has(#searchbox) #searchcriteria:focus-within tr,
+form:has(#searchbox) #searchcriteria:focus-within td,
+form:has(#searchbox) table#searchcriteria:focus-within tbody,
+form:has(#searchbox) table#searchcriteria:focus-within tr,
+form:has(#searchbox) table#searchcriteria:focus-within td {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+@media only screen and (max-width: 1500px) {
+  form:has(#searchbox) #searchcriteria,
+  form:has(#searchbox) table#searchcriteria,
+  form:has(#searchbox):hover #searchcriteria,
+  form:has(#searchbox):hover table#searchcriteria,
+  form:has(#searchbox):focus-within #searchcriteria,
+  form:has(#searchbox):focus-within table#searchcriteria {
+    left: 858px !important;
+  }
+
+  form:has(#searchbox) #searchcriteria:hover,
+  form:has(#searchbox) table#searchcriteria:hover,
+  form:has(#searchbox) #searchcriteria:focus-within,
+  form:has(#searchbox) table#searchcriteria:focus-within {
+    width: min(540px, calc(100vw - 884px)) !important;
   }
 }
