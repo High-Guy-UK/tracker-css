@@ -1,6 +1,6 @@
 /*!
  * Theme Name:     ThoseHDBits
- * Version:        5.9
+ * Version:        6.0
  * Last Updated:   2026-07-24
  * Based on:       HDBits Berlin 1.4
  */
@@ -9245,4 +9245,256 @@ body:has(.film-info) table.sources_table {
   overflow: hidden !important;
   border-radius: 10px !important;
   background: rgba(11, 19, 30, .72) !important;
+}
+
+/* v6.0: flatten detail pages into one calmer, matching surface. */
+body:has(#details),
+body:has(#showpage),
+body:has(.film-info) {
+  --hdb-detail-page: #101923;
+  --hdb-detail-surface: #121b26;
+  --hdb-detail-surface-soft: #141f2b;
+  --hdb-detail-line: rgba(103, 140, 170, .16);
+  --hdb-detail-line-soft: rgba(103, 140, 170, .08);
+  --hdb-detail-text: #c4cfdb;
+  --hdb-detail-title: #eef6ff;
+  --hdb-detail-muted: #8fa1b2;
+}
+
+body:has(#details) td#sidebar-container + td.bottom,
+body:has(#showpage) td#sidebar-container + td.bottom,
+body:has(.film-info) td#sidebar-container + td.bottom {
+  background: var(--hdb-detail-page) !important;
+}
+
+body:has(#details) td.bottom > h1,
+body:has(#showpage) td.bottom > h1,
+body:has(.film-info) td.bottom > h1 {
+  max-width: 1380px !important;
+  margin: 38px auto 22px !important;
+  padding: 0 18px !important;
+  text-align: center !important;
+  font-size: 28px !important;
+  font-weight: 780 !important;
+}
+
+body:has(#details) #details,
+body:has(#showpage) #showpage,
+body:has(.film-info) .film-info {
+  max-width: 1380px !important;
+  margin: 0 auto 18px !important;
+  padding: 18px !important;
+  border: 1px solid var(--hdb-detail-line) !important;
+  border-radius: 14px !important;
+  background: var(--hdb-detail-surface) !important;
+  box-shadow: 0 18px 42px rgba(0,0,0,.2) !important;
+}
+
+body:has(#details) #details *,
+body:has(#showpage) #showpage *,
+body:has(.film-info) .film-info * {
+  box-shadow: none !important;
+}
+
+body:has(#details) #details table,
+body:has(#showpage) #showpage table,
+body:has(.film-info) .film-info table,
+body:has(.film-info) .contentlayout table,
+body:has(#details) #details td,
+body:has(#details) #details th,
+body:has(#showpage) #showpage td,
+body:has(#showpage) #showpage th,
+body:has(.film-info) .film-info td,
+body:has(.film-info) .film-info th {
+  background: transparent !important;
+  border-color: transparent !important;
+}
+
+body:has(#details) #details td,
+body:has(#details) #details th,
+body:has(#showpage) #showpage td,
+body:has(#showpage) #showpage th,
+body:has(.film-info) .film-info td,
+body:has(.film-info) .film-info th {
+  color: var(--hdb-detail-text) !important;
+}
+
+body:has(#details) #details > tbody > tr:first-child > td,
+body:has(#showpage) #showpage > tbody > tr:first-child > td,
+body:has(.film-info) .film-info > tbody > tr:first-child > td {
+  padding: 0 0 16px !important;
+  border-bottom: 1px solid var(--hdb-detail-line-soft) !important;
+}
+
+body:has(#details) #details > tbody > tr > td,
+body:has(#showpage) #showpage > tbody > tr > td,
+body:has(.film-info) .film-info > tbody > tr > td {
+  padding: 14px 0 !important;
+}
+
+body:has(#details) #details h2,
+body:has(#details) #details h3,
+body:has(#details) #details .contentlayout h3,
+body:has(#showpage) #showpage h2,
+body:has(#showpage) #showpage h3,
+body:has(.film-info) .film-info h2,
+body:has(.film-info) .film-info h3 {
+  margin: 14px 0 10px !important;
+  padding: 0 !important;
+  color: var(--hdb-detail-title) !important;
+  font-size: 15px !important;
+  font-weight: 760 !important;
+}
+
+body:has(#details) #showpage,
+body:has(#details) .contentlayout,
+body:has(#showpage) .contentlayout,
+body:has(.film-info) .contentlayout {
+  padding: 20px !important;
+  border: 0 !important;
+  border-radius: 12px !important;
+  background: var(--hdb-detail-surface) !important;
+}
+
+body:has(#details) #showpage span.movie_name,
+body:has(#showpage) span.movie_name,
+body:has(.film-info) span.movie_name {
+  margin: 0 0 18px !important;
+  color: var(--hdb-detail-title) !important;
+  font-size: 28px !important;
+  font-weight: 800 !important;
+}
+
+body:has(#details) #showpage table td,
+body:has(#showpage) #showpage table td,
+body:has(.film-info) .film-info table td {
+  padding: 7px 10px !important;
+}
+
+body:has(#details) #showpage table td:first-child,
+body:has(#showpage) #showpage table td:first-child,
+body:has(.film-info) .film-info table td:first-child {
+  width: 118px !important;
+  color: #d5e3ef !important;
+  font-weight: 750 !important;
+}
+
+body:has(#details) #showpage table td:not(:first-child),
+body:has(#showpage) #showpage table td:not(:first-child),
+body:has(.film-info) .film-info table td:not(:first-child) {
+  color: var(--hdb-detail-text) !important;
+  font-weight: 560 !important;
+}
+
+body:has(#details) #showpage table,
+body:has(#showpage) #showpage table,
+body:has(.film-info) .film-info table {
+  border-spacing: 0 3px !important;
+}
+
+body:has(#details) #showpage table tr + tr td,
+body:has(#showpage) #showpage table tr + tr td,
+body:has(.film-info) .film-info table tr + tr td {
+  border-top: 1px solid var(--hdb-detail-line-soft) !important;
+}
+
+body:has(#details) #showpage table img:not([src*="/pic/flag/"]):not([src*="imdb.png"]):not([src*="/pic/info/"]),
+body:has(#showpage) #showpage table img:not([src*="/pic/flag/"]):not([src*="imdb.png"]):not([src*="/pic/info/"]) {
+  max-width: 210px !important;
+  border: 0 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 14px 30px rgba(0,0,0,.28) !important;
+}
+
+body:has(#details) #showpage > tbody > tr > td,
+body:has(#showpage) #showpage > tbody > tr > td {
+  background: var(--hdb-detail-surface) !important;
+}
+
+body:has(#details) #showpage > tbody > tr:last-child > td,
+body:has(#showpage) #showpage > tbody > tr:last-child > td {
+  padding-top: 18px !important;
+  border-top: 1px solid var(--hdb-detail-line-soft) !important;
+  background: var(--hdb-detail-surface) !important;
+}
+
+body:has(#details) #showpage > tbody > tr:last-child table,
+body:has(#showpage) #showpage > tbody > tr:last-child table {
+  background: var(--hdb-detail-surface) !important;
+}
+
+body:has(#details) #showpage > tbody > tr:last-child img,
+body:has(#showpage) #showpage > tbody > tr:last-child img {
+  border: 0 !important;
+  border-radius: 7px !important;
+  box-shadow: 0 10px 20px rgba(0,0,0,.2) !important;
+}
+
+body:has(#details) #details ~ table,
+body:has(#details) #details ~ table.main,
+body:has(#showpage) #showpage ~ table,
+body:has(#showpage) #showpage ~ table.main,
+body:has(.film-info) td.bottom > table:not(.menu) {
+  overflow: hidden !important;
+  margin: 14px auto !important;
+  padding: 12px !important;
+  border: 1px solid var(--hdb-detail-line) !important;
+  border-radius: 12px !important;
+  background: var(--hdb-detail-surface) !important;
+}
+
+body:has(#details) #details ~ table td,
+body:has(#details) #details ~ table th,
+body:has(#showpage) #showpage ~ table td,
+body:has(#showpage) #showpage ~ table th {
+  padding: 8px 11px !important;
+  border-color: var(--hdb-detail-line-soft) !important;
+  background: transparent !important;
+}
+
+body:has(#details) #details ~ table td:first-child,
+body:has(#details) #details ~ table th,
+body:has(#showpage) #showpage ~ table td:first-child,
+body:has(#showpage) #showpage ~ table th {
+  color: #d6e4f0 !important;
+  font-weight: 750 !important;
+}
+
+body:has(#details) td.bottom > h2,
+body:has(#showpage) td.bottom > h2,
+body:has(.film-info) td.bottom > h2 {
+  margin: 20px auto 8px !important;
+  color: #dce8f3 !important;
+  font-size: 15px !important;
+  font-weight: 760 !important;
+  max-width: 1380px !important;
+}
+
+body:has(#details) td.bottom > a > img:not([src*="/pic/flag/"]):not([src*="imdb.png"]):not([src*="/pic/info/"]),
+body:has(#details) .previewbox img,
+body:has(#showpage) .previewbox img {
+  height: 190px !important;
+  border: 0 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 12px 26px rgba(0,0,0,.24) !important;
+}
+
+body:has(#details) table.sources_table,
+body:has(#showpage) table.sources_table,
+body:has(.film-info) table.sources_table {
+  border: 1px solid var(--hdb-detail-line) !important;
+  border-radius: 10px !important;
+  background: var(--hdb-detail-surface) !important;
+}
+
+body:has(#details) .tag,
+body:has(#details) .tag-content,
+body:has(#showpage) .tag,
+body:has(#showpage) .tag-content,
+body:has(.film-info) .tag,
+body:has(.film-info) .tag-content {
+  border-color: var(--hdb-detail-line) !important;
+  background: #172331 !important;
+  color: #bcd5e7 !important;
+  box-shadow: none !important;
 }
