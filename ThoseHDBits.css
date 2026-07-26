@@ -1,6 +1,6 @@
 /*!
  * Theme Name:     ThoseHDBits
- * Version:        1.4
+ * Version:        1.5
  * Last Updated:   2026-07-24
  * Based on:       HDBits Berlin 1.4
  */
@@ -3895,7 +3895,7 @@ td#sidebar-container {
   display: block !important;
   z-index: 31;
   left: 12px !important;
-  top: 326px !important;
+  top: 360px !important;
   bottom: 58px !important;
   width: 276px !important;
   min-width: 276px !important;
@@ -3979,7 +3979,7 @@ td#sidebar-container + td.bottom {
   }
 
   td#sidebar-container {
-    top: 286px !important;
+    top: 332px !important;
   }
 
   td#sidebar-container .embedded h2,
@@ -3987,4 +3987,10 @@ td#sidebar-container + td.bottom {
   td#sidebar-container .embedded a {
     font-size: 9px !important;
   }
+}
+
+/* Hide the old global search; browse/search pages already provide local search. */
+#sitesearch,
+#sitesearchform {
+  display: none !important;
 }
