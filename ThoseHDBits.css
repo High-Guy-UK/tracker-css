@@ -1,6 +1,6 @@
 /*!
  * Theme Name:     ThoseHDBits
- * Version:        3.8
+ * Version:        3.9
  * Last Updated:   2026-07-24
  * Based on:       HDBits Berlin 1.4
  */
@@ -6547,6 +6547,88 @@ form:has(#searchbox) #searchbox tr[id^="moresearch"] input[type=radio] {
   form:has(#searchbox) #searchbox:has(tr[id^="moresearch"]:not([style*="display:none"]):not([style*="display: none"])) tr:has(input#search) {
     left: 710px !important;
     width: 260px !important;
+  }
+}
+
+/* v3.9: beat the generic hidden-row guardrail for the real Options row. */
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox > tbody > tr:first-child,
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox > tbody > tr:first-child:not(:has(input#search)),
+body form:has(#searchbox) table#searchbox > tbody > tr:first-child,
+body form:has(#searchbox) table#searchbox > tbody > tr:first-child:not(:has(input#search)) {
+  position: fixed !important;
+  top: 12px !important;
+  left: 1082px !important;
+  z-index: 140 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: auto !important;
+  min-width: 0 !important;
+  height: 28px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  color: transparent !important;
+  background: #171e29 !important;
+  border: 1px solid #1f2a38 !important;
+  border-radius: 7px !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .025) !important;
+  box-sizing: border-box !important;
+  font-size: 0 !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+}
+
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox > tbody > tr:first-child th,
+body form:has(#searchbox) table#searchbox > tbody > tr:first-child th {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: auto !important;
+  min-width: 0 !important;
+  height: 28px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: transparent !important;
+  background: transparent !important;
+  border: 0 !important;
+  font-size: 0 !important;
+  line-height: 1 !important;
+}
+
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox > tbody > tr:first-child a,
+body form:has(#searchbox) table#searchbox > tbody > tr:first-child a {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 28px !important;
+  margin: 0 !important;
+  padding: 0 12px !important;
+  color: transparent !important;
+  background: transparent !important;
+  border: 0 !important;
+  font-size: 0 !important;
+  line-height: 1 !important;
+  text-decoration: none !important;
+}
+
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox > tbody > tr:first-child a::before,
+body form:has(#searchbox) table#searchbox > tbody > tr:first-child a::before {
+  content: "Options" !important;
+  color: #aeb7c3 !important;
+  font-family: "Inter", "Roboto", "Helvetica Neue", Arial, sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0 !important;
+  line-height: 1 !important;
+}
+
+@media only screen and (max-width: 1500px) {
+  html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox > tbody > tr:first-child,
+  html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox > tbody > tr:first-child:not(:has(input#search)),
+  body form:has(#searchbox) table#searchbox > tbody > tr:first-child,
+  body form:has(#searchbox) table#searchbox > tbody > tr:first-child:not(:has(input#search)) {
+    left: 980px !important;
   }
 }
 
