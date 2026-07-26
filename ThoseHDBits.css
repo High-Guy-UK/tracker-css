@@ -1,6 +1,6 @@
 /*!
  * Theme Name:     ThoseHDBits
- * Version:        2.9
+ * Version:        3.0
  * Last Updated:   2026-07-24
  * Based on:       HDBits Berlin 1.4
  */
@@ -5357,4 +5357,146 @@ td.text {
 #torrent-list tbody,
 #torrent-list > tbody > tr {
   background-color: transparent !important;
+}
+
+/* Compact toolbar chips and tucked-away search options. */
+form:has(#searchbox) ul#tabs {
+  top: 14px !important;
+  gap: 7px !important;
+}
+
+html body table.main tbody tr td.bottom form:has(#searchbox) ul#tabs li.tab,
+form:has(#searchbox) ul#tabs li,
+form:has(#searchbox) ul#tabs li.tab {
+  min-width: 0 !important;
+  width: auto !important;
+  height: 28px !important;
+  padding: 0 12px !important;
+}
+
+@media only screen and (max-width: 1500px) {
+  form:has(#searchbox) ul#tabs li,
+  form:has(#searchbox) ul#tabs li.tab {
+    min-width: 0 !important;
+    width: auto !important;
+    height: 28px !important;
+    padding: 0 12px !important;
+  }
+}
+
+form:has(#searchbox) ul#tabs li *,
+form:has(#searchbox) ul#tabs li.tab *,
+form:has(#searchbox) ul#tabs li a,
+form:has(#searchbox) ul#tabs li.tab a {
+  width: auto !important;
+  min-width: 0 !important;
+  padding: 0 !important;
+}
+
+form:has(#searchbox) #searchbox {
+  top: 14px !important;
+  left: 640px !important;
+  width: clamp(260px, 20vw, 380px) !important;
+  height: 28px !important;
+}
+
+@media only screen and (max-width: 1500px) {
+  form:has(#searchbox) #searchbox {
+    left: 590px !important;
+    width: 260px !important;
+  }
+}
+
+form:has(#searchbox) #searchbox tr:has(input#search),
+form:has(#searchbox) #searchbox tr:has(input#search) td,
+form:has(#searchbox) #searchbox input#search,
+form:has(#searchbox) #searchbox tr:has(input#search) input#search,
+form:has(#searchbox) #searchbox input[type=submit],
+form:has(#searchbox) #searchbox button,
+form:has(#searchbox) #searchbox tr:has(input#search) input[type=submit],
+form:has(#searchbox) #searchbox tr:has(input#search) button {
+  height: 28px !important;
+}
+
+form:has(#searchbox)::after {
+  content: "Options";
+  position: fixed;
+  top: 14px;
+  left: calc(640px + clamp(260px, 20vw, 380px) + 8px);
+  z-index: 62;
+  display: flex;
+  align-items: center;
+  height: 28px;
+  padding: 0 12px;
+  color: #aeb7c3;
+  background: #171e29;
+  border: 1px solid #1b2430;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-family: "Inter", "Roboto", "Helvetica Neue", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+form:has(#searchbox):hover::after,
+form:has(#searchbox):focus-within::after {
+  color: #f1f6fb;
+  background: #1d2633;
+  border-color: rgba(85, 163, 255, .22);
+}
+
+@media only screen and (max-width: 1500px) {
+  form:has(#searchbox)::after {
+    left: 858px;
+  }
+}
+
+form:has(#searchbox) #searchcriteria,
+form:has(#searchbox) table#searchcriteria {
+  position: fixed !important;
+  top: 50px !important;
+  left: 640px !important;
+  z-index: 80 !important;
+  display: none !important;
+  width: min(620px, calc(100vw - 670px)) !important;
+  max-height: 58vh !important;
+  margin: 0 !important;
+  padding: 10px !important;
+  overflow: auto !important;
+  color: #aeb7c3 !important;
+  background: #121b26 !important;
+  border: 1px solid #243244 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, .32) !important;
+  border-collapse: separate !important;
+  border-spacing: 8px !important;
+}
+
+form:has(#searchbox):hover #searchcriteria,
+form:has(#searchbox):hover table#searchcriteria,
+form:has(#searchbox):focus-within #searchcriteria,
+form:has(#searchbox):focus-within table#searchcriteria {
+  display: block !important;
+}
+
+form:has(#searchbox) #searchcriteria tbody,
+form:has(#searchbox) #searchcriteria tr,
+form:has(#searchbox) #searchcriteria td {
+  color: #aeb7c3 !important;
+  background: transparent !important;
+  border: 0 !important;
+  font-family: "Inter", "Roboto", "Helvetica Neue", Arial, sans-serif !important;
+  font-size: 11px !important;
+}
+
+form:has(#searchbox) #searchcriteria input,
+form:has(#searchbox) #searchcriteria select {
+  height: 26px !important;
+  margin: 2px 3px !important;
+  color: #c3cbd6 !important;
+  background: #0a1018 !important;
+  border: 1px solid #1f2b3a !important;
+  border-radius: 5px !important;
+  font-size: 11px !important;
 }
