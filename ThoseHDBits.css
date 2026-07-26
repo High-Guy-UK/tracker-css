@@ -1,6 +1,6 @@
 /*!
  * Theme Name:     ThoseHDBits
- * Version:        4.9
+ * Version:        5.0
  * Last Updated:   2026-07-24
  * Based on:       HDBits Berlin 1.4
  */
@@ -8466,4 +8466,122 @@ body > table:first-of-type .embedded:nth-of-type(3) font {
 #torrent-list > tbody > tr > td:nth-child(2) a:has(> img[title*="wish" i])::before {
   mask: var(--hdb-mask-wishlist) center / contain no-repeat !important;
   -webkit-mask: var(--hdb-mask-wishlist) center / contain no-repeat !important;
+}
+
+/* v5.0: fully cover original category artwork and align IMDb labels. */
+#torrent-list > tbody > tr > td:first-child a,
+#torrent-list > tbody > tr > td.catcell a {
+  position: relative !important;
+  isolation: isolate !important;
+  background: transparent !important;
+  border-color: var(--hdb-icon-cyan-border) !important;
+}
+
+#torrent-list > tbody > tr > td:first-child a > *,
+#torrent-list > tbody > tr > td.catcell a > * {
+  display: none !important;
+  visibility: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
+  opacity: 0 !important;
+}
+
+#torrent-list > tbody > tr > td:first-child a::before,
+#torrent-list > tbody > tr > td.catcell a::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  display: block !important;
+  width: auto !important;
+  height: auto !important;
+  background: linear-gradient(180deg, rgba(24, 37, 52, .98), rgba(8, 16, 26, .98)) !important;
+  border-radius: 6px !important;
+  mask: none !important;
+  -webkit-mask: none !important;
+  filter: none !important;
+}
+
+#torrent-list > tbody > tr > td:first-child a::after,
+#torrent-list > tbody > tr > td.catcell a::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 2px 5px !important;
+  z-index: 2 !important;
+  display: block !important;
+  background: var(--hdb-icon-cyan) !important;
+  filter: drop-shadow(0 0 5px rgba(86, 217, 255, .34)) !important;
+  mask: var(--hdb-mask-movie) center / contain no-repeat !important;
+  -webkit-mask: var(--hdb-mask-movie) center / contain no-repeat !important;
+}
+
+#torrent-list > tbody > tr > td:first-child a[href*="cat=2"]::after,
+#torrent-list > tbody > tr > td.catcell a[href*="cat=2"]::after {
+  mask: var(--hdb-mask-tv) center / contain no-repeat !important;
+  -webkit-mask: var(--hdb-mask-tv) center / contain no-repeat !important;
+}
+
+#torrent-list > tbody > tr > td:first-child a[href*="cat=3"]::after,
+#torrent-list > tbody > tr > td.catcell a[href*="cat=3"]::after {
+  mask: var(--hdb-mask-doc) center / contain no-repeat !important;
+  -webkit-mask: var(--hdb-mask-doc) center / contain no-repeat !important;
+}
+
+#torrent-list > tbody > tr > td:first-child a[href*="cat=4"]::after,
+#torrent-list > tbody > tr > td.catcell a[href*="cat=4"]::after {
+  mask: var(--hdb-mask-music) center / contain no-repeat !important;
+  -webkit-mask: var(--hdb-mask-music) center / contain no-repeat !important;
+}
+
+#torrent-list > tbody > tr > td:first-child a[href*="cat=5"]::after,
+#torrent-list > tbody > tr > td.catcell a[href*="cat=5"]::after {
+  mask: var(--hdb-mask-sport) center / contain no-repeat !important;
+  -webkit-mask: var(--hdb-mask-sport) center / contain no-repeat !important;
+}
+
+#torrent-list > tbody > tr > td:first-child a[href*="cat=6"]::after,
+#torrent-list > tbody > tr > td.catcell a[href*="cat=6"]::after {
+  mask: var(--hdb-mask-audio) center / contain no-repeat !important;
+  -webkit-mask: var(--hdb-mask-audio) center / contain no-repeat !important;
+}
+
+#torrent-list > tbody > tr > td:first-child a[href*="cat=8"]::after,
+#torrent-list > tbody > tr > td.catcell a[href*="cat=8"]::after {
+  mask: var(--hdb-mask-misc) center / contain no-repeat !important;
+  -webkit-mask: var(--hdb-mask-misc) center / contain no-repeat !important;
+}
+
+#torrent-list a[href*="/film/info"],
+#torrent-list a[href*="film/info"] {
+  display: inline-block !important;
+  padding-top: 3px !important;
+  vertical-align: top !important;
+  line-height: 18px !important;
+}
+
+@keyframes hdb-new-title-breathe {
+  0%, 100% {
+    color: #c9d6e6;
+    text-shadow:
+      0 0 0 rgba(86, 217, 255, 0),
+      0 0 0 rgba(86, 217, 255, 0);
+  }
+  50% {
+    color: #e4fbff;
+    text-shadow:
+      0 0 9px rgba(86, 217, 255, .46),
+      0 0 18px rgba(56, 189, 248, .24);
+  }
+}
+
+#torrent-list .tag.new {
+  display: none !important;
+}
+
+#torrent-list > tbody > tr:has(.tag.new) > td:nth-child(2) > a:not(:has(> img)):not([href*="/film/info"]):not([href*="film/info"]):not([href*="download"]):not([href^="javascript"]),
+#torrent-list > tbody > tr:has(.tag.new) > td:nth-child(2) a[href*="details"],
+#torrent-list > tbody > tr:has(.tag.new) > td:nth-child(2) a[href*="torrent"] {
+  animation: hdb-new-title-breathe 2.8s ease-in-out infinite !important;
+  color: #d9f8ff !important;
+  text-decoration: none !important;
 }
