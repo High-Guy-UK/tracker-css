@@ -1,6 +1,6 @@
 /*!
  * Theme Name:     ThoseHDBits
- * Version:        3.0
+ * Version:        3.1
  * Last Updated:   2026-07-24
  * Based on:       HDBits Berlin 1.4
  */
@@ -5499,4 +5499,144 @@ form:has(#searchbox) #searchcriteria select {
   border: 1px solid #1f2b3a !important;
   border-radius: 5px !important;
   font-size: 11px !important;
+}
+
+/* Replace the fake options button with real compact clickable controls. */
+body > table:first-of-type {
+  height: 86px !important;
+}
+
+body > table:first-of-type tbody,
+body > table:first-of-type tr,
+body > table:first-of-type td {
+  height: 56px !important;
+}
+
+body > table:first-of-type .embedded:nth-of-type(3) {
+  align-self: flex-start !important;
+  height: 56px !important;
+}
+
+body > table.menu + table.main {
+  margin-top: 86px !important;
+}
+
+td#sidebar-container + *,
+td#sidebar-container + td.bottom {
+  padding-top: 10px !important;
+}
+
+form:has(#searchbox)::after {
+  content: none !important;
+  display: none !important;
+}
+
+form:has(#searchbox) ul#tabs {
+  top: 12px !important;
+}
+
+form:has(#searchbox) #searchbox {
+  top: 12px !important;
+}
+
+form:has(#searchbox) #searchcriteria,
+form:has(#searchbox) table#searchcriteria,
+form:has(#searchbox):hover #searchcriteria,
+form:has(#searchbox):hover table#searchcriteria,
+form:has(#searchbox):focus-within #searchcriteria,
+form:has(#searchbox):focus-within table#searchcriteria {
+  position: fixed !important;
+  top: 50px !important;
+  left: 242px !important;
+  right: 24px !important;
+  z-index: 62 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  width: auto !important;
+  height: 26px !important;
+  max-height: 26px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  color: #aeb7c3 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  border-collapse: collapse !important;
+  border-spacing: 0 !important;
+  white-space: nowrap !important;
+}
+
+form:has(#searchbox) #searchcriteria tbody,
+form:has(#searchbox) #searchcriteria tr {
+  display: contents !important;
+}
+
+form:has(#searchbox) #searchcriteria td {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  width: auto !important;
+  height: 24px !important;
+  min-height: 24px !important;
+  margin: 0 !important;
+  padding: 0 8px !important;
+  color: #aeb7c3 !important;
+  background: #171e29 !important;
+  border: 1px solid #1b2430 !important;
+  border-radius: 999px !important;
+  box-sizing: border-box !important;
+  font-family: "Inter", "Roboto", "Helvetica Neue", Arial, sans-serif !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+}
+
+form:has(#searchbox) #searchcriteria td:empty,
+form:has(#searchbox) #searchcriteria td:first-child:empty {
+  display: none !important;
+}
+
+form:has(#searchbox) #searchcriteria input,
+form:has(#searchbox) #searchcriteria select,
+form:has(#searchbox) #searchcriteria button {
+  height: 20px !important;
+  margin: 0 !important;
+  color: #c3cbd6 !important;
+  background: #0a1018 !important;
+  border: 1px solid #1f2b3a !important;
+  border-radius: 999px !important;
+  box-shadow: none !important;
+  font-family: "Inter", "Roboto", "Helvetica Neue", Arial, sans-serif !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+}
+
+form:has(#searchbox) #searchcriteria input[type=checkbox],
+form:has(#searchbox) #searchcriteria input[type=radio] {
+  width: 14px !important;
+  min-width: 14px !important;
+  height: 14px !important;
+  accent-color: #55a3ff !important;
+  border-radius: 4px !important;
+}
+
+form:has(#searchbox) #searchcriteria input[type=text],
+form:has(#searchbox) #searchcriteria input:not([type]),
+form:has(#searchbox) #searchcriteria select {
+  max-width: 135px !important;
+  padding: 0 8px !important;
+}
+
+form:has(#searchbox) #searchcriteria input[type=submit],
+form:has(#searchbox) #searchcriteria button {
+  padding: 0 8px !important;
+  color: #aeb7c3 !important;
+  background: #171e29 !important;
+  border-color: #1b2430 !important;
 }
