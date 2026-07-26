@@ -1,6 +1,6 @@
 /*!
  * Theme Name:     ThoseHDBits
- * Version:        5.6
+ * Version:        5.7
  * Last Updated:   2026-07-24
  * Based on:       HDBits Berlin 1.4
  */
@@ -8938,4 +8938,24 @@ html .rc__film__poster {
   background-color: transparent !important;
   border-color: transparent !important;
   box-shadow: none !important;
+}
+
+/* v5.7: mask the hidden IMDb label so only the logo and score show. */
+#torrent-list a[href*="/film/info"],
+#torrent-list a[href*="film/info"] {
+  width: 86px !important;
+  min-width: 86px !important;
+  padding-left: 48px !important;
+  text-shadow: -39px 0 0 var(--hdb-imdb-yellow) !important;
+}
+
+#torrent-list a[href*="/film/info"]::before,
+#torrent-list a[href*="film/info"]::before {
+  left: -6px !important;
+  width: 56px !important;
+  background:
+    #151c25
+    url("https://hdbits.org/pic/imdb.png")
+    center / 36px auto
+    no-repeat !important;
 }
