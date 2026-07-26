@@ -1,6 +1,6 @@
 /*!
  * Theme Name:     ThoseHDBits
- * Version:        4.0
+ * Version:        4.1
  * Last Updated:   2026-07-24
  * Based on:       HDBits Berlin 1.4
  */
@@ -6657,6 +6657,98 @@ body form:has(#searchbox) table#searchbox > tbody > tr:first-child a::before {
   display: inline-block !important;
   width: auto !important;
   min-width: 0 !important;
+}
+
+/* v4.1: CSS-open every HDBits advanced-search row on Options hover/focus. */
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox:hover,
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox:focus-within,
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox:has(> tbody > tr:first-child:hover),
+body form:has(#searchbox) table#searchbox:hover,
+body form:has(#searchbox) table#searchbox:focus-within,
+body form:has(#searchbox) table#searchbox:has(> tbody > tr:first-child:hover) {
+  top: 50px !important;
+  left: 750px !important;
+  z-index: 120 !important;
+  display: table !important;
+  width: min(720px, calc(100vw - 810px)) !important;
+  height: auto !important;
+  max-height: 62vh !important;
+  padding: 10px !important;
+  overflow: auto !important;
+  color: #aeb7c3 !important;
+  background: rgba(18, 27, 38, .82) !important;
+  border: 1px solid rgba(72, 91, 116, .58) !important;
+  border-radius: 10px !important;
+  box-shadow: 0 22px 58px rgba(0, 0, 0, .42), inset 0 1px 0 rgba(255, 255, 255, .04) !important;
+  backdrop-filter: blur(18px) saturate(135%) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(135%) !important;
+  border-collapse: separate !important;
+  border-spacing: 8px !important;
+}
+
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox:hover > tbody > tr[id^="moresearch"],
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox:focus-within > tbody > tr[id^="moresearch"],
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox > tbody > tr:first-child:hover ~ tr[id^="moresearch"],
+body form:has(#searchbox) table#searchbox:hover > tbody > tr[id^="moresearch"],
+body form:has(#searchbox) table#searchbox:focus-within > tbody > tr[id^="moresearch"],
+body form:has(#searchbox) table#searchbox > tbody > tr:first-child:hover ~ tr[id^="moresearch"] {
+  position: static !important;
+  display: table-row !important;
+  width: auto !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  visibility: visible !important;
+}
+
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox:hover > tbody > tr[id^="moresearch"] > td,
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox:focus-within > tbody > tr[id^="moresearch"] > td,
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox > tbody > tr:first-child:hover ~ tr[id^="moresearch"] > td,
+body form:has(#searchbox) table#searchbox:hover > tbody > tr[id^="moresearch"] > td,
+body form:has(#searchbox) table#searchbox:focus-within > tbody > tr[id^="moresearch"] > td,
+body form:has(#searchbox) table#searchbox > tbody > tr:first-child:hover ~ tr[id^="moresearch"] > td {
+  display: table-cell !important;
+  width: auto !important;
+  height: auto !important;
+  padding: 0 !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  visibility: visible !important;
+}
+
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox:hover tr:has(input#search),
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox:focus-within tr:has(input#search),
+body form:has(#searchbox) table#searchbox:hover tr:has(input#search),
+body form:has(#searchbox) table#searchbox:focus-within tr:has(input#search) {
+  position: fixed !important;
+  top: 12px !important;
+  left: 750px !important;
+  z-index: 141 !important;
+  display: flex !important;
+  width: 320px !important;
+  height: 32px !important;
+}
+
+@media only screen and (max-width: 1500px) {
+  html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox:hover,
+  html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox:focus-within,
+  html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox:has(> tbody > tr:first-child:hover),
+  body form:has(#searchbox) table#searchbox:hover,
+  body form:has(#searchbox) table#searchbox:focus-within,
+  body form:has(#searchbox) table#searchbox:has(> tbody > tr:first-child:hover) {
+    left: 710px !important;
+    width: min(560px, calc(100vw - 740px)) !important;
+  }
+
+  html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox:hover tr:has(input#search),
+  html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox:focus-within tr:has(input#search),
+  body form:has(#searchbox) table#searchbox:hover tr:has(input#search),
+  body form:has(#searchbox) table#searchbox:focus-within tr:has(input#search) {
+    left: 710px !important;
+    width: 260px !important;
+  }
 }
 
 /* Final override: show the real HDBits options link, not a fake table button. */
