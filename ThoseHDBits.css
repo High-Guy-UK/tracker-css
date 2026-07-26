@@ -1,6 +1,6 @@
 /*!
  * Theme Name:     ThoseHDBits
- * Version:        3.1
+ * Version:        3.2
  * Last Updated:   2026-07-24
  * Based on:       HDBits Berlin 1.4
  */
@@ -5455,7 +5455,7 @@ form:has(#searchbox):focus-within::after {
 form:has(#searchbox) #searchcriteria,
 form:has(#searchbox) table#searchcriteria {
   position: fixed !important;
-  top: 50px !important;
+  top: 44px !important;
   left: 640px !important;
   z-index: 80 !important;
   display: none !important;
@@ -5639,4 +5639,169 @@ form:has(#searchbox) #searchcriteria button {
   color: #aeb7c3 !important;
   background: #171e29 !important;
   border-color: #1b2430 !important;
+}
+
+/* Restore compact header and make Options a hover-open frosted panel. */
+body > table:first-of-type {
+  height: 56px !important;
+}
+
+body > table:first-of-type tbody,
+body > table:first-of-type tr,
+body > table:first-of-type td {
+  height: 56px !important;
+}
+
+body > table:first-of-type .embedded:nth-of-type(3) {
+  align-self: center !important;
+  height: 56px !important;
+}
+
+body > table.menu + table.main {
+  margin-top: 56px !important;
+}
+
+td#sidebar-container + *,
+td#sidebar-container + td.bottom {
+  padding-top: 12px !important;
+}
+
+form:has(#searchbox) ul#tabs {
+  top: 14px !important;
+}
+
+form:has(#searchbox) #searchbox {
+  top: 14px !important;
+  left: 640px !important;
+  width: clamp(260px, 20vw, 380px) !important;
+  height: 28px !important;
+}
+
+form:has(#searchbox)::after {
+  content: "Options" !important;
+  position: fixed !important;
+  top: 14px !important;
+  left: calc(640px + clamp(260px, 20vw, 380px) + 8px) !important;
+  z-index: 82 !important;
+  display: flex !important;
+  align-items: center !important;
+  height: 28px !important;
+  padding: 0 12px !important;
+  color: #aeb7c3 !important;
+  background: rgba(23, 30, 41, .82) !important;
+  border: 1px solid rgba(85, 163, 255, .14) !important;
+  border-radius: 6px !important;
+  box-sizing: border-box !important;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, .18) !important;
+  font-family: "Inter", "Roboto", "Helvetica Neue", Arial, sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  pointer-events: auto !important;
+}
+
+form:has(#searchbox):hover::after,
+form:has(#searchbox):focus-within::after {
+  color: #f1f6fb !important;
+  background: rgba(29, 38, 51, .9) !important;
+  border-color: rgba(85, 163, 255, .28) !important;
+}
+
+form:has(#searchbox) #searchcriteria,
+form:has(#searchbox) table#searchcriteria {
+  position: fixed !important;
+  top: 44px !important;
+  left: 640px !important;
+  right: auto !important;
+  z-index: 81 !important;
+  display: none !important;
+  width: min(620px, calc(100vw - 680px)) !important;
+  height: auto !important;
+  max-height: 58vh !important;
+  margin: 0 !important;
+  padding: 12px !important;
+  overflow: auto !important;
+  color: #aeb7c3 !important;
+  background: rgba(18, 27, 38, .72) !important;
+  border: 1px solid rgba(122, 151, 184, .22) !important;
+  border-radius: 10px !important;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, .42), inset 0 1px 0 rgba(255, 255, 255, .04) !important;
+  backdrop-filter: blur(18px) saturate(145%) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(145%) !important;
+  border-collapse: separate !important;
+  border-spacing: 8px !important;
+  white-space: normal !important;
+}
+
+form:has(#searchbox):hover #searchcriteria,
+form:has(#searchbox):hover table#searchcriteria,
+form:has(#searchbox):focus-within #searchcriteria,
+form:has(#searchbox):focus-within table#searchcriteria {
+  display: table !important;
+}
+
+form:has(#searchbox) #searchcriteria tbody {
+  display: table-row-group !important;
+}
+
+form:has(#searchbox) #searchcriteria tr {
+  display: table-row !important;
+}
+
+form:has(#searchbox) #searchcriteria td {
+  display: table-cell !important;
+  width: auto !important;
+  height: auto !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 4px 6px !important;
+  color: #aeb7c3 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  font-family: "Inter", "Roboto", "Helvetica Neue", Arial, sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  white-space: nowrap !important;
+}
+
+form:has(#searchbox) #searchcriteria input,
+form:has(#searchbox) #searchcriteria select,
+form:has(#searchbox) #searchcriteria button {
+  height: 24px !important;
+  margin: 2px !important;
+  color: #c3cbd6 !important;
+  background: rgba(10, 16, 24, .76) !important;
+  border: 1px solid rgba(122, 151, 184, .2) !important;
+  border-radius: 6px !important;
+  box-shadow: none !important;
+  font-family: "Inter", "Roboto", "Helvetica Neue", Arial, sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+}
+
+form:has(#searchbox) #searchcriteria input[type=checkbox],
+form:has(#searchbox) #searchcriteria input[type=radio] {
+  width: 14px !important;
+  min-width: 14px !important;
+  height: 14px !important;
+  accent-color: #55a3ff !important;
+}
+
+@media only screen and (max-width: 1500px) {
+  form:has(#searchbox) #searchbox {
+    left: 590px !important;
+    width: 260px !important;
+  }
+
+  form:has(#searchbox)::after {
+    left: 858px !important;
+  }
+
+  form:has(#searchbox) #searchcriteria,
+  form:has(#searchbox) table#searchcriteria {
+    left: 590px !important;
+    width: min(560px, calc(100vw - 620px)) !important;
+  }
 }
