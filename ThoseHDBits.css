@@ -1,6 +1,6 @@
 /*!
  * Theme Name:     ThoseHDBits
- * Version:        4.2
+ * Version:        4.3
  * Last Updated:   2026-07-24
  * Based on:       HDBits Berlin 1.4
  */
@@ -6792,6 +6792,226 @@ body form:has(#searchbox) table#searchbox > tbody > tr:first-child:focus-within 
   opacity: 1 !important;
   pointer-events: auto !important;
   visibility: visible !important;
+}
+
+/* v4.3: stable top bar; options drop under the profile block instead of moving the search box. */
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox,
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox:hover,
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox:focus-within,
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox:has(> tbody > tr:first-child:hover),
+body form:has(#searchbox) table#searchbox,
+body form:has(#searchbox) table#searchbox:hover,
+body form:has(#searchbox) table#searchbox:focus-within,
+body form:has(#searchbox) table#searchbox:has(> tbody > tr:first-child:hover) {
+  position: fixed !important;
+  top: 12px !important;
+  left: 750px !important;
+  z-index: 120 !important;
+  display: block !important;
+  width: 320px !important;
+  height: 32px !important;
+  min-height: 32px !important;
+  max-height: 32px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: visible !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-collapse: collapse !important;
+  border-spacing: 0 !important;
+}
+
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox tr:has(input#search),
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox:hover tr:has(input#search),
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox:focus-within tr:has(input#search),
+body form:has(#searchbox) table#searchbox tr:has(input#search),
+body form:has(#searchbox) table#searchbox:hover tr:has(input#search),
+body form:has(#searchbox) table#searchbox:focus-within tr:has(input#search) {
+  position: static !important;
+  display: flex !important;
+  align-items: center !important;
+  width: 320px !important;
+  height: 32px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox > tbody > tr:first-child,
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox > tbody > tr:first-child:not(:has(input#search)),
+body form:has(#searchbox) table#searchbox > tbody > tr:first-child,
+body form:has(#searchbox) table#searchbox > tbody > tr:first-child:not(:has(input#search)) {
+  top: 12px !important;
+  left: 1082px !important;
+  width: 76px !important;
+  min-width: 76px !important;
+  max-width: 76px !important;
+}
+
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox > tbody > tr[id^="moresearch"],
+body form:has(#searchbox) table#searchbox > tbody > tr[id^="moresearch"] {
+  display: none !important;
+}
+
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox:hover > tbody > tr[id^="moresearch"],
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox:focus-within > tbody > tr[id^="moresearch"],
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox > tbody > tr[id^="moresearch"][style*="table-row"],
+body form:has(#searchbox) table#searchbox:hover > tbody > tr[id^="moresearch"],
+body form:has(#searchbox) table#searchbox:focus-within > tbody > tr[id^="moresearch"],
+body form:has(#searchbox) table#searchbox > tbody > tr[id^="moresearch"][style*="table-row"] {
+  position: fixed !important;
+  left: auto !important;
+  right: 18px !important;
+  z-index: 119 !important;
+  display: flex !important;
+  align-items: center !important;
+  width: min(760px, calc(100vw - 560px)) !important;
+  height: 30px !important;
+  min-height: 30px !important;
+  max-height: 30px !important;
+  margin: 0 !important;
+  padding: 0 8px !important;
+  overflow: hidden !important;
+  color: #aeb7c3 !important;
+  background: rgba(18, 27, 38, .92) !important;
+  border: 1px solid #223040 !important;
+  border-radius: 7px !important;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, .32) !important;
+  backdrop-filter: blur(14px) saturate(130%) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(130%) !important;
+  box-sizing: border-box !important;
+  white-space: nowrap !important;
+}
+
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox:hover > tbody > tr#moresearch3,
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox:focus-within > tbody > tr#moresearch3,
+body form:has(#searchbox) table#searchbox:hover > tbody > tr#moresearch3,
+body form:has(#searchbox) table#searchbox:focus-within > tbody > tr#moresearch3,
+body form:has(#searchbox) table#searchbox > tbody > tr#moresearch3[style*="table-row"] {
+  top: 58px !important;
+}
+
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox:hover > tbody > tr#moresearch1,
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox:focus-within > tbody > tr#moresearch1,
+body form:has(#searchbox) table#searchbox:hover > tbody > tr#moresearch1,
+body form:has(#searchbox) table#searchbox:focus-within > tbody > tr#moresearch1,
+body form:has(#searchbox) table#searchbox > tbody > tr#moresearch1[style*="table-row"] {
+  top: 92px !important;
+}
+
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox:hover > tbody > tr#moresearch4,
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox:focus-within > tbody > tr#moresearch4,
+body form:has(#searchbox) table#searchbox:hover > tbody > tr#moresearch4,
+body form:has(#searchbox) table#searchbox:focus-within > tbody > tr#moresearch4,
+body form:has(#searchbox) table#searchbox > tbody > tr#moresearch4[style*="table-row"] {
+  top: 126px !important;
+}
+
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox:hover > tbody > tr#moresearch5,
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox:focus-within > tbody > tr#moresearch5,
+body form:has(#searchbox) table#searchbox:hover > tbody > tr#moresearch5,
+body form:has(#searchbox) table#searchbox:focus-within > tbody > tr#moresearch5,
+body form:has(#searchbox) table#searchbox > tbody > tr#moresearch5[style*="table-row"] {
+  top: 160px !important;
+}
+
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox:hover > tbody > tr#moresearch2,
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox:focus-within > tbody > tr#moresearch2,
+body form:has(#searchbox) table#searchbox:hover > tbody > tr#moresearch2,
+body form:has(#searchbox) table#searchbox:focus-within > tbody > tr#moresearch2,
+body form:has(#searchbox) table#searchbox > tbody > tr#moresearch2[style*="table-row"] {
+  top: 194px !important;
+}
+
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox > tbody > tr[id^="moresearch"] > td,
+body form:has(#searchbox) table#searchbox > tbody > tr[id^="moresearch"] > td {
+  display: flex !important;
+  align-items: center !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  color: #aeb7c3 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox tr[id^="moresearch"] table.bottom,
+body form:has(#searchbox) table#searchbox tr[id^="moresearch"] table.bottom {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+  color: #aeb7c3 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-spacing: 0 !important;
+  box-shadow: none !important;
+}
+
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox tr[id^="moresearch"] table.bottom tbody,
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox tr[id^="moresearch"] table.bottom tr,
+body form:has(#searchbox) table#searchbox tr[id^="moresearch"] table.bottom tbody,
+body form:has(#searchbox) table#searchbox tr[id^="moresearch"] table.bottom tr {
+  display: flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+}
+
+html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox tr[id^="moresearch"] table.bottom td,
+body form:has(#searchbox) table#searchbox tr[id^="moresearch"] table.bottom td {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  width: auto !important;
+  height: 24px !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 6px !important;
+  overflow: hidden !important;
+  color: #aeb7c3 !important;
+  background: #171e29 !important;
+  border: 1px solid #1f2a38 !important;
+  border-radius: 6px !important;
+  box-sizing: border-box !important;
+  font-family: "Inter", "Roboto", "Helvetica Neue", Arial, sans-serif !important;
+  font-size: 10px !important;
+  font-weight: 500 !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+}
+
+@media only screen and (max-width: 1500px) {
+  html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox,
+  html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox:hover,
+  html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox:focus-within,
+  body form:has(#searchbox) table#searchbox,
+  body form:has(#searchbox) table#searchbox:hover,
+  body form:has(#searchbox) table#searchbox:focus-within {
+    left: 710px !important;
+    width: 260px !important;
+  }
+
+  html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox tr:has(input#search),
+  body form:has(#searchbox) table#searchbox tr:has(input#search) {
+    width: 260px !important;
+  }
+
+  html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox > tbody > tr:first-child,
+  html body table.main tbody tr td.bottom form:has(#searchbox) table#searchbox > tbody > tr:first-child:not(:has(input#search)),
+  body form:has(#searchbox) table#searchbox > tbody > tr:first-child,
+  body form:has(#searchbox) table#searchbox > tbody > tr:first-child:not(:has(input#search)) {
+    left: 980px !important;
+  }
 }
 
 /* Final override: show the real HDBits options link, not a fake table button. */
