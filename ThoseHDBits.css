@@ -1,6 +1,6 @@
 /*!
  * Theme Name:     ThoseHDBits
- * Version:        6.4
+ * Version:        6.5
  * Last Updated:   2026-07-24
  * Based on:       HDBits Berlin 1.4
  */
@@ -10068,5 +10068,84 @@ body:has(#torrent-list) #torrent-list {
 
   body:has(#torrent-list) #pager {
     margin-top: 10px !important;
+  }
+}
+
+/* v6.5: widescreen content panels for home, forum, upload, and general pages. */
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) {
+  --hdb-wide-content: min(1680px, calc(100vw - 316px));
+}
+
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) td#sidebar-container + *,
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) td#sidebar-container + td.bottom {
+  padding: 30px clamp(26px, 2.4vw, 48px) 64px !important;
+}
+
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) td.bottom > h1,
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) td.bottom > h2,
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) td.bottom > h3,
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) td.bottom > p,
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) td.bottom > form,
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) td.bottom > div,
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) td.bottom > table,
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) td.bottom > table.main,
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) td.bottom > table:not(.menu),
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) td.bottom > table[width],
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) td.bottom > table[width="500"]:first-of-type,
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) td.bottom > table[width="800"]:first-of-type,
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) .std-content,
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) table.std-content,
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) table.poll,
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) .alert-box--news,
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) .list-description,
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) #news > h2,
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) #news > h2 + table,
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) div#news > h2,
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) div#news > h2 + table {
+  width: var(--hdb-wide-content) !important;
+  max-width: var(--hdb-wide-content) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box !important;
+}
+
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) > table.menu + table.main > tbody > tr > td.bottom:last-child > h2,
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) > table.menu + table.main > tbody > tr > td.bottom:last-child > h2 + table:last-of-type,
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) > table.menu + table.main > tbody > tr > td.bottom:last-child table.main > tbody > tr > td.embedded > h2,
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) > table.menu + table.main > tbody > tr > td.bottom:last-child table.main > tbody > tr > td.embedded > h2 + table:not([class]) {
+  width: var(--hdb-wide-content) !important;
+  max-width: var(--hdb-wide-content) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box !important;
+}
+
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) td.bottom > table.main > tbody,
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) td.bottom > table.main > tbody > tr,
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) td.bottom > table.main > tbody > tr > td,
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) td.bottom > table.main > tbody > tr > td.embedded,
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) td.embedded > table,
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) td.embedded > table > tbody,
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) td.embedded > table > tbody > tr,
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) td.embedded > table > tbody > tr > td {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) td.bottom img:not([src*="/pic/flag/"]):not([src*="imdb.png"]) {
+  max-width: 100% !important;
+  height: auto;
+}
+
+@media only screen and (max-width: 1200px) {
+  body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) {
+    --hdb-wide-content: calc(100vw - 260px);
+  }
+
+  body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) td#sidebar-container + *,
+  body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) td#sidebar-container + td.bottom {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 }
