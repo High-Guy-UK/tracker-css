@@ -954,9 +954,9 @@ ul#userinfo_username {
 .torrent_table tr:has(a[href*="techno" i]) td:nth-child(2) img,
 .torrent_table tr:has(a[href*="garage" i]) td:nth-child(2) img {
   display: block !important;
-  width: 122px !important;
-  height: 60px !important;
-  max-width: 122px !important;
+  width: 104px !important;
+  height: 51px !important;
+  max-width: 104px !important;
   object-fit: cover;
 }
 
