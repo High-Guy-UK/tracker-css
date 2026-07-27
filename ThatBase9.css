@@ -819,8 +819,8 @@ ul#userinfo_username {
 #submenu a {
   display: none !important;
   width: 188px !important;
-  min-height: 36px;
-  line-height: 36px !important;
+  min-height: 32px;
+  line-height: 32px !important;
   padding: 0 14px !important;
   color: var(--tb9-muted);
   background: rgba(10, 12, 18, 0.98);
@@ -831,12 +831,18 @@ ul#userinfo_username {
   text-align: left;
 }
 
+#submenu li {
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none;
+}
+
 #submenu:hover a {
   display: block !important;
 }
 
 #submenu:hover a:first-of-type {
-  margin-top: 8px;
+  margin-top: 0;
   border-top: 1px solid var(--tb9-line);
   border-radius: 8px 8px 0 0;
   box-shadow: 0 18px 34px rgba(0, 0, 0, 0.36);
