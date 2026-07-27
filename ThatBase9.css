@@ -583,6 +583,7 @@ span[style*="color: blue"] {
   width: 100px !important;
   max-width: 100px;
   pointer-events: auto;
+  display: none !important;
 }
 
 #userinfo_username::before,
@@ -595,6 +596,18 @@ span[style*="color: blue"] {
   background: rgba(8, 10, 15, 0.88);
   border-left: 1px solid var(--tb9-line);
   text-align: center;
+}
+
+#userinfo_username a {
+  display: none !important;
+}
+
+#userinfo_username #nav_userinfo > a {
+  display: block !important;
+}
+
+#userinfo_username:hover a {
+  display: block !important;
 }
 
 #submenu,
