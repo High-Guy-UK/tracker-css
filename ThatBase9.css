@@ -900,6 +900,84 @@ ul#userinfo_username {
   background-color: rgba(255, 255, 255, 0.045);
 }
 
+.torrent_table img:is(
+  [src*="jungle" i],
+  [alt*="jungle" i],
+  [title*="jungle" i],
+  [src*="breaks" i],
+  [alt*="breaks" i],
+  [title*="breaks" i],
+  [src*="dnb" i],
+  [alt*="dnb" i],
+  [title*="dnb" i],
+  [src*="drum" i][src*="bass" i],
+  [alt*="drum" i][alt*="bass" i],
+  [title*="drum" i][title*="bass" i]
+) {
+  display: block !important;
+  width: 152px !important;
+  height: 75px !important;
+  max-width: 152px !important;
+  object-fit: cover;
+}
+
+.torrent_table img:is([src*="jungle" i], [alt*="jungle" i], [title*="jungle" i]) {
+  content: url("assets/db9-genres/jungle.svg");
+}
+
+.torrent_table img:is([src*="breaks" i], [alt*="breaks" i], [title*="breaks" i]) {
+  content: url("assets/db9-genres/breaks.svg");
+}
+
+.torrent_table img:is(
+  [src*="dnb" i],
+  [alt*="dnb" i],
+  [title*="dnb" i],
+  [src*="drum" i][src*="bass" i],
+  [alt*="drum" i][alt*="bass" i],
+  [title*="drum" i][title*="bass" i]
+) {
+  content: url("assets/db9-genres/drum-and-bass.svg");
+}
+
+.torrent_table td:has(img:is(
+  [src*="jungle" i],
+  [alt*="jungle" i],
+  [title*="jungle" i],
+  [src*="breaks" i],
+  [alt*="breaks" i],
+  [title*="breaks" i],
+  [src*="dnb" i],
+  [alt*="dnb" i],
+  [title*="dnb" i],
+  [src*="drum" i][src*="bass" i],
+  [alt*="drum" i][alt*="bass" i],
+  [title*="drum" i][title*="bass" i]
+)) {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font-size: 0 !important;
+  line-height: 0 !important;
+}
+
+.torrent_table td:has(img:is(
+  [src*="jungle" i],
+  [alt*="jungle" i],
+  [title*="jungle" i],
+  [src*="breaks" i],
+  [alt*="breaks" i],
+  [title*="breaks" i],
+  [src*="dnb" i],
+  [alt*="dnb" i],
+  [title*="dnb" i],
+  [src*="drum" i][src*="bass" i],
+  [alt*="drum" i][alt*="bass" i],
+  [title*="drum" i][title*="bass" i]
+)) a {
+  display: inline-block;
+  line-height: 0 !important;
+}
+
 .tags a:hover {
   color: var(--tb9-accent);
 }
