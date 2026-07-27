@@ -1,6 +1,6 @@
 /*!
  * Theme Name:     ThoseHDBits
- * Version:        6.5
+ * Version:        6.6
  * Last Updated:   2026-07-24
  * Based on:       HDBits Berlin 1.4
  */
@@ -10147,5 +10147,60 @@ body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(
   body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) td#sidebar-container + td.bottom {
     padding-left: 20px !important;
     padding-right: 20px !important;
+  }
+}
+
+/* v6.6: keep widened page panels out of the sidebar quick-link block. */
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) td#sidebar-container {
+  position: fixed !important;
+  top: 574px !important;
+  left: 15px !important;
+  width: 190px !important;
+  min-width: 190px !important;
+  max-width: 190px !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: visible !important;
+}
+
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) td#sidebar-container .main,
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) td#sidebar-container .embedded,
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) td#sidebar-container .embedded h2 {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  box-sizing: border-box !important;
+}
+
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) td#sidebar-container .embedded table,
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) td#sidebar-container .embedded table > tbody,
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) td#sidebar-container .embedded table > tbody > tr,
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) td#sidebar-container .embedded table > tbody > tr > td {
+  width: auto !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) td#sidebar-container .embedded table {
+  display: none !important;
+  position: fixed !important;
+  left: 214px !important;
+  width: 218px !important;
+  padding: 10px 12px !important;
+}
+
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) td#sidebar-container .embedded h2:hover + table,
+body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) td#sidebar-container .embedded table:hover {
+  display: block !important;
+}
+
+@media only screen and (max-height: 820px) {
+  body:not(:has(#torrent-list)):not(:has(#details)):not(:has(#showpage)):not(:has(.film-info)) td#sidebar-container {
+    top: 500px !important;
   }
 }
