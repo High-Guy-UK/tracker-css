@@ -397,6 +397,28 @@ span[style*="color: blue"] {
   display: none;
 }
 
+#header,
+#header a,
+#header input,
+#header button,
+#header select {
+  font-family: 'Open Sans', Helvetica, Arial, Tahoma, "Microsoft Yahei", sans-serif !important;
+  letter-spacing: 0;
+}
+
+#userinfo_major,
+#userinfo_stats,
+#radiobar,
+#alerts,
+#searchbars > ul input,
+#searchbars .search_form input,
+#submenu a,
+#userinfo_username a,
+#userinfo_username #nav_userinfo > a {
+  font-size: 13px;
+  font-weight: 700;
+}
+
 #userinfo {
   position: absolute;
   top: 18px;
