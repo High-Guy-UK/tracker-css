@@ -901,79 +901,118 @@ ul#userinfo_username {
 }
 
 .torrent_table img:is(
+  [src*="caticon" i],
+  [src*="category" i],
+  [src*="genre" i],
   [src*="jungle" i],
-  [alt*="jungle" i],
-  [title*="jungle" i],
-  [src*="breaks" i],
-  [alt*="breaks" i],
-  [title*="breaks" i],
+  [src*="break" i],
   [src*="dnb" i],
-  [alt*="dnb" i],
-  [title*="dnb" i],
   [src*="drum" i][src*="bass" i],
+  [src*="house" i],
+  [src*="dubstep" i],
+  [src*="oldschool" i],
+  [src*="old-school" i],
+  [src*="oldskool" i],
+  [src*="techno" i],
+  [src*="garage" i],
+  [alt*="jungle" i],
+  [alt*="break" i],
+  [alt*="dnb" i],
   [alt*="drum" i][alt*="bass" i],
-  [title*="drum" i][title*="bass" i]
-) {
+  [alt*="house" i],
+  [alt*="dubstep" i],
+  [alt*="oldschool" i],
+  [alt*="old school" i],
+  [alt*="oldskool" i],
+  [alt*="techno" i],
+  [alt*="garage" i],
+  [title*="jungle" i],
+  [title*="break" i],
+  [title*="dnb" i],
+  [title*="drum" i][title*="bass" i],
+  [title*="house" i],
+  [title*="dubstep" i],
+  [title*="oldschool" i],
+  [title*="old school" i],
+  [title*="oldskool" i],
+  [title*="techno" i],
+  [title*="garage" i],
+  [width="152"],
+  [height="75"]
+),
+.torrent_table tr:has(a[href*="jungle" i]) td:nth-child(2) img,
+.torrent_table tr:has(a[href*="break" i]) td:nth-child(2) img,
+.torrent_table tr:has(a[href*="dnb" i]) td:nth-child(2) img,
+.torrent_table tr:has(a[href*="drum" i][href*="bass" i]) td:nth-child(2) img,
+.torrent_table tr:has(a[href*="house" i]) td:nth-child(2) img,
+.torrent_table tr:has(a[href*="dubstep" i]) td:nth-child(2) img,
+.torrent_table tr:has(a[href*="oldschool" i]) td:nth-child(2) img,
+.torrent_table tr:has(a[href*="old-school" i]) td:nth-child(2) img,
+.torrent_table tr:has(a[href*="old%20school" i]) td:nth-child(2) img,
+.torrent_table tr:has(a[href*="old+school" i]) td:nth-child(2) img,
+.torrent_table tr:has(a[href*="oldskool" i]) td:nth-child(2) img,
+.torrent_table tr:has(a[href*="techno" i]) td:nth-child(2) img,
+.torrent_table tr:has(a[href*="garage" i]) td:nth-child(2) img {
   display: block !important;
-  width: 152px !important;
-  height: 75px !important;
-  max-width: 152px !important;
+  width: 122px !important;
+  height: 60px !important;
+  max-width: 122px !important;
   object-fit: cover;
 }
 
-.torrent_table img:is([src*="jungle" i], [alt*="jungle" i], [title*="jungle" i]) {
+.torrent_table img:is([src*="jungle" i], [alt*="jungle" i], [title*="jungle" i]),
+.torrent_table tr:has(a[href*="jungle" i]) td:nth-child(2) img {
   content: url("assets/db9-genres/jungle.svg");
 }
 
-.torrent_table img:is([src*="breaks" i], [alt*="breaks" i], [title*="breaks" i]) {
+.torrent_table img:is([src*="break" i], [alt*="break" i], [title*="break" i]),
+.torrent_table tr:has(a[href*="break" i]) td:nth-child(2) img {
   content: url("assets/db9-genres/breaks.svg");
 }
 
-.torrent_table img:is(
-  [src*="dnb" i],
-  [alt*="dnb" i],
-  [title*="dnb" i],
-  [src*="drum" i][src*="bass" i],
-  [alt*="drum" i][alt*="bass" i],
-  [title*="drum" i][title*="bass" i]
-) {
+.torrent_table img:is([src*="dnb" i], [alt*="dnb" i], [title*="dnb" i], [src*="drum" i][src*="bass" i], [alt*="drum" i][alt*="bass" i], [title*="drum" i][title*="bass" i]),
+.torrent_table tr:has(a[href*="dnb" i]) td:nth-child(2) img,
+.torrent_table tr:has(a[href*="drum" i][href*="bass" i]) td:nth-child(2) img {
   content: url("assets/db9-genres/drum-and-bass.svg");
 }
 
-.torrent_table td:has(img:is(
-  [src*="jungle" i],
-  [alt*="jungle" i],
-  [title*="jungle" i],
-  [src*="breaks" i],
-  [alt*="breaks" i],
-  [title*="breaks" i],
-  [src*="dnb" i],
-  [alt*="dnb" i],
-  [title*="dnb" i],
-  [src*="drum" i][src*="bass" i],
-  [alt*="drum" i][alt*="bass" i],
-  [title*="drum" i][title*="bass" i]
-)) {
+.torrent_table img:is([src*="house" i], [alt*="house" i], [title*="house" i]),
+.torrent_table tr:has(a[href*="house" i]) td:nth-child(2) img {
+  content: url("assets/db9-genres/house.svg");
+}
+
+.torrent_table img:is([src*="dubstep" i], [alt*="dubstep" i], [title*="dubstep" i]),
+.torrent_table tr:has(a[href*="dubstep" i]) td:nth-child(2) img {
+  content: url("assets/db9-genres/dubstep.svg");
+}
+
+.torrent_table img:is([src*="oldschool" i], [src*="old-school" i], [src*="oldskool" i], [alt*="oldschool" i], [alt*="old school" i], [alt*="oldskool" i], [title*="oldschool" i], [title*="old school" i], [title*="oldskool" i]),
+.torrent_table tr:has(a[href*="oldschool" i]) td:nth-child(2) img,
+.torrent_table tr:has(a[href*="old-school" i]) td:nth-child(2) img,
+.torrent_table tr:has(a[href*="old%20school" i]) td:nth-child(2) img,
+.torrent_table tr:has(a[href*="old+school" i]) td:nth-child(2) img,
+.torrent_table tr:has(a[href*="oldskool" i]) td:nth-child(2) img {
+  content: url("assets/db9-genres/oldschool.svg");
+}
+
+.torrent_table img:is([src*="techno" i], [alt*="techno" i], [title*="techno" i]),
+.torrent_table tr:has(a[href*="techno" i]) td:nth-child(2) img {
+  content: url("assets/db9-genres/techno.svg");
+}
+
+.torrent_table img:is([src*="garage" i], [alt*="garage" i], [title*="garage" i]),
+.torrent_table tr:has(a[href*="garage" i]) td:nth-child(2) img {
+  content: url("assets/db9-genres/uk-garage.svg");
+}
+
+.torrent_table td:nth-child(2):has(img) {
   padding-top: 6px;
   padding-bottom: 6px;
   font-size: 0 !important;
   line-height: 0 !important;
 }
 
-.torrent_table td:has(img:is(
-  [src*="jungle" i],
-  [alt*="jungle" i],
-  [title*="jungle" i],
-  [src*="breaks" i],
-  [alt*="breaks" i],
-  [title*="breaks" i],
-  [src*="dnb" i],
-  [alt*="dnb" i],
-  [title*="dnb" i],
-  [src*="drum" i][src*="bass" i],
-  [alt*="drum" i][alt*="bass" i],
-  [title*="drum" i][title*="bass" i]
-)) a {
+.torrent_table td:nth-child(2):has(img) a {
   display: inline-block;
   line-height: 0 !important;
 }
