@@ -527,12 +527,17 @@ span[style*="color: blue"] {
 }
 
 #donation_bar_text {
-  position: static !important;
+  position: absolute !important;
   display: inline-flex !important;
   align-items: center;
-  top: auto !important;
-  right: auto !important;
+  top: 104px !important;
+  right: 18px !important;
+  z-index: 11002;
   line-height: 1.35 !important;
+  color: var(--tb9-muted);
+  font-size: 13px;
+  font-weight: 700;
+  pointer-events: auto;
 }
 
 #donation_bar_text > a {
@@ -563,6 +568,7 @@ span[style*="color: blue"] {
 #menu {
   position: relative;
   z-index: 1010;
+  margin-top: 22px;
   border-radius: 10px 10px 0 0;
   overflow: visible;
   background:
@@ -630,15 +636,15 @@ span[style*="color: blue"] {
   min-height: 42px;
   padding: 0 !important;
   color: var(--tb9-muted) !important;
-  background: rgba(8, 10, 15, 0.82) !important;
-  border: 1px solid var(--tb9-line);
+  background: transparent !important;
+  border: 0;
   border-radius: 7px;
   box-shadow: none !important;
   font-family: 'Open Sans', Helvetica, Arial, Tahoma, "Microsoft Yahei", sans-serif !important;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 0;
-  line-height: 40px !important;
+  line-height: 42px !important;
   text-align: center;
   text-transform: uppercase;
 }
@@ -760,11 +766,13 @@ ul#userinfo_username {
 
 #submenu::before {
   display: block;
+  content: "";
   width: 46px !important;
   height: 42px !important;
   line-height: 42px !important;
-  background: transparent;
-  border-left: 1px solid var(--tb9-line);
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='%23a3a9b8' d='M5.4 7.6h9.2L10 12.4z'/%3E%3C/svg%3E") center / 18px 18px no-repeat transparent !important;
+  border: 0;
+  border-radius: 7px;
 }
 
 #submenu:hover {
@@ -776,10 +784,11 @@ ul#userinfo_username {
 
 #submenu:hover::before {
   margin-left: 114px;
-  background-color: rgba(10, 12, 18, 0.9);
+  background-color: rgba(255, 255, 255, 0.13) !important;
 }
 
 #submenu a {
+  display: none !important;
   width: 160px !important;
   min-height: 34px;
   line-height: 34px !important;
@@ -789,6 +798,10 @@ ul#userinfo_username {
   border-top: 0;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.28);
   text-align: right;
+}
+
+#submenu:hover a {
+  display: block !important;
 }
 
 #submenu a:hover {
@@ -955,6 +968,27 @@ span#newtorrentnumber {
   #searchbars > ul,
   .thin > .header {
     flex-wrap: wrap;
+  }
+
+  #donation_bar_text {
+    position: static !important;
+    justify-content: flex-end;
+    margin: 6px 0;
+  }
+
+  #menu {
+    margin-top: 8px;
+  }
+
+  #menu > ul {
+    width: 100% !important;
+  }
+
+  #nav_donate,
+  #nav_staff,
+  #submenu {
+    position: static !important;
+    width: auto !important;
   }
 
   #menu > ul a {
