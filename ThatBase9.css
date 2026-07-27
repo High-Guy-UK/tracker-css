@@ -486,7 +486,7 @@ span[style*="color: blue"] {
   height: 18px;
   margin-left: 2px;
   border-radius: 50%;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Ccircle cx='9' cy='9' r='8' fill='%23090b10' stroke='%23d7dbe3' stroke-opacity='.45'/%3E%3Cpath fill='%23d7dbe3' d='M9 13.8S4.2 10.9 4.2 7.4C4.2 5.8 5.4 4.6 7 4.6c.9 0 1.6.5 2 1.2.4-.7 1.1-1.2 2-1.2 1.6 0 2.8 1.2 2.8 2.8 0 3.5-4.8 6.4-4.8 6.4z'/%3E%3C/svg%3E") center / contain no-repeat;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Ccircle cx='9' cy='9' r='8' fill='%23090b10' stroke='%23d7dbe3' stroke-opacity='.45'/%3E%3Cpath fill='%23e14d57' d='M9 13.8S4.2 10.9 4.2 7.4C4.2 5.8 5.4 4.6 7 4.6c.9 0 1.6.5 2 1.2.4-.7 1.1-1.2 2-1.2 1.6 0 2.8 1.2 2.8 2.8 0 3.5-4.8 6.4-4.8 6.4z'/%3E%3C/svg%3E") center / contain no-repeat;
   vertical-align: -4px;
 }
 
@@ -496,7 +496,7 @@ span[style*="color: blue"] {
 #header img[alt*="donor"],
 #header img[title*="Donor"],
 #header img[title*="donor"] {
-  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Ccircle cx='9' cy='9' r='8' fill='%23090b10' stroke='%23d7dbe3' stroke-opacity='.45'/%3E%3Cpath fill='%23d7dbe3' d='M9 13.8S4.2 10.9 4.2 7.4C4.2 5.8 5.4 4.6 7 4.6c.9 0 1.6.5 2 1.2.4-.7 1.1-1.2 2-1.2 1.6 0 2.8 1.2 2.8 2.8 0 3.5-4.8 6.4-4.8 6.4z'/%3E%3C/svg%3E");
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Ccircle cx='9' cy='9' r='8' fill='%23090b10' stroke='%23d7dbe3' stroke-opacity='.45'/%3E%3Cpath fill='%23e14d57' d='M9 13.8S4.2 10.9 4.2 7.4C4.2 5.8 5.4 4.6 7 4.6c.9 0 1.6.5 2 1.2.4-.7 1.1-1.2 2-1.2 1.6 0 2.8 1.2 2.8 2.8 0 3.5-4.8 6.4-4.8 6.4z'/%3E%3C/svg%3E");
   display: inline-block !important;
   width: 18px !important;
   height: 18px !important;
@@ -586,7 +586,11 @@ span[style*="color: blue"] {
 #menu {
   position: relative;
   z-index: 1010;
+  display: grid;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+  gap: 1px;
   margin-top: 22px;
+  padding: 3px;
   border-radius: 10px 10px 0 0;
   overflow: visible;
   background:
@@ -599,14 +603,16 @@ span[style*="color: blue"] {
 }
 
 #menu > ul {
-  gap: 1px;
-  padding: 3px;
-  width: calc(100% - 136px) !important;
+  display: contents !important;
+  gap: 0;
+  padding: 0;
+  width: auto !important;
   overflow: visible;
 }
 
 #menu li,
 #menu li:nth-child(n) {
+  min-width: 0;
   background-color: transparent;
 }
 
@@ -626,10 +632,13 @@ span[style*="color: blue"] {
 
 #nav_donate,
 #nav_staff {
-  position: absolute !important;
-  top: 3px !important;
+  position: static !important;
+  top: auto !important;
+  right: auto !important;
   z-index: 13001 !important;
-  height: 42px;
+  width: auto !important;
+  min-width: 0;
+  height: auto;
   margin: 0 !important;
   padding: 0 !important;
   background: transparent !important;
@@ -637,13 +646,13 @@ span[style*="color: blue"] {
 }
 
 #nav_donate {
-  right: 58px !important;
-  width: 74px;
+  right: auto !important;
+  width: auto;
 }
 
 #nav_staff {
-  right: 6px !important;
-  width: 46px;
+  right: auto !important;
+  width: auto;
 }
 
 #nav_donate > a,
@@ -774,7 +783,7 @@ ul#userinfo_username {
    caret beside the username that expands to a dropdown on hover. */
 #submenu {
   position: absolute !important;
-  right: 356px !important;
+  right: 344px !important;
   top: 24px !important;
   z-index: 13000 !important;
   width: 26px !important;
@@ -797,36 +806,50 @@ ul#userinfo_username {
 
 #submenu:hover {
   z-index: 13003 !important;
-  width: 160px !important;
+  width: 188px !important;
   overflow: visible;
   backdrop-filter: blur(14px);
 }
 
 #submenu:hover::before {
-  margin-left: 134px;
+  margin-left: 162px;
   background-color: rgba(255, 255, 255, 0.13) !important;
 }
 
 #submenu a {
   display: none !important;
-  width: 160px !important;
-  min-height: 34px;
-  line-height: 34px !important;
+  width: 188px !important;
+  min-height: 36px;
+  line-height: 36px !important;
+  padding: 0 14px !important;
   color: var(--tb9-muted);
-  background: rgba(8, 10, 15, 0.96);
-  border: 1px solid var(--tb9-line);
-  border-top: 0;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.28);
-  text-align: right;
+  background: rgba(10, 12, 18, 0.98);
+  border: 0;
+  border-left: 1px solid var(--tb9-line);
+  border-right: 1px solid var(--tb9-line);
+  box-shadow: none;
+  text-align: left;
 }
 
 #submenu:hover a {
   display: block !important;
 }
 
+#submenu:hover a:first-of-type {
+  margin-top: 8px;
+  border-top: 1px solid var(--tb9-line);
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.36);
+}
+
+#submenu:hover a:last-of-type {
+  border-bottom: 1px solid var(--tb9-line);
+  border-radius: 0 0 8px 8px;
+}
+
 #submenu a:hover {
   color: var(--tb9-text-strong);
-  background: rgba(255, 255, 255, 0.09);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 #content {
@@ -997,10 +1020,15 @@ span#newtorrentnumber {
   }
 
   #menu {
+    display: block;
     margin-top: 8px;
+    padding: 0;
   }
 
   #menu > ul {
+    display: flex !important;
+    gap: 1px;
+    padding: 3px;
     width: 100% !important;
   }
 
