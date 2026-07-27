@@ -475,6 +475,23 @@ span[style*="color: blue"] {
   vertical-align: middle;
 }
 
+#header img[src*="donor"],
+#header img[src*="heart"],
+#header img[alt*="Donor"],
+#header img[alt*="donor"],
+#header img[title*="Donor"],
+#header img[title*="donor"] {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Ccircle cx='9' cy='9' r='8' fill='%23090b10' stroke='%23d7dbe3' stroke-opacity='.45'/%3E%3Cpath fill='%23d7dbe3' d='M9 13.8S4.2 10.9 4.2 7.4C4.2 5.8 5.4 4.6 7 4.6c.9 0 1.6.5 2 1.2.4-.7 1.1-1.2 2-1.2 1.6 0 2.8 1.2 2.8 2.8 0 3.5-4.8 6.4-4.8 6.4z'/%3E%3C/svg%3E");
+  display: inline-block !important;
+  width: 18px !important;
+  height: 18px !important;
+  margin-left: 4px;
+  border-radius: 50%;
+  vertical-align: -4px;
+  opacity: 1;
+  filter: none !important;
+}
+
 #userinfo_major,
 #userinfo_stats {
   position: static !important;
@@ -560,7 +577,7 @@ span[style*="color: blue"] {
 #menu > ul {
   gap: 1px;
   padding: 3px;
-  width: 100% !important;
+  width: calc(100% - 178px) !important;
   overflow: visible;
 }
 
@@ -581,6 +598,55 @@ span[style*="color: blue"] {
 
 #menu > ul a:hover {
   box-shadow: inset 0 0 0 1px rgba(215, 219, 227, 0.2);
+}
+
+#nav_donate,
+#nav_staff {
+  position: absolute !important;
+  top: 3px !important;
+  z-index: 13001 !important;
+  height: 42px;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  list-style: none;
+}
+
+#nav_donate {
+  right: 100px !important;
+  width: 74px;
+}
+
+#nav_staff {
+  right: 50px !important;
+  width: 46px;
+}
+
+#nav_donate > a,
+#nav_staff > a {
+  display: block !important;
+  width: 100% !important;
+  height: 42px;
+  min-height: 42px;
+  padding: 0 !important;
+  color: var(--tb9-muted) !important;
+  background: rgba(8, 10, 15, 0.82) !important;
+  border: 1px solid var(--tb9-line);
+  border-radius: 7px;
+  box-shadow: none !important;
+  font-family: 'Open Sans', Helvetica, Arial, Tahoma, "Microsoft Yahei", sans-serif !important;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 40px !important;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#nav_donate > a:hover,
+#nav_staff > a:hover {
+  color: var(--tb9-text-strong) !important;
+  background: rgba(255, 255, 255, 0.13) !important;
 }
 
 #menu > ul a:hover,
@@ -684,13 +750,19 @@ ul#userinfo_username {
 #submenu {
   position: absolute !important;
   right: 0;
+  top: 3px !important;
   z-index: 13000 !important;
   width: 46px !important;
+  height: 42px;
+  margin-top: 0 !important;
   overflow: visible;
 }
 
 #submenu::before {
+  display: block;
   width: 46px !important;
+  height: 42px !important;
+  line-height: 42px !important;
   background: transparent;
   border-left: 1px solid var(--tb9-line);
 }
