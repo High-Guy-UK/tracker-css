@@ -7708,3 +7708,52 @@ input[type="submit"]:hover {
     z-index: 7 !important;
   }
 }
+
+/* Safari gives three of PTP's search controls a separate stacking context.
+   Draw their labels in the fields themselves so every row paints reliably. */
+@media (min-width: 1280px) {
+  .search-bar__list > *::before,
+  .search-bar__list > * form::before {
+    display: none !important;
+  }
+
+  .search-bar__list input:placeholder-shown {
+    background-repeat: no-repeat !important;
+    background-position: 10px center !important;
+    background-size: 180px 24px !important;
+  }
+
+  .search-bar__list > :nth-child(1) input:placeholder-shown {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='24' viewBox='0 0 180 24'%3E%3Ctext x='0' y='16' fill='%23748095' font-family='Arial,sans-serif' font-size='12'%3ESearch Movies..%3C/text%3E%3C/svg%3E") !important;
+  }
+
+  .search-bar__list > :nth-child(2) input:placeholder-shown {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='24' viewBox='0 0 180 24'%3E%3Ctext x='0' y='16' fill='%23748095' font-family='Arial,sans-serif' font-size='12'%3ESearch People..%3C/text%3E%3C/svg%3E") !important;
+  }
+
+  .search-bar__list > :nth-child(3) input:placeholder-shown {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='24' viewBox='0 0 180 24'%3E%3Ctext x='0' y='16' fill='%23748095' font-family='Arial,sans-serif' font-size='12'%3ESearch Collections..%3C/text%3E%3C/svg%3E") !important;
+  }
+
+  .search-bar__list > :nth-child(4) input:placeholder-shown {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='24' viewBox='0 0 180 24'%3E%3Ctext x='0' y='16' fill='%23748095' font-family='Arial,sans-serif' font-size='12'%3ESearch Requests..%3C/text%3E%3C/svg%3E") !important;
+  }
+
+  .search-bar__list > :nth-child(5) input:placeholder-shown {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='24' viewBox='0 0 180 24'%3E%3Ctext x='0' y='16' fill='%23748095' font-family='Arial,sans-serif' font-size='12'%3ESearch Forums..%3C/text%3E%3C/svg%3E") !important;
+  }
+
+  .search-bar__list > :nth-child(6) input:placeholder-shown {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='24' viewBox='0 0 180 24'%3E%3Ctext x='0' y='16' fill='%23748095' font-family='Arial,sans-serif' font-size='12'%3ESearch Log..%3C/text%3E%3C/svg%3E") !important;
+  }
+
+  .search-bar__list > :nth-child(7) input:placeholder-shown {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='24' viewBox='0 0 180 24'%3E%3Ctext x='0' y='16' fill='%23748095' font-family='Arial,sans-serif' font-size='12'%3ESearch Users..%3C/text%3E%3C/svg%3E") !important;
+  }
+
+  .search-bar__list input:focus:placeholder-shown {
+    box-shadow:
+      0 0 0 3px rgba(66, 151, 255, 0.16),
+      inset 0 1px 0 rgba(255, 255, 255, 0.025) !important;
+  }
+}
