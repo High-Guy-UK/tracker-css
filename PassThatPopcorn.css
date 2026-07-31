@@ -7628,31 +7628,54 @@ input[type="submit"]:hover {
     transition: color 160ms ease, opacity 120ms ease !important;
   }
 
-  .search-bar__list > :nth-child(1)::before {
+  .search-bar__list > * form::before {
+    position: absolute !important;
+    top: 50% !important;
+    left: 10px !important;
+    z-index: 9 !important;
+    display: block !important;
+    color: #748095 !important;
+    font-family: Inter, "Open Sans", Arial, sans-serif !important;
+    font-size: 0.78rem !important;
+    font-weight: 400 !important;
+    line-height: 1 !important;
+    pointer-events: none !important;
+    transform: translateY(-50%) !important;
+    transition: color 160ms ease, opacity 120ms ease !important;
+  }
+
+  .search-bar__list > :nth-child(1)::before,
+  .search-bar__list > :nth-child(1) form::before {
     content: "Search Movies.." !important;
   }
 
-  .search-bar__list > :nth-child(2)::before {
+  .search-bar__list > :nth-child(2)::before,
+  .search-bar__list > :nth-child(2) form::before {
     content: "Search People.." !important;
   }
 
-  .search-bar__list > :nth-child(3)::before {
+  .search-bar__list > :nth-child(3)::before,
+  .search-bar__list > :nth-child(3) form::before {
     content: "Search Collections.." !important;
   }
 
-  .search-bar__list > :nth-child(4)::before {
+  .search-bar__list > :nth-child(4)::before,
+  .search-bar__list > :nth-child(4) form::before {
     content: "Search Requests.." !important;
   }
 
-  .search-bar__list > :nth-child(5)::before {
+  .search-bar__list > :nth-child(5)::before,
+  .search-bar__list > :nth-child(5) form::before {
     content: "Search Forums.." !important;
   }
 
-  .search-bar__list > :nth-child(6)::before {
+  .search-bar__list > :nth-child(6)::before,
+  .search-bar__list > :nth-child(6) form::before {
     content: "Search Log.." !important;
   }
 
-  .search-bar__list > :nth-child(7)::before {
+  .search-bar__list > :nth-child(7)::before,
+  .search-bar__list > :nth-child(7) form::before {
     content: "Search Users.." !important;
   }
 
@@ -7660,7 +7683,15 @@ input[type="submit"]:hover {
     color: #dce8fc !important;
   }
 
+  .search-bar__list > *:focus-within form::before {
+    color: #dce8fc !important;
+  }
+
   .search-bar__list > *:has(input[placeholder]):has(input:not(:placeholder-shown))::before {
+    opacity: 0 !important;
+  }
+
+  .search-bar__list > *:has(input[placeholder]):has(input:not(:placeholder-shown)) form::before {
     opacity: 0 !important;
   }
 
