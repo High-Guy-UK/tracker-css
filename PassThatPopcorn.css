@@ -7881,3 +7881,102 @@ input[type="submit"]:hover {
     transition: none !important;
   }
 }
+
+/* Inbox alert: a compact blue-accent toast that quietly asks for attention. */
+@media (min-width: 1280px) {
+  .header .alert,
+  .header .alert-bar,
+  .header .alert--warning,
+  .header .alert--error {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    width: min(380px, calc(100vw - 40px)) !important;
+    min-height: 58px !important;
+    padding: 12px 42px 12px 20px !important;
+    border: 1px solid #3a4860 !important;
+    border-radius: 10px !important;
+    background: #1a2230 !important;
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.34) !important;
+    color: #dce7f9 !important;
+    overflow: hidden !important;
+    text-align: left !important;
+    animation: ptp-inbox-toast-nudge 20s ease-in-out infinite !important;
+  }
+
+  .header .alert::before,
+  .header .alert-bar::before,
+  .header .alert--warning::before,
+  .header .alert--error::before {
+    position: absolute;
+    top: 12px;
+    bottom: 12px;
+    left: 0;
+    width: 3px;
+    border-radius: 0 3px 3px 0;
+    background: #4297ff;
+    content: "";
+  }
+
+  .header .alert::after,
+  .header .alert-bar::after,
+  .header .alert--warning::after,
+  .header .alert--error::after {
+    position: absolute;
+    top: 50%;
+    right: 17px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #6baeff;
+    box-shadow: 0 0 0 3px rgba(66, 151, 255, 0.14);
+    content: "";
+    transform: translateY(-50%);
+  }
+
+  .header .alert a,
+  .header .alert-bar a,
+  .header .alert--warning a,
+  .header .alert--error a {
+    color: #dce7f9 !important;
+    font-weight: 750 !important;
+  }
+
+  .header .alert:hover,
+  .header .alert-bar:hover,
+  .header .alert--warning:hover,
+  .header .alert--error:hover {
+    animation-play-state: paused !important;
+    border-color: #4f6381 !important;
+    transform: translateY(-1px) !important;
+  }
+}
+
+@keyframes ptp-inbox-toast-nudge {
+  0%,
+  91%,
+  100% {
+    transform: translateX(0);
+  }
+
+  93% {
+    transform: translateX(-3px);
+  }
+
+  95% {
+    transform: translateX(3px);
+  }
+
+  97% {
+    transform: translateX(-1px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .header .alert,
+  .header .alert-bar,
+  .header .alert--warning,
+  .header .alert--error {
+    animation: none !important;
+  }
+}
