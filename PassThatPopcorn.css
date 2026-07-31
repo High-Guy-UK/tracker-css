@@ -7609,6 +7609,10 @@ input[type="submit"]:hover {
   }
 
   .search-bar__search-field::before {
+    display: none !important;
+  }
+
+  .search-bar__list > *::before {
     position: absolute !important;
     top: 50% !important;
     left: 10px !important;
@@ -7624,46 +7628,39 @@ input[type="submit"]:hover {
     transition: color 160ms ease, opacity 120ms ease !important;
   }
 
-  .search-bar__list > :nth-child(1) .search-bar__search-field::before,
-  .search-bar__list > .search-bar__search-field:nth-child(1)::before {
+  .search-bar__list > :nth-child(1)::before {
     content: "Search Movies.." !important;
   }
 
-  .search-bar__list > :nth-child(2) .search-bar__search-field::before,
-  .search-bar__list > .search-bar__search-field:nth-child(2)::before {
+  .search-bar__list > :nth-child(2)::before {
     content: "Search People.." !important;
   }
 
-  .search-bar__list > :nth-child(3) .search-bar__search-field::before,
-  .search-bar__list > .search-bar__search-field:nth-child(3)::before {
+  .search-bar__list > :nth-child(3)::before {
     content: "Search Collections.." !important;
   }
 
-  .search-bar__list > :nth-child(4) .search-bar__search-field::before,
-  .search-bar__list > .search-bar__search-field:nth-child(4)::before {
+  .search-bar__list > :nth-child(4)::before {
     content: "Search Requests.." !important;
   }
 
-  .search-bar__list > :nth-child(5) .search-bar__search-field::before,
-  .search-bar__list > .search-bar__search-field:nth-child(5)::before {
+  .search-bar__list > :nth-child(5)::before {
     content: "Search Forums.." !important;
   }
 
-  .search-bar__list > :nth-child(6) .search-bar__search-field::before,
-  .search-bar__list > .search-bar__search-field:nth-child(6)::before {
+  .search-bar__list > :nth-child(6)::before {
     content: "Search Log.." !important;
   }
 
-  .search-bar__list > :nth-child(7) .search-bar__search-field::before,
-  .search-bar__list > .search-bar__search-field:nth-child(7)::before {
+  .search-bar__list > :nth-child(7)::before {
     content: "Search Users.." !important;
   }
 
-  .search-bar__search-field:focus-within::before {
+  .search-bar__list > *:focus-within::before {
     color: #dce8fc !important;
   }
 
-  .search-bar__search-field:has(input[placeholder]):has(input:not(:placeholder-shown))::before {
+  .search-bar__list > *:has(input[placeholder]):has(input:not(:placeholder-shown))::before {
     opacity: 0 !important;
   }
 
