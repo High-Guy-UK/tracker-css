@@ -5076,6 +5076,69 @@ img[src*="series-2160"]{
   }
 }
 
+/* Series pages keep a fixed left info rail and a full-width main column. */
+@media (min-width:993px){
+  #series .thin,
+  #content:has(.main_column>table#discog_table) .thin{
+    display:grid !important;
+    grid-template-columns:286px minmax(0,1fr) !important;
+    column-gap:12px !important;
+    row-gap:12px !important;
+    align-items:start !important;
+    overflow:visible !important;
+  }
+
+  #series .thin>.linkbox,
+  #content:has(.main_column>table#discog_table) .thin>.linkbox{
+    grid-column:1 / -1 !important;
+    grid-row:1 !important;
+    width:100% !important;
+    margin:0 0 4px !important;
+  }
+
+  #series .thin>.sidebar,
+  #content:has(.main_column>table#discog_table) .thin>.sidebar{
+    grid-column:1 !important;
+    grid-row:2 !important;
+    position:static !important;
+    display:flex !important;
+    flex-direction:column !important;
+    width:100% !important;
+    max-width:none !important;
+    min-width:0 !important;
+    margin:0 !important;
+  }
+
+  #series .thin>.main_column,
+  #content:has(.main_column>table#discog_table) .thin>.main_column{
+    grid-column:2 !important;
+    grid-row:2 !important;
+    position:static !important;
+    display:flex !important;
+    flex-direction:column !important;
+    width:100% !important;
+    max-width:none !important;
+    min-width:0 !important;
+    margin:0 !important;
+    padding-top:0 !important;
+  }
+
+  #series .thin>.sidebar>.box,
+  #content:has(.main_column>table#discog_table) .thin>.sidebar>.box{
+    position:static !important;
+    width:100% !important;
+    max-width:none !important;
+  }
+
+  #series .thin>.sidebar>.box:has(.stats),
+  #content:has(.main_column>table#discog_table) .thin>.sidebar>.box:has(.stats){
+    position:static !important;
+    width:100% !important;
+    max-width:none !important;
+    margin:0 !important;
+  }
+}
+
 /* Forum image lightbox: keep the preview above the frosted page layer. */
 #lightbox[style="display: block;"],
 #lightbox[style*="display: block"]{
