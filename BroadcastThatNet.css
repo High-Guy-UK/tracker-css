@@ -5042,6 +5042,40 @@ img[src*="series-2160"]{
   }
 }
 
+/* Use the full desktop canvas instead of centering pages in a capped card. */
+@media (min-width:1280px){
+  body{
+    padding:calc(var(--swift-topbar, var(--dash-topbar)) + 30px) 22px 42px calc(var(--dash-rail, 304px) + 22px) !important;
+  }
+
+  #wrapper{
+    width:100% !important;
+    max-width:none !important;
+    margin:0 !important;
+    padding:0 !important;
+  }
+
+  #content{
+    box-sizing:border-box !important;
+    width:100% !important;
+    max-width:none !important;
+    margin:0 0 24px !important;
+  }
+
+  #content>.thin,
+  #content .thin,
+  #series .thin,
+  #content:has(.main_column>table#discog_table) .thin{
+    width:100% !important;
+    max-width:none !important;
+  }
+
+  #series .thin .main_column,
+  #content:has(.main_column>table#discog_table) .thin .main_column{
+    flex:1 1 auto !important;
+  }
+}
+
 /* Forum image lightbox: keep the preview above the frosted page layer. */
 #lightbox[style="display: block;"],
 #lightbox[style*="display: block"]{
